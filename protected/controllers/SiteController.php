@@ -40,7 +40,8 @@ class SiteController extends TController
                             'error',
                             'content-tools-image-upload',
                             'content-tools-image-insert',
-                            'content-tools-image-rotate'
+                            'content-tools-image-rotate',
+                            'cart'
                         ],
                         'allow' => true,
                         'roles' => [
@@ -94,6 +95,16 @@ class SiteController extends TController
             $this->layout = User::LAYOUT_GUEST_MAIN;
             return $this->render('index');
         }
+    }
+
+
+    public function actionCart()
+    {
+        $this->updateMenuItems();
+        $this->layout = User::LAYOUT_GUEST_MAIN;
+       
+            return $this->render('cart');
+        
     }
 
     public function actionContact()
