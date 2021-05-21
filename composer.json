@@ -1,0 +1,71 @@
+{
+	"name" : "project/ainehome",
+	"description" : "Project Management System",
+	"authors" : [{
+			"name" : "Stranger",
+			"email" : "strangerhash65@gmail.com",
+			"homepage" : "http://yourUrl.com/"
+		}
+	],
+	"keywords" : [
+		"yii2"
+	],
+	"homepage" : "http://yourUrl.com/",
+	"type" : "project",
+	"license" : "commercial",
+	"support" : {
+		"issues" : "https://github.com/yiisoft/yii2/issues?state=open",
+		"forum" : "http://www.yiiframework.com/forum/",
+		"wiki" : "http://www.yiiframework.com/wiki/",
+		"irc" : "irc://irc.freenode.net/yii",
+		"source" : "https://github.com/yiisoft/yii2"
+	},
+	"minimum-stability" : "stable",
+	"require" : {
+		"php" : ">=7.0.0",
+		"yiisoft/yii2" : "*",
+		"yiisoft/yii2-bootstrap4" : "^1.0@dev",
+		"yiisoft/yii2-swiftmailer" : "*",
+		"yiisoft/yii2-jui" : "*",
+		"yiisoft/yii2-imagine" : "*",
+		"yiisoft/yii2-authclient" : "*",
+		"2amigos/yii2-ckeditor-widget" : "*",
+		"miloschuman/yii2-highcharts-widget" : "*",
+		"himiklab/yii2-sortable-grid-view-widget" : "*",
+		"bryglen/yii2-apns-gcm" : "*",
+		"phpoffice/phpspreadsheet" : "*",
+		"guzzlehttp/guzzle" : ">=4.1.4 <7.0",
+		"alexantr/yii2-ckeditor" : "^2.1@dev",
+		"lajax/yii2-language-picker" : "1.*",
+		"trntv/probe" : "dev-master",
+		"kartik-v/yii2-widget-fileinput" : "@dev",
+		"trntv/yii2-datetime-widget" : "^1.1",
+		"yiisoft/yii2-queue" : "^2.3",
+		"2amigos/yii2-file-upload-widget" : "~1.0",
+		"bizley/contenttools" : "^1.4",
+		"devgroup/yii2-jsoneditor" : "*",
+		"lesha724/yii2-document-viewer": "*"
+	},
+	"require-dev" : {
+		"yiisoft/yii2-debug" : "*",
+		"yiisoft/yii2-gii" : "*",
+		"yiisoft/yii2-faker" : "*",
+		"guzzlehttp/guzzle" : ">=4.1.4 <7.0",
+		"codeception/codeception" : "^3.1.0",
+		"phpunit/phpunit" : "~6.5.5",
+		"codeception/verify" : "~1.1.0",
+		"symfony/event-dispatcher" : "< 4.2.8",
+		"symfony/browser-kit" : ">=2.7 < 4.1.0"
+	},
+	"config" : {
+		"process-timeout" : 1800,
+		"fxp-asset" : {
+			"enabled" : false
+		}
+	},
+	"repositories" : [{
+			"type" : "composer",
+			"url" : "https://asset-packagist.org"
+		}
+	]
+}

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Furniture">
+<meta name="keywords" content="Furniture">
+<meta name="author" content="Furniture">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Furniture - Checkout</title>
+<link href="assets/images/icon1.ico" rel="shortcut icon" type="image/x-icon">
+<!-- Frntre External CSS -->
+<link href="assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet" type="text/css">
+<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="assets/css/styles.css" rel="stylesheet" type="text/css" media="all">
+<link href="assets/css/responsive.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body>
+
+<!-- Frntre Header -->
+<header class="frntre-header">
+  <div class="container process-container">
+    <div class="row align-items-center">
+      <div class="col-md-3 col-5">
+        <a href="#0" class="frntre-brand"><img src="assets/images/logo.png" alt="Furniture" width="150"></a>
+      </div>
+      <div class="col-md-9 col-7">
+        <ul class="user-menus-wrap user-menus-style-two">
+          <li>
+            <span class="anchor-label">
+              <svg viewBox="0 0 28 28" class="frntre-icon">
+                <path d="M20 10h-2a4 4 0 1 0-8 0H8a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V11a1 1 0 0 0-1-1zm-6-2a2 2 0 0 1 2 2h-4a2 2 0 0 1 2-2zm5 12H9v-8h10v8z"></path>
+                <path d="M14 13.5a1 1 0 0 0-1 1v3a1 1 0 0 0 2 0v-3a1 1 0 0 0-1-1z"></path>
+              </svg>
+              <span class="user-menu">Secure Checkout</span>
+            </span>
+          </li>
+          <li>
+            <a href="javascript:void(0);" class="has-underline">
+              <svg viewBox="0 0 28 28" class="frntre-icon">
+                <path d="M20.86 18.14H10.19l.91-1.31h9.76a1 1 0 0 0 1-.83L23 9.38a1 1 0 0 0-.23-.81 1 1 0 0 0-.77-.36H9.63l-.38-1.46a1 1 0 0 0-1-.75H6a1 1 0 1 0 0 2h1.51l2 7.64-2 2.93a1 1 0 0 0-.06 1 1 1 0 0 0 .89.53h.46a1.38 1.38 0 1 0 2.4 0h6.74a1.47 1.47 0 0 0-.17.66 1.38 1.38 0 1 0 2.57-.66h.52a1 1 0 1 0 0-2v.04zm-.05-7.93L20 14.83h-8.65l-1.2-4.62h10.66z"></path>
+              </svg>
+              <span class="user-menu">Back to Cart</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Frntre Mid Wrap -->
+<section class="frntre-mid-wrap">
+  <div class="container process-container">
+    <div class="frntre-account-wrap process-wrap">
+      <div class="frntre-columns-row">
+        <div class="frntre-secondary">
+          <form id="CheckoutForm">
+            <div class="list-group">
+              <div class="list-group-item" data-acc-step>
+                <h2 data-acc-title>Shipping Address</h2>
+                <div data-acc-content>
+                  <h2 data-acc-title>Shipping Address</h2>
+                  <div class="whitebox">
+                    <div class="whitebox-wrap">
+                      <h5 class="border-title">Add A New Address</h5>
+                      <div class="form-group">
+                        <input type="text" name="FullName" placeholder="Full Name" required="required" class="form-control form-control-lg" id="FullName">
+                      </div>
+                      <div class="form-group">
+                        <textarea name="Address" placeholder="Address" required="required" class="form-control form-control-lg" id="Address"></textarea>
+                      </div>
+                      <div class="form-group">
+                        <input type="text" name="City" placeholder="City" required="required" class="form-control form-control-lg" id="City">
+                      </div>
+                      <div class="form-group">
+                        <input type="text" name="PinCode" placeholder="Pincode" required="required" class="form-control form-control-lg" id="PinCode">
+                      </div>
+                      <div class="form-group">
+                        <input type="text" name="PhoneNumber" placeholder="Phone Number" required="required" class="form-control form-control-lg" id="PhoneNumber">
+                      </div>
+                      <div class="custom-control custom-checkbox mb-0">
+                        <input type="checkbox" class="custom-control-input" id="ShippingAddress" checked="checked">
+                        <label class="custom-control-label" for="ShippingAddress">Set as default shipping address</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="list-group-item" data-acc-step>
+                <h2 data-acc-title>Payment Information</h2>
+                <div data-acc-content>
+                  <div data-acc-content-list>
+                    <div class="whitebox">
+                      <div class="whitebox-wrap">
+                        <div class="account-info-wrap">
+                          <p>Jason Carter</p>
+                          <p>Demo street name <br> demo city name, Alabama, 90909 <br> United States</p>
+                          <p>T: 9090909090</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-acc-content-list>
+                    <h2 data-acc-title>Payment Information</h2>
+                    <div class="payment-method">
+                      <div class="custom-control custom-radio">
+                        <input type="radio" id="PayPal" name="PaymentMethod" class="custom-control-input">
+                        <label class="custom-control-label" for="PayPal">
+                          <span class="row align-items-center">
+                            <span class="col-9">PayPal/PayPal Credit</span>
+                            <span class="col-3 textright"><img src="assets/images/paypal.png" alt="PayPal"></span>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="payment-method">
+                      <div class="custom-control custom-radio">
+                        <input type="radio" id="PayLow" name="PaymentMethod" class="custom-control-input">
+                        <label class="custom-control-label" for="PayLow">
+                          <span class="row align-items-center">
+                            <span class="col-9">Pay as low as $115 per month.</span>
+                            <span class="col-3 textright"><img src="assets/images/wayfair-financing.png" alt="Wayfair Financing"></span>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="list-group-item review-order" data-acc-step>
+                <h2 data-acc-title>Review Order</h2>
+                <div data-acc-content>
+                  <h2 data-acc-title>Review Order</h2>
+                  <div class="whitebox">
+                    <div class="whitebox-wrap">
+                      <table class="table table-striped table-has-data-th table-orders table-has-tfoot">
+                        <thead>
+                          <tr>
+                            <th>Product Name</th>
+                            <th>SKU</th>
+                            <th>Price</th>
+                            <th>Qty</th>
+                            <th class="text-md-right">Subtotal</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td data-th="Product Name">
+                              <span class="product-title">Olivia 1/4 Zip Light Jacket &copy;</span>
+                              <dl>
+                                <dt>Color</dt>
+                                <dd>Purple</dd>
+                                <dt>Size</dt>
+                                <dd>M</dd>
+                              </dl>
+                            </td>
+                            <td data-th="SKU">WJ12-M-Purple</td>
+                            <td data-th="Ship"><strong>$77.00</strong></td>
+                            <td data-th="Qty">Ordered: 1</td>
+                            <td data-th="Subtotal" class="text-md-right"><strong>$77.00</strong></td>
+                          </tr>
+                          <tr>
+                            <td data-th="Product Name">
+                              <span class="product-title">Jade Yoga Jacket</span>
+                              <dl>
+                                <dt>Color</dt>
+                                <dd>Gray</dd>
+                                <dt>Size</dt>
+                                <dd>M</dd>
+                              </dl>
+                            </td>
+                            <td data-th="SKU">WJ09-M-Gray</td>
+                            <td data-th="Ship"><strong>$32.00</strong></td>
+                            <td data-th="Qty">Ordered: 1</td>
+                            <td data-th="Subtotal" class="text-md-right"><strong>$32.00</strong></td>
+                          </tr>
+                          <tr>
+                            <td data-th="Product Name">
+                              <span class="product-title">Riona Full Zip Jacket</span>
+                              <dl>
+                                <dt>Color</dt>
+                                <dd>Green</dd>
+                                <dt>Size</dt>
+                                <dd>L</dd>
+                              </dl>
+                            </td>
+                            <td data-th="SKU">WJ05-L-Green</td>
+                            <td data-th="Ship"><strong>$60.00</strong></td>
+                            <td data-th="Qty">Ordered: 1</td>
+                            <td data-th="Subtotal" class="text-md-right"><strong>$60.00</strong></td>
+                          </tr>
+                          <tfoot>
+                            <tr>
+                              <th colspan="4">Subtotal:</th>
+                              <td class="text-right">$169.00</td>
+                            </tr>
+                            <tr>
+                              <th colspan="4">Shipping &amp; Handling:</th>
+                              <td class="text-right">$0.00</td>
+                            </tr>
+                            <tr>
+                              <th colspan="4"><strong>Estimated Total:</strong></th>
+                              <td class="text-right"><strong>$169.00</strong></td>
+                            </tr>
+                          </tfoot>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="frntre-primary col-dsktp-tblt">
+          <div class="checkout-step">
+            <h2 class="checkout-step-title">Order Summary</h2>
+            <div class="whitebox total-amount-wrap">
+              <div class="whitebox-wrap">
+                <dl class="row">
+                  <dt class="col-8">Subtotal:</dt>
+                  <dd class="col-4">$5,244.92</dd>
+                  <dt class="col-8">Ship To:</dt>
+                  <dd class="col-4">FREE</dd>
+                  <dt class="col-8">Tax:</dt>
+                  <dd class="col-4">$393.37</dd>
+                  <dt class="col-8 total">Total:</dt>
+                  <dd class="col-4 total">$5,638.29</dd>
+                  <dt class="col-8">You Save:</dt>
+                  <dd class="col-4">$3,888.56</dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Frntre Copyright, Copyright Style Two -->
+<section class="frntre-copyright copyright-style-two">
+  <div class="container">
+    <ul>
+      <li><a href="#0">Site Feedback</a></li>
+      <li>
+        <a href="#0">
+          <svg viewBox="0 0 28 28" class="frntre-icon">
+            <path d="M21.3 16.7l-2.4-1.9a1.8 1.8 0 0 0-2.6.4l-.6.8a7.8 7.8 0 0 1-3.9-3.4l.8-.9a1.8 1.8 0 0 0 .2-2.1l-1.6-2.8A1.7 1.7 0 0 0 10 6a2.1 2.1 0 0 0-1.7.7L6.5 8.5a1.8 1.8 0 0 0-.5 1.6C8.1 20.7 16.6 21.9 18.3 22h.1a1.8 1.8 0 0 0 1.4-.6l1.8-2a1.8 1.8 0 0 0-.3-2.7zm-3 3.3C16.2 19.8 9.7 18.5 8 9.9l1.7-1.8 1.4 2.4-.8.9a1.8 1.8 0 0 0-.3 2.1 9.8 9.8 0 0 0 5.1 4.5 1.8 1.8 0 0 0 2-.6l.7-.8 2.1 1.6z"></path>
+          </svg>Call Us
+        </a>
+      </li>
+    </ul>
+    <ul>
+      <li><a href="#0">Privacy</a></li>
+      <li><a href="#0">Terms of Use</a></li>
+      <li>&copy; 2020, Wayfair</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Frntre Hover Overlay -->
+<div class="frntre-hover-overlay">&nbsp;</div>
+
+<!-- Furniture Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/html5.min.js"></script>
+<script src="assets/js/placeholders.min.js"></script>
+<script src="assets/js/respond.min.js"></script>
+<script src="assets/js/bootstrap-4-autocomplete.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
+<script src="assets/js/jquery.elevateZoom-3.0.8.min.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.min.js"></script>
+<script src="assets/js/jquery.accordion-wizard.min.js"></script>
+<script src="assets/js/scripts.js"></script>
+<script>
+jQuery(document).ready(function() {
+  "use strict";
+  $('#CheckoutForm').accWizard ({
+    autoButtonsNextClass: 'btn btn-dark',
+    autoButtonsSubmitText: 'Place Order',
+  });
+});
+</script>
+</body>
+</html>

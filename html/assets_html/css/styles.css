@@ -1,0 +1,2757 @@
+@charset "utf-8";
+/*
+  1. Frntre Normal CSS
+  2. Frntre Elements CSS
+    1. Frntre Fonts CSS
+    2. Frntre Reseted CSS
+      1. Frntre Form CSS
+      2. Frntre Buttons CSS
+      3. Frntre Badge CSS
+      4. Frntre Slick Slider CSS
+      5. Frntre Hover Overlay CSS
+      6. Frntre Thumb Slider CSS
+      7. Frntre Tooltip CSS
+      8. Frntre Popover CSS
+      9. Frntre Malihu Custom Scrollbar CSS
+      9. Frntre Table CSS
+      10. Frntre Modal CSS
+      11. Frntre Dropdown CSS
+    3. Frntre Data Sidebar Popup CSS
+    4. Frntre Keyframes CSS
+  3. Frntre Topbar CSS
+  4. Frntre Header CSS
+  5. Frntre Nav CSS
+  6. Frntre Banner CSS
+  7. Frntre Products CSS
+  8. Frntre Services CSS
+  9. Frntre Footer CSS
+  10. Frntre Copyright CSS
+    1. Frntre Default Copyright CSS
+    2. Frntre Copyright Style Two CSS
+  11. Frntre Listing Page CSS
+  12. Frntre Product Listings CSS
+  13. Frntre Product Detail Page CSS
+  14. Frntre Mid Wrap CSS
+  15. Frntre Related Products CSS
+  16. Frntre My Account Page CSS
+  17. Frntre Confirmation Page CSS
+  18. Frntre Order Page CSS
+  19. Frntre Cart Page CSS
+  20. Frntre Checkout Page CSS
+  21. Frntre Contact Us Page CSS
+  22. Frntre Terms Page CSS
+*/
+/* 1. Frntre Normal CSS */
+body {
+  overflow-x: hidden;
+  clear: both;
+  color: #000000;
+  font-family: Gotham Narrow SSm, Helvetica Neue, Helvetica, Arial, Sans-Serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.42857143;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+*, *:focus {
+  outline: none;
+}
+a {
+  color: #000000;
+  transition: all ease .4s;
+}
+a:focus {
+  outline: none;
+  outline-offset: 0;
+}
+a:hover, a:focus {
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+iframe {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  border: none;
+}
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  padding-bottom: 10px;
+  margin-bottom: 0;
+  font-weight: 500;
+  line-height: 1.3;
+}
+p {
+  padding-bottom: 10px;
+  margin-bottom: 0;
+  color: #7c7c7c;
+  font-size: 15px;
+  line-height: 24px;
+}
+p a {
+  color: inherit;
+}
+p a:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+video {
+  display: block;
+  width: auto;
+  min-width: 100%;
+  height: auto;
+  min-height: 100%;
+  background: #f8f8f8;
+}
+audio, canvas, progress, video {
+  vertical-align: middle;
+}
+button, button:focus {
+  outline: none;
+  outline-offset: 0;
+}
+figure {
+  margin: 0;
+}
+::selection {
+  background: #000000;
+  color: #ffffff;
+}
+::-webkit-selection {
+  background: #000000;
+  color: #ffffff;
+}
+::-moz-selection {
+  background: #000000;
+  color: #ffffff;
+}
+::-o-selection {
+  background: #000000;
+  color: #ffffff;
+}
+::-ms-selection {
+  background: #000000;
+  color: #ffffff;
+}
+::-webkit-input-placeholder {
+  color: #aaaaaa !important;
+  opacity: 1;
+}
+::-moz-placeholder {
+  color: #aaaaaa !important;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  color: #aaaaaa !important;
+  opacity: 1;
+}
+:-moz-placeholder {
+  color: #aaaaaa !important;
+  opacity: 1;
+}
+.textright {
+  text-align: right;
+}
+.frntre-image {
+  position: relative;
+}
+* [class*="col-"]:nth-child(2n) .frntre-column {
+  float: left;
+}
+.right-align [data-hover-popup] {
+  left: auto;
+  right: 0;
+}
+[data-hover] {
+  position: relative;
+}
+[data-hover-popup] {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 300px;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #f4f4f5;
+  border-radius: 3px;
+  box-shadow: 0 8px 10px 0 rgba(97, 92, 101, 0.2);
+  z-index: 5;
+}
+.product-thumbs:after, .product-colors ul:after, .quantity-wrap:after, .safe-shopping:after, .guarntee-review:after, .whitebox-wrap:after, .whitebox-tabs:after, .cart-item:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+/* 2. Frntre Elements CSS */
+/* 1. Frntre Fonts CSS */
+@font-face {
+  font-display: fallback;
+  font-family: Gotham Narrow SSm;
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Gotham_Narrow_SSm_4r.woff) format("woff"),
+       url(../fonts/Gotham_Narrow_SSm_4r.woff) format("woff"),
+       url(../fonts/Gotham_Narrow_SSm_4r.woff) format("woff");
+}
+@font-face {
+  font-display: fallback;
+  font-family: Gotham Narrow SSm;
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/Gotham_Narrow_SSm_5r.woff) format("woff"),
+      url(../fonts/Gotham_Narrow_SSm_5r.woff) format("woff"),
+      url(../fonts/Gotham_Narrow_SSm_5r.woff) format("woff")
+}
+@font-face {
+  font-display: fallback;
+  font-family: 'PlayfairDisplay-Regular';
+  src: url('../fonts/PlayfairDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/PlayfairDisplay-Regular.woff') format('woff'),
+      url('../fonts/PlayfairDisplay-Regular.ttf') format('truetype'),
+      url('../fonts/PlayfairDisplay-Regular.svg#PlayfairDisplay-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-display: fallback;
+  font-family: Gotham Narrow SSm;
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/Gotham_Narrow_SSm_7r.woff) format("woff"),
+      url(../fonts/Gotham_Narrow_SSm_7r.woff) format("woff"),
+      url(../fonts/Gotham_Narrow_SSm_7r.woff) format("woff");
+}
+/* 2. Frntre Reseted CSS */
+b, strong {
+  font-weight: 700;
+}
+dl, dd:last-child {
+  margin-bottom: 0;
+}
+svg.frntre-icon {
+  height: 30px;
+}
+.frntre-icon {
+  display: inline-block;
+  width: 30px;
+  transition: all ease .4s;
+}
+.container {
+  max-width: 94vw;
+  padding: 0 5px;
+}
+/* 1. Frntre Form CSS */
+label {
+  vertical-align: middle;
+  font-size: 14px;
+  cursor: pointer;
+}
+label a {
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: underline;
+}
+label sup {
+  top: 0;
+  font-size: 120%;
+}
+select::-ms-expand {
+  display: none;
+}
+select option {
+  padding: 0;
+}
+@-moz-document url-prefix() {
+  .has-select-style select.form-control {
+    padding-left: 10px;
+  }
+}
+select.form-control {
+  padding: 10px 40px 10px 15px;
+  background-image: url(../images/icon3.png);
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  background-size: 28px auto;
+  text-indent: 0px;
+  text-overflow: '';
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+textarea.form-control {
+  height: 128px;
+}
+.form-group {
+  margin-bottom: 12px;
+  position: relative;
+}
+.has-select-style label {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  margin-bottom: 0;
+  color: #7c7c7c;
+  pointer-events: none;
+  z-index: 1;
+}
+.has-select-style .form-control {
+  height: 60px;
+  padding: 24px 40px 7px 14px;
+  cursor: pointer;
+}
+.form-control {
+  height: 44px;
+  padding: 10px 15px;
+  color: #000000;
+  font-size: 15px;
+  border: 2px solid #ebebeb;
+}
+.form-control:focus {
+  border-color: #000000;
+  box-shadow: none;
+}
+.form-control-lg {
+  height: 54px;
+  padding: 12px 18px;
+  font-size: 16px;
+}
+.custom-control {
+  min-height: 1px;
+  margin-bottom: 10px;
+}
+.custom-control-input:checked ~ .custom-control-label:before, .custom-control-input:not(:disabled):active ~ .custom-control-label:before {
+  background-color: #000000;
+  border-color: #000000;
+}
+.custom-control-input:focus ~ .custom-control-label:before {
+  box-shadow: 0 0 0 .2rem rgba(0, 0, 0, .25);
+}
+.custom-control-input:focus:not(:checked) ~ .custom-control-label:before {
+  border-color: #000000;
+}
+.custom-control-label:before {
+  top: .1rem;
+  border-color: #cfcfcf;
+}
+.custom-control-label:after {
+  top: .1rem;
+}
+.form-check {
+  margin-bottom: 12px;
+}
+.form-check-input {
+  margin-top: .2rem;
+}
+.control-icon {
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  left: 2px;
+  width: 52px;
+  background: #f4f4f5;
+  border-right: 2px solid #ebebeb;
+  border-radius: 2px 0 0 2px;
+  z-index: 1;
+}
+.control-icon .frntre-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
+}
+.control-icon + .form-control {
+  padding-left: 65px;
+}
+.progress-bar span {
+  display: inline-block;
+  padding: 0 5px;
+}
+/* 2. Frntre Buttons CSS */
+.btn {
+  padding: 10px 20px;
+  font-size: 15px;
+}
+.btn .frntre-icon {
+  width: 28px;
+  height: 28px;
+  margin: -2px 2px 0 0;
+  fill: #ffffff;
+}
+.btn-group-sm > .btn, .btn-sm {
+  padding: 6px 15px;
+  font-size: 12px;
+}
+.btn-group-sm > .btn .frntre-icon, .btn-sm .frntre-icon {
+  width: 24px;
+  height: 24px;
+}
+.btn-group-lg > .btn, .btn-lg {
+  padding: 13px 30px;
+  font-size: 18px;
+}
+.btn-group-lg > .btn .frntre-icon, .btn-lg .frntre-icon {
+  font-size: 24px;
+}
+/* 3. Frntre Badge CSS */
+.badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  background: #000000;
+  color: #ffffff;
+  font-weight: 500;
+  border-radius: 10px 0 10px 0;
+  z-index: 1;
+}
+/* 4. Frntre Slick Slider CSS */
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+.slick-slider {
+  -webkit-user-select: unset;
+  -moz-user-select: unset;
+  -ms-user-select: unset;
+  user-select: unset;
+}
+.slick-slider:hover .slick-arrow {
+  opacity: 1;
+}
+.slick-dotted .slick-arrow {
+  margin-top: -20px;
+}
+.slick-prev, .slick-next {
+  z-index: 1;
+}
+.slick-arrow.slick-disabled {
+  display: none !important;
+}
+.slick-prev {
+  left: 0;
+}
+.slick-next {
+  right: 0;
+}
+.slick-slide > div > .item {
+  vertical-align: middle;
+}
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 50px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  border-radius: 0 3px 3px 0;
+  transition: all ease .4s;
+  z-index: 1;
+}
+.slick-arrow:hover, .slick-arrow:focus {
+  background: #000000;
+}
+.slick-arrow:hover svg, .slick-arrow:focus svg {
+  fill: #ffffff;
+}
+.slick-arrow:before {
+  display: none;
+}
+.slick-arrow svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  color: rgba(0, 0, 0, 0.8);
+  content: "";
+  opacity: 1;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
+}
+.slick-arrow.slick-disabled:hover, .slick-arrow.slick-disabled:focus {
+  background: rgba(255, 255, 255, 0.8);
+}
+.slick-arrow.slick-disabled:hover svg, .slick-arrow.slick-disabled:focus svg {
+  fill: rgba(0, 0, 0, 0.8);
+}
+.slick-prev svg {
+  transform: translateX(-50%) translateY(-50%) rotate(180deg);
+}
+.slick-next {
+  left: auto;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.slick-dots {
+  position: static;
+  padding-top: 15px;
+}
+.slick-dots li {
+  vertical-align: middle;
+  width: auto;
+  height: auto;
+}
+.slick-dots li button {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  background: transparent;
+  border: 2px solid #000000;
+  border-radius: 100%;
+  transition: all ease .4s;
+}
+.slick-dots li.slick-active button {
+  background: #000000;
+}
+.slick-dots li button:before {
+  display: none;
+}
+.has-rounded-arrow .slick-arrow {
+  left: 15px;
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 100%;
+}
+.has-rounded-arrow .slick-arrow svg, .frntre-thumb-slider .slick-arrow svg {
+  width: 24px;
+  height: 24px;
+}
+.has-rounded-arrow .slick-next {
+  left: auto;
+  right: 15px;
+}
+/* 5. Frntre Hover Overlay CSS */
+.frntre-hover-overlay, [data-sidebar-backdrop]  {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
+/* 6. Frntre Thumb Slider CSS */
+.frntre-thumb-slider .slick-arrow {
+  top: 0;
+  transform: none;
+  border-radius: 0;
+}
+.frntre-thumb-slider .slick-arrow:before {
+  font-size: 30px;
+}
+.frntre-thumb-slider .slick-slide {
+  margin-bottom: 9.6px;
+  border: 2px solid #ebebeb;
+  cursor: pointer;
+  transition: all ease .4s;
+}
+.frntre-thumb-slider img {
+  width: 100%;
+}
+.frntre-thumb-slider .slick-slide.slick-current {
+  border-color: #000000;
+}
+.frntre-thumb-slider .slick-slide:last-child {
+  margin: 0;
+}
+/* 7. Frntre Tooltip CSS */
+.tooltip, .popover {
+  font-family: Gotham Narrow SSm, Helvetica Neue, Helvetica, Arial, Sans-Serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+.tooltip.tooltip-light .arrow:before {
+  border-color: #ffffff;
+}
+.tooltip-xl .tooltip-inner {
+  max-width: 500px;
+  padding: 10px 15px;
+  font-size: 14px;
+}
+.tooltip-light .tooltip-inner {
+  background: #ffffff;
+  color: #000000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.tooltip-inner {
+  padding: 5px 10px;
+}
+/* 8. Frntre Popover CSS */
+.bs-popover-auto[x-placement^="top"], .bs-popover-top {
+  margin-bottom: 0.8rem;
+}
+.bs-popover-auto[x-placement^="bottom"], .bs-popover-bottom {
+  margin-top: 0.8rem;
+}
+.popover {
+  max-width: 500px;
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+.popover-body {
+  padding: 12px 20px;
+  color: #000000;
+}
+.popover-body p {
+  padding-bottom: 6px;
+  font-size: 13px;
+  line-height: 18px;
+}
+.popover-body h1, .popover-body h2, .popover-body h3, .popover-body h4, .popover-body h5, .popover-body h6 {
+  padding: 6px 0;
+}
+.popover-body h6 {
+  font-size: 14px;
+}
+/* 9. Frntre Malihu Custom Scrollbar CSS */
+.frntre-scroll {
+  height: 100%;
+  overflow: hidden;
+  clear: both;
+}
+.frntre-scroll:hover .mCSB_scrollTools .mCSB_draggerContainer {
+  opacity: 1;
+}
+.mCSB_scrollTools {
+  width: 7px;
+}
+.mCSB_scrollTools .mCSB_draggerRail {
+  display: none;
+}
+/*.mCSB_scrollTools .mCSB_draggerContainer {
+  background: #ebebeb;
+  opacity: 0;
+  transition: all ease .4s;
+  border-radius: 10px;
+}*/
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  width: 7px;
+  background: #000000;
+  border-radius: 10px;
+}
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, .mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {
+  background: #000000;
+}
+.mCSB_horizontal.mCSB_inside > .mCSB_container {
+  margin-bottom: 0;
+}
+.mCSB_scrollTools.mCSB_scrollTools_horizontal {
+  height: 4px;
+}
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+  margin: 0;
+}
+.frntre-scroll:not(.mCS_no_scrollbar) .mCSB_inside > .mCSB_container {
+  margin-right: 25px;
+}
+/* 9. Frntre Table CSS */
+.table {
+  margin-bottom: 0;
+  color: #000000;
+  font-size: 15px;
+}
+.table a:hover {
+  text-decoration: underline;
+}
+.table th, .table td {
+  border-color: #ebebeb;
+}
+.table:not(.table-striped) th:first-child, .table:not(.table-striped) td:first-child {
+  padding-left: 0;
+}
+.table thead th {
+  padding-top: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-top: none;
+  border-color: #ebebeb;
+}
+.table-striped tbody tr:nth-of-type(n) {
+  background: none;
+}
+.table-striped tbody tr:nth-child(2n), .table-striped tfoot {
+  background: #f4f4f4;
+}
+.table-striped tfoot tr:last-child th, .table-striped tfoot tr:last-child td {
+  padding-bottom: .75rem;
+}
+.table-striped tfoot th {
+  padding-bottom: 0;
+  font-weight: 400;
+  text-align: right;
+  border-top: none;
+}
+.table-striped tfoot td {
+  padding-bottom: 0;
+  border-top: none;
+}
+/* 10. Frntre Modal CSS */
+.modal-content {
+  border-radius: 8px;
+  border: none;
+}
+.modal-content p a {
+  color: #000000;
+  text-decoration: underline;
+}
+.modal-content p a:hover {
+  text-decoration: none;
+}
+.modal-content button.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 15px 15px;
+  margin: 0;
+  font-weight: 400;
+  text-shadow: none;
+  opacity: 1;
+  z-index: 1;
+}
+.modal-body {
+  padding: 30px;
+}
+.modal-header {
+  display: block;
+  padding: 0 15px;
+  text-align: center;
+  border-bottom: none;
+  border-radius: 0;
+}
+.modal-title {
+  font-weight: 700;
+  line-height: 1.3;
+}
+/* 11. Frntre Dropdown CSS */
+.dropdown-menu {
+  border-color: #ebebeb;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.dropdown-item {
+  color: #000000;
+}
+.dropdown-item.active, .dropdown-item:active {
+  background-color: #000000;
+}
+.dropdown-item.active *, .dropdown-item:active * {
+  color: #ffffff;
+}
+/* 3. Frntre Data Sidebar Popup CSS */
+.sidebar-popup-open {
+  overflow: hidden;
+  height: 100%;
+  padding-right: 17px;
+}
+[data-sidebar-popup] {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 500px;
+  height: 100%;
+  background: #f4f4f5;
+  font-size: 16px;
+  transition: all ease .4s;
+  transform: translateX(100%);
+  z-index: 5;
+}
+[data-sidebar-popup].open {
+  transform: translateX(0);
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+}
+[data-sidebar-backdrop] {
+  z-index: 4;
+}
+.sidebar-popup-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 14px 60px;
+  background: #ffffff;
+  color: #000000;
+  font-weight: 500;
+  text-align: center;
+  z-index: 1;
+}
+[data-sidebar-closer] {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.sidebar-popup-body {
+  height: 100%;
+  padding: 51px 25px 25px;
+}
+.sidebar-popup-body p {
+  color: #000000;
+}
+.tax-consult {
+  padding-top: 15px;
+  margin-top: 5px;
+  border-top: 1px solid #dddddd;
+}
+/* 4. Frntre Keyframes CSS */
+.shake-animation {
+  animation: shake-animation 5000ms infinite;
+}
+@keyframes shake-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  8.0% {
+    transform: rotate(0deg);
+  }
+  12.0% {
+    transform: rotate(23deg);
+  }
+  16.0% {
+    transform: rotate(-18deg);
+  }
+  20.0% {
+    transform: rotate(0deg);
+  }
+  23.0% {
+    transform: rotate(18deg);
+  }
+  26.0% {
+    transform: rotate(-13deg);
+  }
+  29.0% {
+    transform: rotate(0deg);
+  }
+  31.0% {
+    transform: rotate(8deg);
+  }
+  33.0% {
+    transform: rotate(-5deg);
+  }
+  35.0% {
+    transform: rotate(0deg);
+  }
+  37.0% {
+    transform: rotate(-5deg);
+  }
+  39.0% {
+    transform: rotate(0deg);
+  }
+}
+/* 3. Frntre Topbar CSS */
+.frntre-topbar {
+  background: #ffffff;
+  position: relative;
+  z-index: 4;
+}
+.frntre-topbar .row {
+  margin: 0;
+}
+.frntre-topbar [class*="col-"] {
+  padding: 0;
+}
+.frntre-topbar [class*="col-"]:first-child {
+  background: #000000;
+}
+.frntre-column {
+  float: right;
+}
+.explore-products {
+  display: block;
+  padding: 10px 0;
+  color: #ffffff;
+  font-size: 15px;
+  position: relative;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.explore-products:hover, .explore-products:focus {
+  color: rgba(255, 255, 255, 0.8);
+}
+.explore-products:after {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 72.5%;
+  height: 100%;
+  background: #000000;
+  content: "";
+  border-bottom-right-radius: 22px;
+  z-index: 1;
+}
+.shipping-details {
+  font-size: 15px;
+  text-decoration: underline;
+}
+.shipping-returns {
+  text-align: center;
+}
+.shipping-returns p:last-child {
+  padding-bottom: 0;
+}
+.shipping-returns h2 {
+  padding-bottom: 5px;
+  font-weight: 700;
+  font-size: 16px;
+}
+.shipping-returns .icon-inner {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  margin-bottom: 15px;
+  background: #f4f4f5;
+  font-size: 16px;
+  line-height: 4.8;
+  border-radius: 100%;
+  transition: all ease .4s;
+}
+.shipping-returns .icon-inner .frntre-icon {
+  width: 50px;
+  height: 50px;
+}
+.shipping-returns [class*="col-"] {
+  padding: 15px;
+}
+.shipping-returns [class*="col-"]:hover .icon-inner {
+  background: #000000;
+}
+.shipping-returns [class*="col-"]:hover .icon-inner .frntre-icon {
+  fill: #ffffff;
+}
+/* 4. Frntre Header CSS */
+.frntre-header {
+  padding: 18px 0;
+  background: #ffffff;
+  position: relative;
+  z-index: 5;
+}
+.frntre-brand {
+  display: inline-block;
+  vertical-align: middle;
+}
+.frntre-search {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+  position: relative;
+}
+.frntre-search > .frntre-icon {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  width: 28px;
+  fill: #bfbfbf;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.frntre-search .form-control {
+  float: left;
+  width: 34vw;
+  height: 40px;
+  padding: 8px 55px 8px 40px;
+}
+.frntre-search [type="submit"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 40px;
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  transition: all ease .4s;
+  border-radius: 0 5px 5px 0;
+  z-index: 1;
+}
+.frntre-search [type="submit"]:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+.frntre-search [type="submit"] .frntre-icon {
+  width: 28px;
+  fill: #ffffff;
+}
+.frntre-search .dropdown-menu {
+  min-width: 100%;
+}
+.frntre-search .strong {
+  font-weight: 500;
+}
+.search-results {
+  overflow: hidden;
+  clear: both;
+  min-height: 1px;
+}
+.user-menus-wrap {
+  float: right;
+  padding-left: 0;
+  margin-bottom: 0;
+  line-height: 1.3;
+  list-style: none;
+}
+.user-menus-wrap > li {
+  display: inline-table;
+  vertical-align: middle;
+  margin-left: 15px;
+}
+.user-menus-wrap > li:first-child {
+  margin-left: 0;
+}
+.user-menus-wrap > li:hover > a.has-underline .user-menu {
+  text-decoration: none;
+}
+.user-menus-wrap li > a:not(.btn), .user-menus-wrap li > .anchor-label {
+  display: table;
+  width: 100%;
+  padding: 5px 0;
+}
+.user-menus-wrap li > a.has-underline .user-menu {
+  text-decoration: underline;
+}
+.user-menus-wrap .frntre-icon {
+  display: table-cell;
+}
+.user-menus-wrap .user-menu {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  padding-left: 6px;
+  font-weight: 500;
+  font-size: 15px;
+}
+.user-menus-wrap .user-menu span {
+  display: block;
+  color: #615c65;
+  font-weight: 400;
+  font-size: 80%;
+}
+.user-menus-style-two > li {
+  padding-right: 25px;
+  position: relative;
+}
+.user-menus-style-two > li:after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 1px;
+  height: 80%;
+  background: #ebebeb;
+  content: "";
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.user-menus-style-two > li:last-child {
+  padding-right: 0;
+}
+.user-menus-style-two > li:last-child:after {
+  display: none;
+}
+.account-popup {
+  padding: 0;
+}
+.account-popup h2 {
+  padding: 10px 15px;
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 15px;
+  border-bottom: 1px solid #d9d8d8;
+}
+.account-popup ul {
+  padding: 8px 0;
+  margin-bottom: 0;
+  list-style: none;
+  border-bottom: 1px solid #d9d8d8;
+}
+.account-popup ul:last-child {
+  border-bottom: none;
+}
+.account-popup ul li .frntre-icon {
+  fill: #b9b6bc;
+  transition: all ease .4s;
+}
+.account-popup ul li .user-menu {
+  padding-left: 15px;
+  font-weight: 400;
+}
+.account-popup ul li a:not(.btn) {
+  padding: 7px 15px;
+}
+.account-popup ul li a:hover .user-menu {
+  text-decoration: underline;
+}
+.account-popup ul li a:hover .frntre-icon {
+  fill: rgba(0, 0, 0, 0.7);
+}
+.account-popup ul li .btn {
+  display: block;
+  margin: 10px 15px 7px;
+}
+.sneak-popup {
+  min-width: 580px;
+  padding: 15px 25px;
+  background: #f4f4f5;
+}
+.sneak-popup .row {
+  margin: 0 -10px;
+}
+.sneak-popup [class*="col-"] {
+  padding: 10px;
+}
+.sneak-peek {
+  display: block;
+  height: 100%;
+  background: #ffffff;
+  text-align: center;
+  border: 2px solid transparent;
+  border-radius: 10px;
+}
+.sneak-peek:hover {
+  border-color: #000000;
+}
+.sneak-peek .frntre-image img {
+  border-radius: 10px 10px 0 0;
+}
+.sneak-type {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  text-align: center;
+  border-radius: 100%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.sneak-type .frntre-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  color: transparent; 
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
+}
+.sneak-type .frntre-icon.x2 {
+  width: 24px;
+}
+.sneak-info {
+  padding: 25px 15px 15px;
+}
+.sneak-info p:last-child {
+  padding-bottom: 0;
+}
+.sneak-info h2 {
+  padding-bottom: 5px;
+  font-size: 16px;
+}
+.notifications-popup {
+  min-width: 350px;
+  padding: 20px;
+  background: #f4f4f5;
+}
+.notifications-popup .frntre-scroll {
+  max-height: 400px;
+}
+.notifications-popup .frntre-scroll .mCSB_inside > .mCSB_container {
+  margin-right: 0;
+}
+.notification-item {
+  display: block;
+  padding: 20px;
+  margin-bottom: 15px;
+  background: #ffffff;
+  border-radius: 5px;
+}
+.notification-item:last-child {
+  margin-bottom: 0;
+}
+.notification-item p {
+  line-height: 22px;
+}
+.notification-item h2 {
+  padding-bottom: 5px;
+  font-size: 16px;
+}
+.cart-popup {
+  min-width: 400px;
+  text-align: center;
+}
+.cart-popup p {
+  font-size: 14px;
+}
+.cart-popup h2 {
+  padding-bottom: 5px;
+  font-size: 16px;
+}
+#LoginSignup .modal-body {
+  padding: 40px;
+}
+.frntre-login {
+  font-size: 14px;
+}
+.frntre-login .nav-tabs {
+  font-size: 15px;
+  border-bottom: none;
+}
+.frntre-login .nav-tabs .nav-item {
+  margin-bottom: 0;
+}
+.frntre-login .nav-tabs .nav-item:first-child .nav-link {
+  border-radius: 5px 0 0 5px;
+}
+.frntre-login .nav-tabs .nav-item:last-child .nav-link {
+  border-radius: 0 5px 5px 0;
+}
+.frntre-login .nav-tabs .nav-link {
+  padding: 15px 20px;
+  background: #f4f4f5;
+  text-align: center;
+  border: none;
+  border-radius: 0;
+}
+.frntre-login .nav-tabs .nav-link.active {
+  background: #000000;
+  color: #ffffff;
+}
+.frntre-login .tab-content {
+  padding-top: 20px;
+}
+.frntre-login .form-group, .frntre-login .form-check {
+  margin-bottom: 18px;
+}
+.frntre-login .form-control {
+  height: 50px;
+}
+.frntre-login .btn {
+  width: 100%;
+  padding: 12px 20px;
+}
+.account-option {
+  text-align: center;
+}
+.account-option a {
+  display: inline-block;
+  vertical-align: middle;
+  min-width: 130px;
+  padding: 12px 20px;
+  margin: 5px 3px;
+  background: #000000;
+  color: #ffffff;
+  font-size: 15px;
+  position: relative;
+  border-radius: 3px;
+}
+.account-option a:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.2);
+  content: "";
+  border-radius: 3px;
+  transition: all ease .4s;
+  z-index: 1;
+}
+.account-option a:hover:before {
+  opacity: 1;
+}
+.account-option a.facebook {
+  background: #4268b3;
+}
+.account-option a.facebook .frntre-icon {
+  width: 10px;
+}
+.account-option a.google {
+  background: #de4b41;
+}
+.account-option a .frntre-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  fill: #ffffff;
+}
+.account-option a span {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+.account-option p {
+  padding-bottom: 0;
+  margin-bottom: 10px;
+  position: relative;
+}
+.account-option p:before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #ebebeb;
+  content: "";
+  z-index: 0;
+}
+.account-option p span {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 2px 10px;
+  background: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+/* 5. Frntre Nav CSS */
+.frntre-nav {
+  background: #ffffff;
+  font-size: 15px;
+  text-align: center;
+  position: relative;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  z-index: 4;
+}
+.frntre-nav > ul {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.frntre-nav > ul > li {
+  display: inline-block;
+  vertical-align: middle;
+}
+.frntre-nav > ul > li > a {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 9px 7.4px;
+  font-weight: 500;
+  position: relative;
+}
+.frntre-nav > ul > li > a .menu-text {
+  display: block;
+}
+.frntre-nav > ul > li[data-hover] > a:after {
+  position: absolute;
+  top: 39px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #f4f4f5;
+  content: "";
+  opacity: 0;
+  transition: all ease .4s;
+  z-index: 6;
+}
+.frntre-nav > ul > li[data-hover]:hover > a {
+  background: #f4f4f5;
+  box-shadow: 0 -1px 8px -1px rgba(97, 92, 101, 0.5);
+}
+.frntre-nav > ul > li[data-hover]:hover > a:after {
+  opacity: 1;
+}
+.frntre-nav > ul > li:last-child [data-hover-popup], .frntre-nav > ul > li:nth-last-child(-n+2) [data-hover-popup], .frntre-nav > ul > li:nth-last-child(-n+3) [data-hover-popup] {
+  left: auto;
+  right: 0;
+}
+.frntre-nav [data-hover-popup] {
+	min-width: 250px;
+  margin-bottom: 0;
+  background: #f4f4f5;
+  text-align: left;
+  border-top-color: #d9d8d8;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  list-style: none;
+  border-radius: 0;
+}
+.menu-item {
+  padding-bottom: 10px;
+}
+.menu-item:last-child {
+  padding-bottom: 0;
+}
+.menu-item h2 {
+  padding-bottom: 5px;
+  font-size: 15px;
+}
+.menu-item.has-menu h2 {
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #d9d8d8;
+}
+.menu-item.has-menu h2:after {
+  padding-left: 5px;
+  content: "»";
+}
+.menu-item:last-child:not(.has-menu) h2, .menu-item:last-child ul li:last-child {
+  padding-bottom: 2px;
+}
+.menu-item ul {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.menu-item ul li {
+  padding-bottom: 7px;
+}
+.menu-item ul li a:hover {
+  text-decoration: underline;
+}
+/* 6. Frntre Banner CSS */
+.frntre-banner video {
+  height: 50vh;
+}
+/* 7. Frntre Products CSS */
+.frntre-products {
+  padding: 25px 0;
+}
+.section-title {
+  padding-bottom: 50px;
+  font-family: 'PlayfairDisplay-Regular';
+  font-size: 32px;
+  text-align: center;
+}
+.product-item {
+  display: block;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.product-item:hover .frntre-image:before {
+  width: 200px;
+  height: 200px;
+  opacity: 1;
+}
+.product-item:hover .product-name {
+  text-decoration: underline;
+}
+.product-item .frntre-image {
+  margin-bottom: 40px;
+}
+.product-item .frntre-image:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  background: rgba(34, 25, 36, .06);
+  content: "";
+  opacity: 0;
+  border-radius: 100%;
+  transition: all ease .4s;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 0;
+}
+.product-item .frntre-image img {
+  position: relative;
+  z-index: 1;
+}
+.product-name {
+  font-weight: 500;
+  font-size: 20px;
+}
+/* 8. Frntre Services CSS */
+.frntre-services {
+  padding-bottom: 10px;
+  text-align: center;
+}
+.service-item {
+  margin: 0 35px 30px;
+}
+.service-item p {
+  color: #000000;
+}
+.service-item h2 {
+  font-family: 'PlayfairDisplay-Regular';
+  font-weight: normal;
+  font-size: 26px;
+}
+/* 9. Frntre Footer CSS */
+.frntre-footer {
+  padding-top: 30px;
+  font-size: 16px;
+  border-top: 1px solid #ebebeb;
+}
+.frntre-footer ul {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.frntre-footer ul li {
+  padding-bottom: 15px;
+}
+.frntre-footer ul li a, .frntre-copyright ul li a {
+  color: #7c7c7c;
+}
+.frntre-footer ul li a:hover, .frntre-copyright ul li a:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+.frntre-footer [class*="col-"] {
+  padding-bottom: 15px;
+}
+/* 10. Frntre Copyright CSS */
+/* 1. Frntre Default Copyright CSS */
+.frntre-copyright {
+  padding: 20px 0;
+  color: #7c7c7c;
+  font-size: 13px;
+  border-top: 1px solid #ebebeb;
+}
+.frntre-copyright p {
+  padding-bottom: 0;
+  font-size: 13px;
+  line-height: 22px;
+}
+.frntre-copyright ul {
+  padding: 0 0 10px;
+  margin-bottom: 0;
+  list-style: none;
+}
+.frntre-copyright ul li {
+  display: inline-block;
+  vertical-align: middle;
+}
+.frntre-copyright ul li:after {
+  padding: 0 10px 0 13px;
+  content: "|";
+}
+.frntre-copyright ul li:last-child:after {
+  display: none;
+}
+.frntre-copyright ul li a {
+  text-decoration: underline;
+}
+/* 2. Frntre Copyright Style Two CSS */
+.copyright-style-two {
+  padding: 40px 0;
+  color: #000000;
+  font-size: 16px;
+  text-align: center;
+}
+.frntre-copyright.copyright-style-two ul li a {
+  color: inherit;
+}
+.frntre-copyright.copyright-style-two ul li a:hover {
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+}
+/* 11. Frntre Listing Page CSS */
+/* 12. Frntre Product Listings CSS */
+.frntre-product-listings {
+  padding: 30px 30px 0;
+  background: #f4f4f5;
+}
+.frntre-product-listings .row > [class*="col-"] {
+  padding-bottom: 30px;
+}
+.product-list {
+  display: block;
+  height: 100%;
+  background: #ffffff;
+  position: relative;
+  border-radius: 12px;
+  transition: all ease .4s;
+}
+.product-list:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  opacity: 0;
+  content: "";
+  border-radius: 12px;
+  transition: all ease .4s;
+  z-index: 0;
+}
+.product-list:hover:before {
+  border-color: #000000;
+  opacity: 1;
+}
+.product-list:hover .view-icon {
+  opacity: 1;
+  transform: scale(1);
+}
+.product-list .frntre-image img {
+  width: 100%;
+}
+.view-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  font-size: 16px;
+  line-height: 2.3;
+  text-align: center;
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(0.8);
+  transition: all ease .4s;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
+  z-index: 1;
+}
+.view-icon .frntre-icon {
+  width: 20px;
+  height: 20px;
+}
+.view-icon:hover {
+  background: #000000;
+}
+.view-icon:hover .frntre-icon {
+  fill: #ffffff;
+}
+.product-wrap {
+  display: block;
+  padding: 8px;
+  position: relative;
+}
+.product-info {
+  padding: 20px 10px 10px;
+}
+.product-info .product-title {
+  padding-bottom: 8px;
+  font-size: 19px;
+}
+.product-info .custom-control {
+  margin-bottom: 0;
+}
+.product-info .product-price {
+  color: #c4113f;
+}
+.product-thumbs {
+  padding: 0 0 12px;
+  margin-bottom: 0;
+  font-size: 16px;
+  list-style: none;
+}
+.product-thumbs li {
+  float: left;
+  max-width: 55px;
+  min-width: 55px;
+  min-height: 55px;
+  margin: 0 3px 2px 0;
+  background: #dfdfdf;
+  border: 1px solid #dfdfdf;
+  position: relative;
+  transition: all ease .4s;
+  box-shadow: 0 0 0 2px #ffffff inset;
+}
+.product-thumbs li img {
+  width: 100%;
+  padding: 2px;
+}
+.product-thumbs li span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 70%;
+  font-weight: 500;
+  text-align: center;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
+}
+.product-price span {
+  display: inline-block;
+  vertical-align: middle;
+  color: #7c7c7c;
+  font-size: 70%;
+  text-decoration: line-through;
+}
+.product-price span.first {
+  text-decoration: none;
+}
+.product-cashback {
+  padding-bottom: 0;
+  color: #247139;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+/* 13. Frntre Product Detail Page CSS */
+/* 14. Frntre Mid Wrap CSS */
+.frntre-mid-wrap {
+  padding: 50px 0;
+  background: #f4f4f5;
+}
+.frntre-mid-wrap.product-detail {
+  padding: 15px;
+}
+.product-detail.whitebox {
+  border: none;
+}
+.product-detail .container {
+  max-width: 100%;
+}
+.product-detail h1.product-title {
+  padding-bottom: 20px;
+  font-size: 20px;
+}
+.product-detail .row {
+  margin: 0 -7.5px;
+}
+.product-detail [class*="col-"] {
+  padding: 0 7.5px;
+}
+.product-slider {
+  padding-left: 73px;
+  position: relative;
+}
+.product-slider .frntre-thumb-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 58px;
+  height: 100%;
+  overflow: hidden;
+  clear: both;
+  z-index: 1;
+}
+.product-slider .frntre-main-slider .slick-arrow {
+  opacity: 1;
+}
+.frntre-main-slider img {
+  width: 100%;
+}
+.frntre-main-slider .badge {
+  border-radius: 0;
+}
+.frequently-products {
+  padding: 15px 15px 0 0;
+  background: #f4f4f5;
+}
+.frequently-products [class*="col-"] {
+  padding-bottom: 15px;
+}
+.frequently-products .product-list {
+  border-radius: 5px;
+}
+.frequently-products .product-list:before {
+  border: 1px solid #ebebeb;
+  border-radius: 5px;
+  opacity: 1;
+}
+.frequently-products .product-list:hover:before {
+  border-color: #000000;
+}
+.frequently-products .product-list .frntre-image img {
+  opacity: 0.5;
+  transition: all ease .4s;
+}
+.frequently-products .product-list.selected .frntre-image img, .product-list.current-product .frntre-image img {
+  opacity: 1;
+}
+.frequently-products .product-wrap {
+  padding: 15px;
+}
+.frequently-products .product-info {
+  padding: 10px 0 0;
+}
+.frequently-products .product-info .product-title {
+  padding-bottom: 0;
+  font-size: 18px;
+}
+.frequently-products .product-price {
+  padding-bottom: 5px;
+}
+.frequently-products .whitebox {
+  border: none;
+}
+.border-title {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ebebeb;
+}
+.border-title a, .page-title a {
+  float: right;
+  margin-top: 8px;
+  font-weight: 400;
+  font-size: 15px;
+}
+.border-title a:hover, .page-title a:hover {
+  text-decoration: underline;
+}
+.viewing-item {
+  color: #7c7c7c;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 13px;
+  text-align: center;
+}
+.product-bundle {
+  padding-bottom: 0;
+  font-size: 13px;
+}
+.product-bundle .frntre-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+.product-discount {
+  font-weight: 400;
+  font-size: 13px;
+}
+.product-discount span {
+  display: inline-block;
+  padding: 3px 6px;
+  margin-right: 5px;
+  font-weight: 500;
+  font-size: 12px;
+  background: #000000;
+  color: #ffffff;
+}
+.product-disclaimer {
+  padding-bottom: 5px;
+  font-size: 12px;
+}
+.product-disclaimer a {
+  text-decoration: underline;
+}
+.current-product {
+  position: relative;
+}
+.current-product:after {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 40px;
+  height: 40px;
+  margin-left: -20px;
+  background: #000000;
+  color: #ffffff;
+  font-size: 28px;
+  text-align: center;
+  content: "+";
+  border-radius: 100%;
+  transform: translateY(-50%);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+.frequently-subtotal {
+  padding-top: 3px;
+  color: #7c7c7c;
+  font-size: 14px;
+  text-align: right;
+}
+.frequently-subtotal span {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 3px 0;
+}
+.frequently-subtotal span span {
+  margin: 0;
+}
+.frequently-subtotal strong {
+  display: inline-block;
+  vertical-align: middle;
+  color: #000000;
+  font-size: 20px;
+}
+.frequently-subtotal .btn {
+  margin-left: 10px;
+}
+.whitebox {
+  background: #ffffff;
+  border: 1px solid #ebebeb;
+}
+.whitebox.no-border {
+  border: none;
+}
+.whitebox-tabs {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.whitebox-tabs li {
+  float: left;
+  margin-right: 5px;
+}
+.whitebox-tabs li.active a, .whitebox-tabs li.active span {
+  box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.1);
+}
+.whitebox-tabs li.active a:after, .whitebox-tabs li.active span:after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  margin-top: -1px;
+  background: #ffffff;
+  content: "";
+  z-index: 1;
+}
+.whitebox-tabs li a, .whitebox-tabs li span {
+  display: block;
+  padding: 10px 15px;
+  background: #ffffff;
+  font-weight: 500;
+  font-size: 14px;
+  border-top: 1px solid #e9e9e9;
+  border-left: 1px solid #e9e9e9;
+  border-right: 1px solid #e9e9e9;
+  position: relative;
+}
+.whitebox-wrap {
+  padding: 20px;
+}
+.product-info-wrap {
+  position: relative;
+}
+.product-info-wrap .product-price {
+  padding-top: 20px;
+  color: #c4113f;
+  font-size: 36px;
+  border-bottom: 1px solid #ebebeb;
+}
+.product-info-wrap h2 span {
+  font-size: 45%;
+}
+.product-info-wrap h2 span.off {
+  color: #000000;
+  font-size: 50%;
+  text-decoration: none;
+}
+.product-info-wrap h2 span.product-status {
+  display: block;
+  color: inherit;
+  font-size: inherit;
+  text-decoration: none;
+}
+.product-colors {
+  padding: 20px 0 15px;
+}
+.product-colors h3 {
+  font-size: 15px;
+}
+.product-colors ul {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.product-colors ul li {
+  float: left;
+  margin: 0 5px 5px 0;
+}
+.product-colors ul li a {
+  display: block;
+  padding: 2px;
+  border: 2px solid #ebebeb;
+}
+.product-colors ul li a.active {
+  border-color: #000000;
+}
+.product-colors ul li a img {
+  max-width: 50px;
+}
+.product-color-name {
+  display: inline-block;
+  padding-left: 5px;
+  color: #7c7c7c;
+  font-weight: 400;
+}
+.product-delivery {
+  display: table;
+  width: 100%;
+  padding-bottom: 25px;
+}
+.product-delivery label {
+  display: table-cell;
+  vertical-align: top;
+  padding-top: 10px;
+  margin-bottom: 0;
+  color: #7c7c7c;
+  font-weight: 500;
+  font-size: 14px;
+}
+.delivery-wrap {
+  display: table-cell;
+  vertical-align: top;
+  padding-left: 15px;
+}
+.delivery-wrap .form-group {
+  margin-bottom: 10px;
+}
+.delivery-wrap .form-group > .frntre-icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 18px;
+  height: 22px;
+  fill: none;
+  stroke: #000000;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.delivery-wrap .form-control {
+  height: 45px;
+  padding: 10px 55px 10px 30px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+}
+.delivery-wrap [type="submit"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 45px;
+  padding: 0;
+  background: none;
+  font-size: 15px;
+  border: none;
+  z-index: 1;
+}
+.delivery-info h4 {
+  padding-bottom: 5px;
+  font-size: 14px;
+}
+.delivery-info h5 {
+  padding-bottom: 5px;
+  font-weight: 400;
+  font-size: 12px;
+}
+.delivery-info .frntre-icon {
+  padding-left: 5px;
+  width: 22px;
+  height: 17px;
+}
+.delivery-info .green-color span {
+  text-decoration: line-through;
+}
+.gray-color {
+  color: #cec2c2;
+}
+.green-color {
+  color: #247139;
+}
+.darkgray-color {
+  color: #878787;
+}
+.quantity-wrap label {
+  margin: 0 5px 0 0;
+}
+.quantity-wrap .form-control {
+  display: inline-block;
+  vertical-align: middle;
+  width: 70px;
+  height: 48px;
+}
+.quantity-wrap .btn {
+  display: block;
+  overflow: hidden;
+  padding: 10px 12px;
+}
+.quantity-selector {
+  float: left;
+  margin-right: 10px;
+}
+.shopping-guarantee {
+  margin-right: -1px;
+  background: #f4f4f5;
+}
+.shopping-guarantee p {
+  padding-bottom: 0;
+  font-size: 14px;
+  line-height: 20px;
+}
+.shopping-guarantee p + p {
+  padding-top: 5px;
+}
+.shopping-guarantee h5 {
+  font-size: 18px;
+}
+.shopping-guarantee h5.first {
+  padding-bottom: 5px;
+}
+.shopping-guarantee .whitebox {
+  border: none;
+}
+.guarantee-wrap {
+  padding: 0 0 15px 15px;
+}
+.guarantee-list {
+  display: table;
+  width: 100%;
+  font-weight: 500;
+  font-size: 15px;
+}
+.guarantee-list + .guarantee-list {
+  padding-top: 15px;
+}
+.guarantee-list .frntre-image {
+  display: table-cell;
+  vertical-align: middle;
+  width: 55px;
+}
+.guarantee-list .icon-wrap {
+  display: block;
+  width: 55px;
+  height: 55px;
+  padding: 14px;
+  background: #000000;
+  border-radius: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.guarantee-info {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 15px;
+}
+.safe-shopping {
+  padding: 5px 0 10px;
+}
+.safe-shopping img {
+  float: left;
+}
+.safe-shopping h6 {
+  overflow: hidden;
+  padding-left: 13px;
+  font-size: 15px;
+}
+.guarntee-review {
+  padding-bottom: 5px;
+}
+.guarntee-review .frntre-image {
+  float: left;
+  display: flex;
+  width: 52px;
+  height: 93px;
+  padding: 5px;
+  margin: 0 5px 5px 0;
+  border: 1px solid #cfcfcf;
+  align-items: center;
+  border-radius: 4px;
+}
+.guarntee-review .frntre-image img {
+  max-height: 100%;
+}
+.product-overview {
+  padding: 30px 0 25px;
+}
+.product-overview img {
+  float: left;
+  max-width: 350px;
+  margin: 0 20px 10px 0;
+}
+.product-overview ul li + li {
+  padding-top: 8px;
+}
+.product-overview .border-title {
+  margin-bottom: 15px;
+}
+.product-overview .mCSB_scrollTools {
+  right: 15px;
+}
+.frntre-scroll {
+  height: 100%;
+  overflow-y: auto;
+}
+.frntre-scroll p:last-child {
+  padding-bottom: 0;
+}
+/* 15. Frntre Related Products CSS */
+.frntre-related-products {
+  padding: 50px 0;
+  border-top: 1px solid #ebebeb;
+}
+.frntre-related-products .border-title {
+  text-align: center;
+  border-bottom: none;
+}
+.related-products .slick-track {
+  display: table;
+}
+.related-products .slick-slide {
+  float: none;
+  display: table-cell;
+  vertical-align: top;
+  padding: 0 7.5px;
+}
+.related-products .product-list {
+  display: table;
+  width: 100%;
+}
+.related-products .product-list:before {
+  border: 1px solid #cfcfcf;
+  opacity: 1;
+}
+.related-products .product-list:hover:before {
+  border-color: #000000;
+}
+.related-products .product-wrap {
+  padding: 13px;
+}
+/* 16. Frntre My Account Page CSS */
+.frntre-account-wrap .whitebox {
+  margin-bottom: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+.frntre-account-wrap .border-title {
+  margin-bottom: 10px;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+.frntre-account-wrap .border-title a {
+  margin-top: 1px;
+  text-transform: none;
+}
+.frntre-columns-row {
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -10px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.frntre-primary {
+  max-width: 21%;
+  padding: 0 10px;
+  -ms-flex: 0 0 21%;
+  flex: 0 0 21%;
+}
+.frntre-primary .checkout-step:last-child {
+  padding-bottom: 0;
+}
+.frntre-secondary {
+  max-width: 79%;
+  padding: 0 10px;
+  -ms-flex: 0 0 79%;
+  flex: 0 0 79%;
+}
+.filters-toggle {
+  display: none;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  background: #000000;
+  color: #ffffff;
+  font-size: 15px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+.filters-toggle:hover, .filters-toggle:focus {
+  background: #ffffff;
+}
+.filters-toggle:hover .frntre-icon, .filters-toggle:focus .frntre-icon {
+  fill: #000000;
+}
+.filters-toggle .frntre-icon {
+  float: right;
+  width: 15px;
+  height: 17px;
+  margin-top: 2px;
+  fill: #ffffff;
+  transition: all ease .4s;
+}
+.filters-toggle.active .frntre-icon {
+  transform: rotate(-25deg);
+}
+.whitebox-title {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #000000;
+  position: relative;
+}
+.whitebox-title:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  height: 5px;
+  background: #000000;
+  content: "";
+  z-index: 1;
+}
+.dashboard-menus {
+  padding-left: 0;
+  margin-bottom: 0;
+  font-size: 15px;
+  list-style: none;
+}
+.dashboard-menus li:first-child a {
+  padding-top: 0;
+}
+.dashboard-menus li:last-child a {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.dashboard-menus li a {
+  display: block;
+  padding: 10px 0;
+  color: #7c7c7c;
+  border-bottom: 1px dashed #cfcfcf;
+}
+.dashboard-menus li a.active, .dashboard-menus li a:hover {
+  color: #000000;
+}
+.page-title {
+  padding-bottom: 10px;
+  font-size: 26px;
+}
+.page-title-text {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 10px;
+}
+.page-subtitle {
+  padding-bottom: 20px;
+}
+.account-info-wrap {
+  padding: 8px 0;
+}
+.account-info-wrap p {
+  padding-bottom: 1px;
+}
+.account-info-wrap h6 {
+  padding-bottom: 5px;
+  font-size: 16px;
+}
+/* 17. Frntre Confirmation Page CSS */
+.frntre-success-wrap {
+  max-width: 50%;
+  padding: 10% 0;
+  margin: 0 auto;
+  text-align: center;
+}
+.frntre-success-wrap p {
+  font-size: 20px;
+  line-height: 28px;
+}
+.frntre-success-wrap p a {
+  color: #000000;
+}
+.frntre-success-wrap h1 {
+  font-size: 60px;
+}
+.frntre-success-wrap .frntre-icon {
+  padding-bottom: 20px;
+  width: 90px;
+  height: 110px;
+}
+.frntre-success-wrap .btn {
+  margin-top: 20px;
+}
+/* 18. Frntre Order Page CSS */
+.page-title .product-status {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 5px 10px;
+  background: #ffffff;
+  font-weight: 500;
+  font-size: 14px;
+  border: 2px solid #cfcfcf;
+  border-radius: 3px;
+}
+.table-orders .product-title {
+  display: block;
+  padding-bottom: 5px;
+  font-weight: 500;
+  font-size: 18px;
+}
+/* 19. Frntre Cart Page CSS */
+.frntre-account-wrap.process-wrap .whitebox {
+  border: none;
+  position: relative;
+  box-shadow: none;
+  border-radius: 5px;
+}
+.process-wrap .frntre-primary {
+  max-width: 30%;
+  -ms-flex: 0 0 30%;
+  flex: 0 0 30%;
+}
+.process-wrap .frntre-secondary {
+  max-width: 70%;
+  -ms-flex: 0 0 70%;
+  flex: 0 0 70%;
+}
+.process-wrap .whitebox-wrap {
+  padding: 15px;
+}
+.process-wrap .total-amount-wrap .whitebox-wrap {
+  padding: 10px 20px;
+}
+.process-wrap .badge {
+  border-radius: 5px 0 5px 0;
+}
+.process-wrap .border-title {
+  margin-bottom: 0;
+  font-size: 15px;
+  text-transform: none;
+  border-bottom: none;
+}
+.process-wrap .list-group-item {
+  padding: 0;
+  background: none;
+  border: none;
+}
+.process-wrap .list-group-item.open:nth-child(2n) {
+  padding-top: 0;
+}
+.process-wrap .list-group-item.open > [data-acc-title] {
+  display: none;
+}
+.process-wrap .list-group-item + .list-group-item {
+  padding-top: 40px;
+}
+.process-wrap [data-acc-content-list] + [data-acc-content-list] {
+  padding-top: 30px;
+}
+.process-wrap .list-group-item.open:not(:nth-child(2n)) .whitebox {
+  border: 2px solid #000000;
+}
+.process-wrap [data-acc-title] {
+  font-size: 16px;
+}
+.process-wrap .acc-step-number:after {
+  content: ".";
+}
+.process-wrap [data-acc-btn-next] {
+  margin-bottom: 10px;
+}
+[data-acc-btn-prev] {
+  float: right;
+  margin-top: 9px;
+}
+[data-acc-btn-prev] .frntre-icon {
+  margin-top: -3px;
+}
+.frntre-back-link {
+  padding-bottom: 5px;
+}
+.frntre-back-link a {
+  text-decoration: underline;
+}
+.cart-item .frntre-image {
+  float: left;
+}
+.cart-item .frntre-image img {
+  max-width: 200px;
+}
+.cart-info {
+  overflow: hidden;
+  padding-left: 20px;
+}
+.cart-info h2 {
+  font-size: 18px;
+}
+.cart-info h3 {
+  padding-bottom: 5px;
+  color: #7c7c7c;
+  font-weight: 400;
+  font-size: 16px;
+}
+.cart-info .product-title, .product-review {
+  padding-bottom: 5px;
+}
+.product-review a {
+  display: inline-block;
+  vertical-align: middle;
+}
+.product-review .rating-wrap {
+  display: inline-block;
+  vertical-align: middle;
+  width: 84px;
+  height: 14px;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23d9d8d8' viewBox='0 0 78 13' width='78' height='13'%3E%3Cpath d='M6.64 10.94L3.7 12.48c-.97.52-1.6.05-1.43-1.04l.56-3.26-2.36-2.3c-.8-.78-.55-1.54.54-1.7L4.3 3.7 5.75.76c.5-1 1.28-1 1.77 0L9 3.7l3.26.48c1.1.16 1.34.92.55 1.7l-2.36 2.3.56 3.26c.2 1.1-.46 1.56-1.44 1.04l-2.92-1.54zm16 0l-2.93 1.54c-.97.52-1.6.05-1.43-1.04l.56-3.26-2.36-2.3c-.8-.78-.55-1.54.54-1.7l3.28-.47L21.75.76c.5-1 1.28-1 1.77 0L25 3.7l3.26.48c1.1.16 1.34.92.55 1.7l-2.36 2.3.56 3.26c.2 1.1-.46 1.56-1.44 1.04l-2.92-1.54zm16 0l-2.93 1.54c-.97.52-1.6.05-1.43-1.04l.56-3.26-2.36-2.3c-.8-.78-.55-1.54.54-1.7l3.28-.47L37.75.76c.5-1 1.28-1 1.77 0L41 3.7l3.26.48c1.1.16 1.34.92.55 1.7l-2.36 2.3.56 3.26c.2 1.1-.46 1.56-1.44 1.04l-2.92-1.54zm16 0l-2.93 1.54c-.97.52-1.6.05-1.43-1.04l.56-3.26-2.36-2.3c-.8-.78-.55-1.54.54-1.7l3.28-.47L53.75.76c.5-1 1.28-1 1.77 0L57 3.7l3.26.48c1.1.16 1.34.92.55 1.7l-2.36 2.3.56 3.26c.2 1.1-.46 1.56-1.44 1.04l-2.92-1.54zm16 0l-2.93 1.54c-.97.52-1.6.05-1.43-1.04l.56-3.26-2.36-2.3c-.8-.78-.55-1.54.54-1.7l3.28-.47L69.75.76c.5-1 1.28-1 1.77 0L73 3.7l3.26.48c1.1.16 1.34.92.55 1.7l-2.36 2.3.56 3.26c.2 1.1-.46 1.56-1.44 1.04l-2.92-1.54z'/%3E%3C/svg%3E");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.product-review .rating-wrap span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f6b71d' viewBox='0 0 78 13' width='78' height='13'%3E%3Cpath d='M6.64 10.94L3.7 12.48c-.97.52-1.6.05-1.43-1.04l.56-3.26-2.36-2.3c-.8-.78-.55-1.54.54-1.7L4.3 3.7 5.75.76c.5-1 1.28-1 1.77 0L9 3.7l3.26.48c1.1.16 1.34.92.55 1.7l-2.36 2.3.56 3.26c.2 1.1-.46 1.56-1.44 1.04l-2.92-1.54zm16 0l-2.93 1.54c-.97.52-1.6.05-1.43-1.04l.56-3.26-2.36-2.3c-.8-.78-.55-1.54.54-1.7l3.28-.47L21.75.76c.5-1 1.28-1 1.77 0L25 3.7l3.26.48c1.1.16 1.34.92.55 1.7l-2.36 2.3.56 3.26c.2 1.1-.46 1.56-1.44 1.04l-2.92-1.54zm16 0l-2.93 1.54c-.97.52-1.6.05-1.43-1.04l.56-3.26-2.36-2.3c-.8-.78-.55-1.54.54-1.7l3.28-.47L37.75.76c.5-1 1.28-1 1.77 0L41 3.7l3.26.48c1.1.16 1.34.92.55 1.7l-2.36 2.3.56 3.26c.2 1.1-.46 1.56-1.44 1.04l-2.92-1.54zm16 0l-2.93 1.54c-.97.52-1.6.05-1.43-1.04l.56-3.26-2.36-2.3c-.8-.78-.55-1.54.54-1.7l3.28-.47L53.75.76c.5-1 1.28-1 1.77 0L57 3.7l3.26.48c1.1.16 1.34.92.55 1.7l-2.36 2.3.56 3.26c.2 1.1-.46 1.56-1.44 1.04l-2.92-1.54zm16 0l-2.93 1.54c-.97.52-1.6.05-1.43-1.04l.56-3.26-2.36-2.3c-.8-.78-.55-1.54.54-1.7l3.28-.47L69.75.76c.5-1 1.28-1 1.77 0L73 3.7l3.26.48c1.1.16 1.34.92.55 1.7l-2.36 2.3.56 3.26c.2 1.1-.46 1.56-1.44 1.04l-2.92-1.54z'/%3E%3C/svg%3E");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+.rating-number {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 5px;
+}
+.cart-right {
+  text-align: right;
+}
+.cart-right .product-price {
+  padding-bottom: 15px;
+  color: #c4113f;
+  font-size: 28px;
+}
+.cart-right .product-price span {
+  display: block;
+  font-size: 65%;
+}
+.cart-right .quantity-selector {
+  float: right;
+  width: 130px;
+  margin-right: 0;
+}
+.cart-actions {
+  padding-top: 15px;
+}
+.cart-actions a {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px 0 0 15px;
+  font-size: 15px;
+  text-decoration: underline;
+}
+.cart-actions a:first-child {
+  margin-left: 0;
+}
+.cart-actions a:hover {
+  text-decoration: none;
+}
+.qualifies-order {
+  display: table;
+  width: 100%;
+}
+.qualifies-order .frntre-icon {
+  width: 35px;
+  height: 35px;
+}
+.qualifies-order .icon-wrap {
+  display: table-cell;
+  vertical-align: middle;
+}
+.qualifies-order span {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  padding-left: 10px;
+}
+.total-amount-wrap dl {
+  margin: 0;
+}
+.total-amount-wrap dt {
+  padding: 7px 0;
+  color: #7c7c7c;
+  font-weight: 400;
+}
+.total-amount-wrap dd {
+  padding: 7px 0;
+  margin-bottom: 0;
+  text-align: right;
+}
+.total-amount-wrap dd.total {
+  font-weight: 500;
+  font-size: 24px;
+}
+.total-amount-wrap .total {
+  padding-top: 14px;
+  margin-top: 7px;
+  border-top: 1px solid #ebebeb;
+}
+.total-amount-wrap .frntre-icon {
+  width: 26px;
+  height: 26px;
+}
+.total-amount-wrap .btn-lg {
+  margin: 10px 0;
+}
+.zip-update {
+  display: none;
+  margin: 8px 0 0;
+}
+.zip-toggle.active .frntre-icon {
+  transform: rotate(180deg);
+}
+.zip-update .form-control {
+  height: 46px;
+  padding-right: 90px;
+}
+.zip-update .btn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding: 5px 15px;
+  font-size: 14px;
+  border-radius: 0 .25rem .25rem 0;
+  z-index: 1;
+}
+.add-card {
+  padding-bottom: 10px;
+}
+.add-card .zip-update {
+  margin-top: 0;
+}
+.add-card .zip-update .form-control {
+  height: 48px;
+}
+.add-card .zip-toggle {
+  text-decoration: underline;
+}
+.add-card .zip-toggle:hover {
+  text-decoration: none;
+}
+.add-card .zip-toggle.active {
+  display: none;
+}
+.frntre-features {
+  padding-top: 5px;
+}
+.feature-item {
+  display: table;
+  width: 100%;
+  padding-bottom: 12px;
+}
+.feature-item .frntre-icon {
+  margin-top: -5px;
+}
+.feature-item .icon-wrap {
+  display: table-cell;
+  vertical-align: top;
+  width: 30px;
+}
+.feature-info {
+  display: table-cell;
+  vertical-align: top;
+  padding-left: 15px;
+}
+.feature-info p {
+  padding-bottom: 0;
+}
+.feature-info h2 {
+  padding-bottom: 5px;
+  font-size: 15px;
+}
+/* 20. Frntre Checkout Page CSS */
+.checkout-step {
+  padding-bottom: 50px;
+}
+.checkout-step.active .whitebox {
+  border: 2px solid #000000;
+}
+.checkout-step form .row {
+  margin: 0 -6px;
+}
+.checkout-step form [class*="col-"] {
+  padding: 0 6px;
+}
+.checkout-step .account-info-wrap {
+  padding: 0;
+}
+.checkout-step .account-info-wrap p {
+  color: inherit;
+  font-size: 16px;
+}
+.checkout-step-title {
+  font-size: 16px;
+}
+.checkout-step-title a {
+  float: right;
+  font-weight: 400;
+  text-decoration: underline;
+}
+.checkout-step-title a:hover {
+  text-decoration: none;
+}
+.payment-method:last-child {
+  margin-bottom: 5px;
+}
+.payment-method img {
+  padding: 5px;
+  border: 1px solid #ebebeb;
+  border-radius: 5px;
+}
+.payment-method .custom-control {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.payment-method .custom-control .row {
+  margin: 0 -5px;
+}
+.payment-method .custom-control [class*="col-"] {
+  padding: 0 5px;
+}
+.payment-method .custom-control-label {
+  display: block;
+  padding: 15px 15px 15px 50px;
+  margin: 0 0 15px;
+  background: #ffffff;
+  font-size: 16px;
+  line-height: 1.3;
+  border-radius: 5px;
+}
+.payment-method .custom-control-label:before, .payment-method .custom-control-label:after {
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+/* 21. Frntre Contact Us Page CSS */
+.contact-wrap {
+  padding: 25px;
+}
+.contact-wrap .row {
+  margin: 0 -10px;
+}
+.contact-wrap [class*="col-"] {
+  padding: 0 10px;
+}
+.contact-right iframe {
+  margin-bottom: 5px;
+}
+.contact-link {
+  display: table;
+  width: 100%;
+  padding-top: 20px;
+}
+.contact-link a {
+  text-decoration: underline;
+}
+.contact-link span {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  padding-left: 5px;
+}
+.contact-link .icon-wrap {
+  display: table-cell;
+  vertical-align: middle;
+  min-width: 30px;
+  text-align: center;
+}
+.contact-link .map {
+  width: 18px;
+  height: 22px;
+  fill: none;
+  stroke: #000000;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+.contact-link .email {
+  width: 20px;
+  height: 14.7px;
+}
+/* 22. Frntre Terms Page CSS */
+.frntre-content h1, .frntre-content h2, .frntre-content h3, .frntre-content h4, .frntre-content h5, .frntre-content h6 {
+  padding-top: 5px;
+}
+.frntre-content h1:first-child, .frntre-content h2:first-child, .frntre-content h3:first-child, .frntre-content h4:first-child, .frntre-content h5:first-child, .frntre-content h6:first-child {
+  padding-top: 0;
+}
