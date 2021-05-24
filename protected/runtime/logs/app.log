@@ -5156,3 +5156,338 @@ $_SERVER = [
     'REQUEST_TIME' => 1621859032
     'SERVER_ADDR' => false
 ]
+2021-05-24 18:01:56 [::1][1][ds1idtr7mjlv7devk3n2r2krkj][error][Error] Error: Class 'alexantr\elfinder\ConnectorAction' not found in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\modules\file\controllers\FileController.php:96
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(249): app\modules\file\controllers\FileController->actions()
+#1 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(150): yii\base\Controller->createAction('thumbnail')
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('thumbnail', Array)
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('file/file/thumb...', Array)
+#4 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#5 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#6 {main}
+2021-05-24 18:01:56 [::1][1][ds1idtr7mjlv7devk3n2r2krkj][info][application] $_GET = [
+    'filename' => 'user-1621855745-profile_file-user_id_1.png'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.1194071790.1620716211'
+    '__tawkuuid' => 'e::localhost::A/hE5h eZbd9jUyOW yyi45QILVkVh PlhAROdVYkFZwQK4WmOUnZFwKPAEAlNxK::2'
+    'language' => '98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a:2:{i:0;s:8:\"language\";i:1;s:2:\"en\";}'
+    '_session_AineProject' => 'ds1idtr7mjlv7devk3n2r2krkj'
+    '_user_AineProject' => 'a0789ac1505501f0a1f2f08a6acd58b0a8253e678a3f6ba3e00851015c0b9f38a:2:{i:0;s:17:\"_user_AineProject\";i:1;s:57:\"[1,\"0zlTzo2DqYFqb0-eckjLnQjt5CaRnRgx_1621596199\",2592000]\";}'
+    '_csrf_AineProject' => '187f4071cdad606767a3baf4152d731d8d1b7db50c2b8682249a24c98193ae80a:2:{i:0;s:17:\"_csrf_AineProject\";i:1;s:32:\"PD6q7t3eBCVNIp4xkmMybymOYDbFrGTY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost:8080/site/listing'
+    '__id' => 1
+    '__key' => '0zlTzo2DqYFqb0-eckjLnQjt5CaRnRgx_1621596199'
+    '__expire' => 1621945916
+    'ADMIN_MODE' => false
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '56493'
+    'SERVER_SOFTWARE' => 'PHP 7.3.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/file/file/thumbnail?filename=user-1621855745-profile_file-user_id_1.png'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website\\index.php'
+    'PATH_INFO' => '/file/file/thumbnail'
+    'PHP_SELF' => '/index.php/file/file/thumbnail'
+    'QUERY_STRING' => 'filename=user-1621855745-profile_file-user_id_1.png'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'image'
+    'HTTP_REFERER' => 'http://localhost:8080/order'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_ga=GA1.1.1194071790.1620716211; __tawkuuid=e::localhost::A/hE5h+eZbd9jUyOW+yyi45QILVkVh+PlhAROdVYkFZwQK4WmOUnZFwKPAEAlNxK::2; language=98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _session_AineProject=ds1idtr7mjlv7devk3n2r2krkj; _user_AineProject=a0789ac1505501f0a1f2f08a6acd58b0a8253e678a3f6ba3e00851015c0b9f38a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_user_AineProject%22%3Bi%3A1%3Bs%3A57%3A%22%5B1%2C%220zlTzo2DqYFqb0-eckjLnQjt5CaRnRgx_1621596199%22%2C2592000%5D%22%3B%7D; _csrf_AineProject=187f4071cdad606767a3baf4152d731d8d1b7db50c2b8682249a24c98193ae80a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_csrf_AineProject%22%3Bi%3A1%3Bs%3A32%3A%22PD6q7t3eBCVNIp4xkmMybymOYDbFrGTY%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1621859516.0118
+    'REQUEST_TIME' => 1621859516
+    'SERVER_ADDR' => false
+]
+2021-05-24 18:01:58 [::1][1][ds1idtr7mjlv7devk3n2r2krkj][error][Error] Error: Class 'alexantr\elfinder\ConnectorAction' not found in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\modules\file\controllers\FileController.php:96
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(249): app\modules\file\controllers\FileController->actions()
+#1 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(150): yii\base\Controller->createAction('thumbnail')
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('thumbnail', Array)
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('file/file/thumb...', Array)
+#4 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#5 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#6 {main}
+2021-05-24 18:01:58 [::1][1][ds1idtr7mjlv7devk3n2r2krkj][info][application] $_GET = [
+    'filename' => 'user-1621855745-profile_file-user_id_1.png'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.1194071790.1620716211'
+    '__tawkuuid' => 'e::localhost::A/hE5h eZbd9jUyOW yyi45QILVkVh PlhAROdVYkFZwQK4WmOUnZFwKPAEAlNxK::2'
+    'language' => '98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a:2:{i:0;s:8:\"language\";i:1;s:2:\"en\";}'
+    '_session_AineProject' => 'ds1idtr7mjlv7devk3n2r2krkj'
+    '_user_AineProject' => 'a0789ac1505501f0a1f2f08a6acd58b0a8253e678a3f6ba3e00851015c0b9f38a:2:{i:0;s:17:\"_user_AineProject\";i:1;s:57:\"[1,\"0zlTzo2DqYFqb0-eckjLnQjt5CaRnRgx_1621596199\",2592000]\";}'
+    '_csrf_AineProject' => '187f4071cdad606767a3baf4152d731d8d1b7db50c2b8682249a24c98193ae80a:2:{i:0;s:17:\"_csrf_AineProject\";i:1;s:32:\"PD6q7t3eBCVNIp4xkmMybymOYDbFrGTY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost:8080/site/listing'
+    '__id' => 1
+    '__key' => '0zlTzo2DqYFqb0-eckjLnQjt5CaRnRgx_1621596199'
+    '__expire' => 1621945918
+    'ADMIN_MODE' => false
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '56539'
+    'SERVER_SOFTWARE' => 'PHP 7.3.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/file/file/thumbnail?filename=user-1621855745-profile_file-user_id_1.png'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website\\index.php'
+    'PATH_INFO' => '/file/file/thumbnail'
+    'PHP_SELF' => '/index.php/file/file/thumbnail'
+    'QUERY_STRING' => 'filename=user-1621855745-profile_file-user_id_1.png'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'image'
+    'HTTP_REFERER' => 'http://localhost:8080/order/view/1/1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_ga=GA1.1.1194071790.1620716211; __tawkuuid=e::localhost::A/hE5h+eZbd9jUyOW+yyi45QILVkVh+PlhAROdVYkFZwQK4WmOUnZFwKPAEAlNxK::2; language=98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _session_AineProject=ds1idtr7mjlv7devk3n2r2krkj; _user_AineProject=a0789ac1505501f0a1f2f08a6acd58b0a8253e678a3f6ba3e00851015c0b9f38a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_user_AineProject%22%3Bi%3A1%3Bs%3A57%3A%22%5B1%2C%220zlTzo2DqYFqb0-eckjLnQjt5CaRnRgx_1621596199%22%2C2592000%5D%22%3B%7D; _csrf_AineProject=187f4071cdad606767a3baf4152d731d8d1b7db50c2b8682249a24c98193ae80a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_csrf_AineProject%22%3Bi%3A1%3Bs%3A32%3A%22PD6q7t3eBCVNIp4xkmMybymOYDbFrGTY%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1621859518.603
+    'REQUEST_TIME' => 1621859518
+    'SERVER_ADDR' => false
+]
+2021-05-24 18:03:32 [::1][1][ds1idtr7mjlv7devk3n2r2krkj][error][Error] Error: Class 'alexantr\elfinder\ConnectorAction' not found in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\modules\file\controllers\FileController.php:96
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(249): app\modules\file\controllers\FileController->actions()
+#1 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(150): yii\base\Controller->createAction('thumbnail')
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('thumbnail', Array)
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('file/file/thumb...', Array)
+#4 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#5 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#6 {main}
+2021-05-24 18:03:32 [::1][1][ds1idtr7mjlv7devk3n2r2krkj][info][application] $_GET = [
+    'filename' => 'user-1621855745-profile_file-user_id_1.png'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.1194071790.1620716211'
+    '__tawkuuid' => 'e::localhost::A/hE5h eZbd9jUyOW yyi45QILVkVh PlhAROdVYkFZwQK4WmOUnZFwKPAEAlNxK::2'
+    'language' => '98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a:2:{i:0;s:8:\"language\";i:1;s:2:\"en\";}'
+    '_session_AineProject' => 'ds1idtr7mjlv7devk3n2r2krkj'
+    '_user_AineProject' => 'a0789ac1505501f0a1f2f08a6acd58b0a8253e678a3f6ba3e00851015c0b9f38a:2:{i:0;s:17:\"_user_AineProject\";i:1;s:57:\"[1,\"0zlTzo2DqYFqb0-eckjLnQjt5CaRnRgx_1621596199\",2592000]\";}'
+    '_csrf_AineProject' => '187f4071cdad606767a3baf4152d731d8d1b7db50c2b8682249a24c98193ae80a:2:{i:0;s:17:\"_csrf_AineProject\";i:1;s:32:\"PD6q7t3eBCVNIp4xkmMybymOYDbFrGTY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost:8080/site/listing'
+    '__id' => 1
+    '__key' => '0zlTzo2DqYFqb0-eckjLnQjt5CaRnRgx_1621596199'
+    '__expire' => 1621946012
+    'ADMIN_MODE' => false
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '56607'
+    'SERVER_SOFTWARE' => 'PHP 7.3.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/file/file/thumbnail?filename=user-1621855745-profile_file-user_id_1.png'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website\\index.php'
+    'PATH_INFO' => '/file/file/thumbnail'
+    'PHP_SELF' => '/index.php/file/file/thumbnail'
+    'QUERY_STRING' => 'filename=user-1621855745-profile_file-user_id_1.png'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'image'
+    'HTTP_REFERER' => 'http://localhost:8080/user'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_ga=GA1.1.1194071790.1620716211; __tawkuuid=e::localhost::A/hE5h+eZbd9jUyOW+yyi45QILVkVh+PlhAROdVYkFZwQK4WmOUnZFwKPAEAlNxK::2; language=98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _session_AineProject=ds1idtr7mjlv7devk3n2r2krkj; _user_AineProject=a0789ac1505501f0a1f2f08a6acd58b0a8253e678a3f6ba3e00851015c0b9f38a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_user_AineProject%22%3Bi%3A1%3Bs%3A57%3A%22%5B1%2C%220zlTzo2DqYFqb0-eckjLnQjt5CaRnRgx_1621596199%22%2C2592000%5D%22%3B%7D; _csrf_AineProject=187f4071cdad606767a3baf4152d731d8d1b7db50c2b8682249a24c98193ae80a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_csrf_AineProject%22%3Bi%3A1%3Bs%3A32%3A%22PD6q7t3eBCVNIp4xkmMybymOYDbFrGTY%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1621859612.2473
+    'REQUEST_TIME' => 1621859612
+    'SERVER_ADDR' => false
+]
+2021-05-24 18:03:34 [::1][1][ds1idtr7mjlv7devk3n2r2krkj][error][Error] Error: Class 'alexantr\elfinder\ConnectorAction' not found in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\modules\file\controllers\FileController.php:96
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(249): app\modules\file\controllers\FileController->actions()
+#1 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(150): yii\base\Controller->createAction('thumbnail')
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('thumbnail', Array)
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('file/file/thumb...', Array)
+#4 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#5 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#6 {main}
+2021-05-24 18:03:34 [::1][1][ds1idtr7mjlv7devk3n2r2krkj][info][application] $_GET = [
+    'filename' => 'user-1621855745-profile_file-user_id_1.png'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.1194071790.1620716211'
+    '__tawkuuid' => 'e::localhost::A/hE5h eZbd9jUyOW yyi45QILVkVh PlhAROdVYkFZwQK4WmOUnZFwKPAEAlNxK::2'
+    'language' => '98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a:2:{i:0;s:8:\"language\";i:1;s:2:\"en\";}'
+    '_session_AineProject' => 'ds1idtr7mjlv7devk3n2r2krkj'
+    '_user_AineProject' => 'a0789ac1505501f0a1f2f08a6acd58b0a8253e678a3f6ba3e00851015c0b9f38a:2:{i:0;s:17:\"_user_AineProject\";i:1;s:57:\"[1,\"0zlTzo2DqYFqb0-eckjLnQjt5CaRnRgx_1621596199\",2592000]\";}'
+    '_csrf_AineProject' => '187f4071cdad606767a3baf4152d731d8d1b7db50c2b8682249a24c98193ae80a:2:{i:0;s:17:\"_csrf_AineProject\";i:1;s:32:\"PD6q7t3eBCVNIp4xkmMybymOYDbFrGTY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost:8080/site/listing'
+    '__id' => 1
+    '__key' => '0zlTzo2DqYFqb0-eckjLnQjt5CaRnRgx_1621596199'
+    '__expire' => 1621946014
+    'ADMIN_MODE' => false
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '56651'
+    'SERVER_SOFTWARE' => 'PHP 7.3.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/file/file/thumbnail?filename=user-1621855745-profile_file-user_id_1.png'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website\\index.php'
+    'PATH_INFO' => '/file/file/thumbnail'
+    'PHP_SELF' => '/index.php/file/file/thumbnail'
+    'QUERY_STRING' => 'filename=user-1621855745-profile_file-user_id_1.png'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'image'
+    'HTTP_REFERER' => 'http://localhost:8080/category'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_ga=GA1.1.1194071790.1620716211; __tawkuuid=e::localhost::A/hE5h+eZbd9jUyOW+yyi45QILVkVh+PlhAROdVYkFZwQK4WmOUnZFwKPAEAlNxK::2; language=98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _session_AineProject=ds1idtr7mjlv7devk3n2r2krkj; _user_AineProject=a0789ac1505501f0a1f2f08a6acd58b0a8253e678a3f6ba3e00851015c0b9f38a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_user_AineProject%22%3Bi%3A1%3Bs%3A57%3A%22%5B1%2C%220zlTzo2DqYFqb0-eckjLnQjt5CaRnRgx_1621596199%22%2C2592000%5D%22%3B%7D; _csrf_AineProject=187f4071cdad606767a3baf4152d731d8d1b7db50c2b8682249a24c98193ae80a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_csrf_AineProject%22%3Bi%3A1%3Bs%3A32%3A%22PD6q7t3eBCVNIp4xkmMybymOYDbFrGTY%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1621859614.5265
+    'REQUEST_TIME' => 1621859614
+    'SERVER_ADDR' => false
+]
+2021-05-24 18:05:54 [::1][1][ds1idtr7mjlv7devk3n2r2krkj][error][Error] Error: Class 'alexantr\elfinder\ConnectorAction' not found in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\modules\file\controllers\FileController.php:96
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(249): app\modules\file\controllers\FileController->actions()
+#1 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(150): yii\base\Controller->createAction('thumbnail')
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('thumbnail', Array)
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('file/file/thumb...', Array)
+#4 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#5 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#6 {main}
+2021-05-24 18:05:53 [::1][1][ds1idtr7mjlv7devk3n2r2krkj][info][application] $_GET = [
+    'filename' => 'user-1621855745-profile_file-user_id_1.png'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.1194071790.1620716211'
+    '__tawkuuid' => 'e::localhost::A/hE5h eZbd9jUyOW yyi45QILVkVh PlhAROdVYkFZwQK4WmOUnZFwKPAEAlNxK::2'
+    'language' => '98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a:2:{i:0;s:8:\"language\";i:1;s:2:\"en\";}'
+    '_session_AineProject' => 'ds1idtr7mjlv7devk3n2r2krkj'
+    '_user_AineProject' => 'a0789ac1505501f0a1f2f08a6acd58b0a8253e678a3f6ba3e00851015c0b9f38a:2:{i:0;s:17:\"_user_AineProject\";i:1;s:57:\"[1,\"0zlTzo2DqYFqb0-eckjLnQjt5CaRnRgx_1621596199\",2592000]\";}'
+    '_csrf_AineProject' => '187f4071cdad606767a3baf4152d731d8d1b7db50c2b8682249a24c98193ae80a:2:{i:0;s:17:\"_csrf_AineProject\";i:1;s:32:\"PD6q7t3eBCVNIp4xkmMybymOYDbFrGTY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost:8080/site/listing'
+    '__id' => 1
+    '__key' => '0zlTzo2DqYFqb0-eckjLnQjt5CaRnRgx_1621596199'
+    '__expire' => 1621946154
+    'ADMIN_MODE' => false
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '56852'
+    'SERVER_SOFTWARE' => 'PHP 7.3.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/file/file/thumbnail?filename=user-1621855745-profile_file-user_id_1.png'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website\\index.php'
+    'PATH_INFO' => '/file/file/thumbnail'
+    'PHP_SELF' => '/index.php/file/file/thumbnail'
+    'QUERY_STRING' => 'filename=user-1621855745-profile_file-user_id_1.png'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'image'
+    'HTTP_REFERER' => 'http://localhost:8080/category'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_ga=GA1.1.1194071790.1620716211; __tawkuuid=e::localhost::A/hE5h+eZbd9jUyOW+yyi45QILVkVh+PlhAROdVYkFZwQK4WmOUnZFwKPAEAlNxK::2; language=98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _session_AineProject=ds1idtr7mjlv7devk3n2r2krkj; _user_AineProject=a0789ac1505501f0a1f2f08a6acd58b0a8253e678a3f6ba3e00851015c0b9f38a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_user_AineProject%22%3Bi%3A1%3Bs%3A57%3A%22%5B1%2C%220zlTzo2DqYFqb0-eckjLnQjt5CaRnRgx_1621596199%22%2C2592000%5D%22%3B%7D; _csrf_AineProject=187f4071cdad606767a3baf4152d731d8d1b7db50c2b8682249a24c98193ae80a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_csrf_AineProject%22%3Bi%3A1%3Bs%3A32%3A%22PD6q7t3eBCVNIp4xkmMybymOYDbFrGTY%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1621859753.2374
+    'REQUEST_TIME' => 1621859753
+    'SERVER_ADDR' => false
+]
