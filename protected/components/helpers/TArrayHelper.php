@@ -7,7 +7,7 @@ use yii\helpers\ArrayHelper;
 /**
  * Setup Commands for first time
  *
- * @author shiv
+ * @author satyendra
  *        
  */
 class TArrayHelper extends ArrayHelper

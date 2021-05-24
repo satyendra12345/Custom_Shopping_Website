@@ -1,9 +1,6 @@
 <?php
 
-/**
- *@copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
- *@author	 : Shiv Charan Panjeta < shiv@toxsl.com >
- */
+
 namespace app\modules\page\models\search;
 
 use app\modules\page\models\Page as PageModel;

@@ -5,12 +5,6 @@ use app\modules\backup\helpers\MysqlBackup;
 use Yii;
 use app\components\TConsoleController;
 
-/**
- * Backup commands
- *
- * @copyright : ToXSL Technologies Pvt. Ltd < https://toxsl.com >
- * @author : Shiv Charan Panjeta < shiv@toxsl.com >
- */
 class ModuleController extends TConsoleController
 {
 

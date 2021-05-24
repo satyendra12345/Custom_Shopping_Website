@@ -1,8 +1,5 @@
 <?php
-/**
- *@copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
- *@author	 : Shiv Charan Panjeta < shiv@toxsl.com >
- */
+
 use app\components\TActiveForm;
 use app\modules\blog\models\Category;
 use yii\helpers\ArrayHelper;

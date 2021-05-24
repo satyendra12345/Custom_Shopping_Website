@@ -1,8 +1,4 @@
 <?php
-/**
- *@copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
- *@author	 : Shiv Charan Panjeta < shiv@toxsl.com >
- */
 
 /* @var $this yii\web\View */
 

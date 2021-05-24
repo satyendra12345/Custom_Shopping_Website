@@ -1,9 +1,6 @@
 <?php
 
-/**
- * Company: ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
- * Author : Shiv Charan Panjeta < shiv@toxsl.com >
- */
+
 
 /**
  * This is the model class for table "tbl_user".
@@ -45,6 +42,7 @@ use Yii;
 use yii\web\NotFoundHttpException;
 use app\modules\file\behaviors\HasFilesBehavior;
 use app\modules\page\models\Page;
+use yii\helpers\Html;
 
 class User extends \app\components\TActiveRecord implements \yii\web\IdentityInterface
 {
@@ -935,6 +933,33 @@ class User extends \app\components\TActiveRecord implements \yii\web\IdentityInt
             throw new NotFoundHttpException(Yii::t('app', "File not found"));
 
         return \yii::$app->response->sendFile($image_path, $user->profile_file);
+    }
+
+    public function displayImage($file, $options = [], $defaultImg = 'default.png', $isThumb = false)
+    {
+        $opt = [
+            'class' => 'img-fluid',
+            'id' => 'profile_file'
+        ];
+
+        $arr = array_merge($opt, $options);
+        if ($isThumb) {
+            $url = [
+                '/file/file/thumbnail',
+                'filename' => $file
+            ];
+        } else {
+            $url = [
+                '/file/file/files',
+                'file' => $file
+            ];
+        }
+
+        if (! empty($file) && file_exists(UPLOAD_PATH . '/' . $file)) {
+            return Html::img($url, $arr);
+        } else {
+            return Html::img(\Yii::$app->view->theme->getUrl('/img/') . $defaultImg, $arr);
+        }
     }
 
     public static function getUserById($id)

@@ -1,9 +1,5 @@
 <?php
-/**
- *
- * @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
- * @author : Shiv Charan Panjeta < shiv@toxsl.com >
- */
+
 use app\modules\page\models\Page;
 use bizley\contenttools\ContentTools;
 use yii\helpers\Url;

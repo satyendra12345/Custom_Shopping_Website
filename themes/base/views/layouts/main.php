@@ -8,6 +8,7 @@ use yii\helpers\StringHelper;
 use yii\helpers\Url;
 use yii\widgets\Breadcrumbs;
 use yii\widgets\Menu;
+use yii\db\ActiveRecord;
 
 $user = Yii::$app->user->identity;
 
@@ -102,7 +103,8 @@ $this->beginPage() ?>
 					<ul class="navbar-nav my-lg-0">
 
 						<li class="nav-item dropdown"><a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<?= $user->displayImage($user->profile_file, ['class' => 'profile-pic'], 'default.png', true); ?>
+								<?php  $user->displayImage($user->profile_file, ['class' => 'profile-pic'], 'default.png', true); ?>
+								
 							</a>
 							<div class="dropdown-menu dropdown-menu-right animated flipInY">
 								<ul class="dropdown-user">

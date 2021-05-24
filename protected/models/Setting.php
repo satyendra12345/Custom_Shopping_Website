@@ -56,32 +56,32 @@ class Setting extends \app\components\TActiveRecord
                 'value' => [
                     'companyUrl' => [
                         'type' => self::KEY_TYPE_STRING,
-                        'value' => 'https://www.toxsl.com',
+                        'value' => '#',
                         'required' => true
                     ],
                     'company' => [
                         'type' => self::KEY_TYPE_STRING,
-                        'value' => 'ToXSL Technologies',
+                        'value' => 'TechLoafer Pvt Ltd',
                         'required' => true
                     ],
                     'companyEmail' => [
                         'type' => self::KEY_TYPE_STRING,
-                        'value' => 'admin@toxsl.in',
+                        'value' => 'pandeysatyendra870@gmail.com',
                         'required' => true
                     ],
                     'companyContactEmail' => [
                         'type' => self::KEY_TYPE_STRING,
-                        'value' => 'admin@toxsl.in',
+                        'value' => 'pandeysatyendra870@gmail.com',
                         'required' => false
                     ],
                     'companyContactNo' => [
                         'type' => self::KEY_TYPE_STRING,
-                        'value' => '9569127788',
+                        'value' => '9335988610',
                         'required' => false
                     ],
                     'companyAddress' => [
                         'type' => self::KEY_TYPE_STRING,
-                        'value' => 'C-127, 2nd floor, Phase 8, Industrial Area, Sector 72, Mohali, Punjab',
+                        'value' => 'Virtual',
                         'required' => false
                     ],
                     'loginCount' => [

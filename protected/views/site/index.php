@@ -1,5 +1,6 @@
 <?php
 
+use app\components\TActiveForm;
 use app\models\Category as ModelsCategory;
 use app\modules\blog\models\search\Category;
 use yii\helpers\Url;
@@ -37,7 +38,7 @@ $categoryModel = ModelsCategory::find()->where(['state_id' => Category::STATE_AC
 		<div class="row">
 			<?php foreach ($categoryModel as $category) { ?>
 				<div class="col-lg-2 col-md-4 col-6">
-					<a href="#0" class="product-item">
+					<a href="<?=Url::toRoute(['site/listing','category_id'=>$category->id,'menu_id'=>$category->id]) ?>" class="product-item">
 						<div class="frntre-image"><img src="<?= $this->theme->getUrl('assets_html/images/product1.png') ?>" alt="Furniture"></div>
 						<div class="product-name"><?= $category->title ?></div>
 					</a>
@@ -199,7 +200,7 @@ $categoryModel = ModelsCategory::find()->where(['state_id' => Category::STATE_AC
 					</div>
 				</div>
 				<div class="text-center pt-1">
-					<p>*Free shipping is only available in the contiguous U.S. Some exclusions apply, including flooring, large fixtures, and non-standard items. Wayfair reserves the right to change this offer at any time. Read more on <a href="#0">shipping policy</a> or <a href="#0">return policy</a>.</p>
+					<p>*0Free shipping is only available in the contiguous U.S. Some exclusions apply, including flooring, large fixtures, and non-standard items. Wayfair reserves the right to change this offer at any time. Read more on <a href="#0">shipping policy</a> or <a href="#0">return policy</a>.</p>
 				</div>
 			</div>
 		</div>
@@ -222,12 +223,14 @@ $categoryModel = ModelsCategory::find()->where(['state_id' => Category::STATE_AC
 				</ul>
 				<div class="tab-content">
 					<div class="tab-pane active" id="Login">
+			
 						<div class="form-group">
 							<div class="control-icon">
 								<svg viewBox="0 0 514 514" class="frntre-icon">
 									<path d="M438.02 331.98C410.14 304.1 376.95 283.46 340.74 270.96C379.52 244.25 405 199.55 405 149C405 67.39 338.61 1 257 1C175.39 1 109 67.39 109 149C109 199.55 134.48 244.25 173.26 270.96C137.05 283.46 103.86 304.1 75.98 331.98C27.63 380.33 1 444.62 1 513L41 513C41 393.9 137.9 297 257 297C376.1 297 473 393.9 473 513L513 513C513 444.62 486.37 380.33 438.02 331.98ZM257 257C197.45 257 149 208.55 149 149C149 89.45 197.45 41 257 41C316.55 41 365 89.45 365 149C365 208.55 316.55 257 257 257Z" />
 								</svg>
 							</div>
+
 							<input type="text" name="UsernameEmail" placeholder="Username / Email" class="form-control" id="UsernameEmail">
 						</div>
 						<div class="form-group">

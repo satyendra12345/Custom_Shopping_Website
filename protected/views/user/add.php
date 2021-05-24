@@ -1,11 +1,7 @@
 <?php
 use yii\helpers\Inflector;
 
-/**
- *
- * @copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
- * @author : Shiv Charan Panjeta < shiv@toxsl.com >
- */
+
 
 /* @var $this yii\web\View */
 /* @var $model app\models\User */

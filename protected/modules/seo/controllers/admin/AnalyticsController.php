@@ -1,8 +1,5 @@
 <?php
-/**
- *@copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
- *@author	 : Shiv Charan Panjeta < shiv@toxsl.com >
- */
+
 namespace app\modules\seo\controllers\admin;
 
 use app\models\User;
@@ -209,4 +206,5 @@ class AnalyticsController extends BaseAnalytics
                 }
         }
     }
-}
+}
+

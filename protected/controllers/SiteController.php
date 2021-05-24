@@ -1,9 +1,5 @@
 <?php
 
-/**
- *@copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
- *@author	 : Shiv Charan Panjeta < shiv@toxsl.com >
- */
 namespace app\controllers;
 
 use app\components\TActiveForm;
@@ -41,7 +37,9 @@ class SiteController extends TController
                             'content-tools-image-upload',
                             'content-tools-image-insert',
                             'content-tools-image-rotate',
-                            'cart'
+                            'cart',
+                            'listing',
+                            'product-view'
                         ],
                         'allow' => true,
                         'roles' => [
@@ -92,8 +90,9 @@ class SiteController extends TController
                 return $this->redirect('dashboard');
             }
         } else {
+            $userModel = new User();
             $this->layout = User::LAYOUT_GUEST_MAIN;
-            return $this->render('index');
+            return $this->render('index',['userModel'=>$userModel]);
         }
     }
 
@@ -102,8 +101,23 @@ class SiteController extends TController
     {
         $this->updateMenuItems();
         $this->layout = User::LAYOUT_GUEST_MAIN;
-       
-            return $this->render('cart');
+        return $this->render('cart');
+        
+    }
+
+    public function actionListing()
+    {
+        $this->updateMenuItems();
+        $this->layout = User::LAYOUT_GUEST_MAIN;
+        return $this->render('listing');
+        
+    }
+
+    public function actionProductView()
+    {
+        $this->updateMenuItems();
+        $this->layout = User::LAYOUT_GUEST_MAIN;
+        return $this->render('product_view');
         
     }
 

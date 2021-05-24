@@ -1,9 +1,5 @@
 <?php
 
-/**
- *@copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
- *@author	 : Shiv Charan Panjeta < shiv@toxsl.com >
- */
 namespace app\controllers;
 
 use app\components\TActiveForm;
@@ -316,4 +312,5 @@ class EmailQueueController extends TController
                 }
         }
     }
-}
+}
+

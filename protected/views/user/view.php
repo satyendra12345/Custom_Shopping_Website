@@ -1,8 +1,5 @@
 <?php
-/**
- *@copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
- *@author	 : Shiv Charan Panjeta < shiv@toxsl.com >
- */
+
 use app\components\PageHeader;
 use app\components\TDetailView;
 use app\components\useraction\UserAction;

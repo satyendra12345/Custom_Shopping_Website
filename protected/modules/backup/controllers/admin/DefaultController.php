@@ -1,8 +1,5 @@
 <?php
-/**
- *@copyright   : ToXSL Technologies Pvt. Ltd < https://toxsl.com >
- *@author      : Shiv Charan Panjeta  < shiv@toxsl.com >
- */
+
 namespace app\modules\backup\controllers\admin;
 
 use app\models\User;

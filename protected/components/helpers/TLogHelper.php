@@ -6,7 +6,7 @@ namespace app\components\helpers;
 /**
  * Setup Commands for first time
  *
- * @author shiv
+ * @author sattu
  *        
  */
 trait TLogHelper

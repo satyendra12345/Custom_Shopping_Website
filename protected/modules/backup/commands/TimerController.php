@@ -4,12 +4,6 @@ namespace app\modules\backup\commands;
 use app\modules\backup\helpers\MysqlBackup;
 use app\components\TConsoleController;
 
-/**
- * Timer commands
- *
- * @copyright : ToXSL Technologies Pvt. Ltd < https://toxsl.com >
- * @author : Shiv Charan Panjeta < shiv@toxsl.com >
- */
 class TimerController extends TConsoleController
 {
 

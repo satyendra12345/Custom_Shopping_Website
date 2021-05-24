@@ -1,9 +1,5 @@
 <?php
 
-/**
- * Company: ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
- * Author : Shiv Charan Panjeta < shiv@toxsl.com >
- */
 
 /**
  * This is the model class for table "tbl_login_history".

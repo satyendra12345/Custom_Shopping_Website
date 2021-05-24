@@ -1,9 +1,6 @@
 <?php
 
-/**
- *@copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
- *@author	 : Shiv Charan Panjeta < shiv@toxsl.com >
- */
+
 use app\components\TGridView;
 use app\models\User;
 use yii\helpers\Html;
@@ -21,7 +18,8 @@ Pjax::begin();
  */
 
 ?>
-
+
+
 <?php
 if (User::isAdmin())
     echo MassAction::widget([
@@ -32,7 +30,8 @@ if (User::isAdmin())
         'pjax_grid_id' => 'user-pjax-grid'
     ]);
 ?>
-<div class="table table-responsive">
+<div class="table table-responsive">
+
 	 <?php
 Pjax::begin([
     'id' => 'user-pjax-grid'
@@ -50,8 +49,10 @@ echo TGridView::widget([
         ],
         'id',
         'full_name',
-        'email:email',
-            /* 'password',*/
+        'email:email',
+
+            /* 'password',*/
+
            				'contact_no',
         // 'address','city',
         /* 'country', */
@@ -76,14 +77,22 @@ echo TGridView::widget([
             'value' => function ($data) {
                 return $data->getStateBadge();
             }
-        ],
-             /* ['attribute' => 'type_id','filter'=>$searchModel->getTypeOptions(),
-			'value' => function ($data) { return $data->getTypeOptions($data->type_id);  },] */
-            /* 'last_visit_time:datetime',*/
-            /* 'last_action_time:datetime',*/
-            /* 'last_password_change:datetime',*/
-            /* 'activation_key',*/
-            /* 'login_error_count',*/
+        ],
+
+             /* ['attribute' => 'type_id','filter'=>$searchModel->getTypeOptions(),
+
+			'value' => function ($data) { return $data->getTypeOptions($data->type_id);  },] */
+
+            /* 'last_visit_time:datetime',*/
+
+            /* 'last_action_time:datetime',*/
+
+            /* 'last_password_change:datetime',*/
+
+            /* 'activation_key',*/
+
+            /* 'login_error_count',*/
+
             /* 'create_user_id',*/
         [
             'attribute' => 'created_on',
@@ -112,8 +121,10 @@ echo TGridView::widget([
     ]
 ]);
 
-?>
+?>
+
 <?php
 
-Pjax::end()?>
+Pjax::end()?>
+
 </div>

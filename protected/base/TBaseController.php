@@ -13,7 +13,7 @@ class TBaseController extends Controller
 
     public $menu = [];
 
-    public $_author = '@toxsl';
+    public $_author = '@sattu';
 
     public $top_menu = [];
 
@@ -82,6 +82,9 @@ class TBaseController extends Controller
             self::addMenu(Yii::t('app', 'User'), '//user', 'user', (User::isAdmin())),
             self::addMenu(Yii::t('app', 'Category'), '//category', 'list', (User::isAdmin())),
             self::addMenu(Yii::t('app', 'Products'), '//product', 'tag', (User::isAdmin())),
+            self::addMenu(Yii::t('app', 'Orders'), '//order', 'tag', (User::isAdmin())),
+
+            self::addMenu(Yii::t('app', 'Menu Navigation bar'), '//menu', 'tag', (User::isAdmin())),
 
 
             // 'Manage' => self::addMenu(Yii::t('app', 'Manage'), '#', 'tasks', User::isAdmin(), [
@@ -93,7 +96,7 @@ class TBaseController extends Controller
             // ])
         ];
 
-        $this->nav_left = array_merge($this->nav_left, $this->renderModuleNev());
+        // $this->nav_left = array_merge($this->nav_left, $this->renderModuleNev());
         return $this->nav_left;
     }
 

@@ -22,7 +22,7 @@ class AcceptanceCest
             $I->seeElement('#form-add-admin');
             $I->amGoingTo('submit sign up form for admin user');
             $this->name = 'admin';
-            $this->email = 'admin@toxsl.in';
+            $this->email = 'pandeysatyendra870@gmail.com';
             $this->password = 'admin@123';
             Helper::$email = $this->email;
             Helper::$password = $this->password;
@@ -61,7 +61,7 @@ class AcceptanceCest
         $I->amOnPage('/user/login');
         $I->seeElement('#login-form');
         $I->amGoingTo('submit login form with right credentials');
-        $this->email = 'admin@toxsl.in';
+        $this->email = 'pandeysatyendra870@gmail.com';
         $this->password = 'admin@123';
         \Helper::$email = $this->email;
         \Helper::$password = $this->password;

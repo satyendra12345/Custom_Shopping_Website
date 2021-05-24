@@ -4,14 +4,7 @@ namespace app\modules\backup\models;
 use Yii;
 use yii\base\Model;
 
-/**
- * Backup
- *
- * Yii module to backup, restore databse
- *
- * @version 1.0
- * @author Shiv Charan Panjeta <shiv@toxsl.com> <shivcharan.panjeta@outlook.com>
- */
+
 /**
  * UploadForm class.
  * UploadForm is the data structure for keeping

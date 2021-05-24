@@ -1,9 +1,6 @@
 <?php
 
-/**
- *@copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
- *@author	 : Shiv Charan Panjeta < shiv@toxsl.com >
- */
+
 namespace app\controllers;
 
 use app\components\TActiveForm;
@@ -322,6 +319,9 @@ class UserController extends TController
         $model->scenario = User::SCENARIO_UPDATE;
         $post = \yii::$app->request->post();
         $old_image = $model->profile_file;
+    
+       
+
         $password = $model->password;
 
         if (Yii::$app->request->isAjax && $model->load($post)) {

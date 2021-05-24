@@ -1,0 +1,98 @@
+.drop {
+	width: 100%;
+	border: 2px dashed #DADFE3;
+	overflow: hidden;
+	text-align: center;
+	background: white;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+	margin: auto;
+	position: relative;
+	height: 168px;
+	min-height: 168px;
+	overflow-y: auto;
+}
+
+.drop .cont {
+	width: 100%;
+	color: #8E99A5;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.drop .cont .desc {
+	color: #A4AEBB;
+}
+
+.drop input {
+	width: 100%;.file-detail h4 {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+	height: 100%;
+	cursor: pointer;
+	background: red;
+	opacity: 0;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+#list {
+	width: 100%;
+	text-align: left;
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 0 10px 10px 10px;
+}
+
+#list .thumb {
+	height: 75px;
+	border: 1px solid #323a44;
+	margin: 10px 5px 0 0;
+}
+
+.icon-images {
+	height: 213px;
+	background: #fff;
+	margin-bottom: 10px;
+	overflow: hidden;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	padding: 10px;
+}
+.icon-images img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.small-height{
+	height:152px !important;
+}
+.file-grid.position-relative {
+	background: #f0f0f0;
+	border-radius: 5px;
+	padding: 15px;
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+	margin-bottom: 30px;
+}
+.file-grid.position-relative audio {
+    min-height: 55px;
+}
+.file-detail h4 {
+    margin-bottom: 10px;
+    font-weight: 600;
+}

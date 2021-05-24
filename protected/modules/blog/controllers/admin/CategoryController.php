@@ -1,9 +1,6 @@
 <?php
 
-/**
- *@copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
- *@author	 : Shiv Charan Panjeta < shiv@toxsl.com >
- */
+
 namespace app\modules\blog\controllers\admin;
 
 use app\components\TActiveForm;
@@ -348,4 +345,5 @@ class CategoryController extends BaseCategory
                 }
         }
     }
-}
+}
+

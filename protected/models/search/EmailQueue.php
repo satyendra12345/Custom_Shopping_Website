@@ -1,9 +1,6 @@
 <?php
 
-/**
- *@copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
- *@author	 : Shiv Charan Panjeta < shiv@toxsl.com >
- */
+
 namespace app\models\search;
 
 use app\models\EmailQueue as EmailQueueModel;
@@ -121,4 +118,5 @@ class EmailQueue extends EmailQueueModel
         
         return $dataProvider;
     }
-}
+}
+

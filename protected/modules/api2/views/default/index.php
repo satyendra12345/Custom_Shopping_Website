@@ -1,8 +1,5 @@
 <?php
-/**
- *@copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
- *@author	 : Shiv Charan Panjeta < shiv@toxsl.com >
- */
+
 use yii\widgets\ListView;
 use yii\base\Widget;
 use yii\helpers\Url;

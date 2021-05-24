@@ -1,7 +1,9 @@
 <?php
 use app\components\notice\Notices;
 use app\controllers\DashboardController;
+use app\models\Category;
 use app\models\EmailQueue;
+use app\models\Product;
 use app\models\User;
 use app\modules\page\models\Page;
 use miloschuman\highcharts\Highcharts;
@@ -18,13 +20,7 @@ $this->params['breadcrumbs'][] = [
 	if (! $isConfig)
 	{
 		?>
-<div>
-	<div class="alert alert-info">
-		<strong> Info !! </strong> Your app is not configure properly <b><a
-			href="<?=Url::toRoute(['/setting/index'])?>"> Click Here </a></b> To
-		configure..
-	</div>
-</div>
+
 <?php
 	}
 	?>
@@ -44,11 +40,11 @@ $this->params['breadcrumbs'][] = [
 	<!-- Column -->
 	<!-- Column -->
 	<div class="col-md-6 col-lg-3">
-		<a href='<?=Url::toRoute(['//page']);?>'>
+		<a href='<?=Url::toRoute(['//category']);?>'>
 			<div class="card card-primary card-inverse">
 				<div class="box text-center">
-					<h1 class="font-light text-white"><?=Page::find()->count();?></h1>
-					<h6 class="text-white"><?=Yii::t("app", 'Total Pages')?></h6>
+					<h1 class="font-light text-white"><?=Category::find()->count();?></h1>
+					<h6 class="text-white"><?=Yii::t("app", 'Total Category')?></h6>
 				</div>
 			</div>
 		</a>
@@ -56,11 +52,11 @@ $this->params['breadcrumbs'][] = [
 	<!-- Column -->
 	<!-- Column -->
 	<div class="col-md-6 col-lg-3">
-		<a href='<?=Url::toRoute(['email-queue/index']);?>'>
+		<a href='<?=Url::toRoute(['//product']);?>'>
 			<div class="card card-inverse card-success">
 				<div class="box text-center">
-					<h1 class="font-light text-white"><?=EmailQueue::find()->count();?></h1>
-					<h6 class="text-white"><?=Yii::t("app", 'Total Emails')?></h6>
+					<h1 class="font-light text-white"><?=Product::find()->count();?></h1>
+					<h6 class="text-white"><?=Yii::t("app", 'Total Products')?></h6>
 				</div>
 			</div>
 		</a>
@@ -68,11 +64,11 @@ $this->params['breadcrumbs'][] = [
 	<!-- Column -->
 	<!-- Column -->
 	<div class="col-md-6 col-lg-3">
-		<a href='<?=Url::toRoute(['user/index']);?>'>
+		<a href='<?=Url::toRoute(['//order']);?>'>
 			<div class="card card-inverse card-warning">
 				<div class="box text-center">
 					<h1 class="font-light text-white"><?=Log::find()->count();?></h1>
-					<h6 class="text-white"><?=Yii::t("app", 'Total Logs')?></h6>
+					<h6 class="text-white"><?=Yii::t("app", 'Total Order')?></h6>
 				</div>
 			</div>
 		</a>

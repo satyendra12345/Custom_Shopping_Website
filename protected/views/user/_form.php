@@ -1,8 +1,4 @@
     <?php
-				/**
-				 *@copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
-				 *@author	 : Shiv Charan Panjeta < shiv@toxsl.com >
-				 */
 				use app\components\TActiveForm;
 				use yii\helpers\Html;
 				use yii\helpers\Url;

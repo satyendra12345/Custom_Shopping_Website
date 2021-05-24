@@ -7,7 +7,7 @@ use yii\helpers\StringHelper;
 /**
  * Setup Commands for first time
  *
- * @author shiv
+ * @author satyendra
  *        
  */
 class TStringHelper extends StringHelper

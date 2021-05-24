@@ -1,66 +1,120 @@
 <?php
-/**
- *@copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
- *@author	 : Shiv Charan Panjeta < shiv@toxsl.com >
- */
-namespace app\models\search;
-
-use Yii;
-use yii\base\Model;
-use yii\data\ActiveDataProvider;
-use app\models\Feed as FeedModel;
-
-/**
- * Feed represents the model behind the search form about `app\models\Feed`.
- */
-class Feed extends FeedModel
-{
-    /**
-     * @inheritdoc
-     */
-    public function rules()
-    {
-        return [
+
+namespace app\models\search;
+
+
+
+use Yii;
+
+use yii\base\Model;
+
+use yii\data\ActiveDataProvider;
+
+use app\models\Feed as FeedModel;
+
+
+
+/**
+
+ * Feed represents the model behind the search form about `app\models\Feed`.
+
+ */
+
+class Feed extends FeedModel
+
+{
+
+    /**
+
+     * @inheritdoc
+
+     */
+
+    public function rules()
+
+    {
+
+        return [
+
             [['id', 'model_id', 'project_id', 'state_id', 'type_id', 'created_by_id'], 'integer'],
-            [['content', 'model_type', 'created_on', 'updated_on'], 'safe'],
-        ];
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function scenarios()
-    {
-        // bypass scenarios() implementation in the parent class
-        return Model::scenarios();
-    }
-    public function beforeValidate(){
-            return true;
-    }
-    /**
-     * Creates data provider instance with search query applied
-     *
-     * @param array $params
-     *
-     * @return ActiveDataProvider
-     */
-    public function search($params)
-    {
-        $query = FeedModel::find();
-
-		        $dataProvider = new ActiveDataProvider([
-            'query' => $query,
-            'sort' => [
-						'defaultOrder' => [
-								'id' => SORT_DESC
-						]
-				]
-        ]);
-
-        if (!($this->load($params) && $this->validate())) {
-            return $dataProvider;
-        }
-
+            [['content', 'model_type', 'created_on', 'updated_on'], 'safe'],
+
+        ];
+
+    }
+
+
+
+    /**
+
+     * @inheritdoc
+
+     */
+
+    public function scenarios()
+
+    {
+
+        // bypass scenarios() implementation in the parent class
+
+        return Model::scenarios();
+
+    }
+
+    public function beforeValidate(){
+
+            return true;
+
+    }
+
+    /**
+
+     * Creates data provider instance with search query applied
+
+     *
+
+     * @param array $params
+
+     *
+
+     * @return ActiveDataProvider
+
+     */
+
+    public function search($params)
+
+    {
+
+        $query = FeedModel::find();
+
+
+
+		        $dataProvider = new ActiveDataProvider([
+
+            'query' => $query,
+
+            'sort' => [
+
+						'defaultOrder' => [
+
+								'id' => SORT_DESC
+
+						]
+
+				]
+
+        ]);
+
+
+
+        if (!($this->load($params) && $this->validate())) {
+
+            return $dataProvider;
+
+        }
+
+
+
         $query->andFilterWhere([
             'id' => $this->id,
             'model_id' => $this->model_id,
@@ -74,7 +128,11 @@ class Feed extends FeedModel
 
         $query->andFilterWhere(['like', 'content', $this->content])
             ->andFilterWhere(['like', 'model_type', $this->model_type]);
-
-        return $dataProvider;
-    }
-}
+
+
+        return $dataProvider;
+
+    }
+
+}
+

@@ -1,9 +1,6 @@
 <?php
 
-/**
- *@copyright : ToXSL Technologies Pvt. Ltd. < www.toxsl.com >
- *@author	 : Shiv Charan Panjeta < shiv@toxsl.com >
- */
+
 namespace app\models;
 
 use Yii;
@@ -80,4 +77,5 @@ class ContactForm extends Model {
 		}
 		return false;
 	}
-}
+}
+
