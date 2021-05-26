@@ -3,6 +3,7 @@
 use app\assets\AppAsset;
 use app\components\FlashMessage;
 use app\models\Category;
+use app\models\Menu;
 use yii\helpers\Html;
 use yii\helpers\Url;
 /* @var $this \yii\web\View */
@@ -160,7 +161,7 @@ $this->beginPage() ?>
 	</header>
 	<!-- Frntre Nav -->
 	<?php
-	$categoryModel = Category::find()->where(['state_id' => Category::STATE_ACTIVE])->limit(10)->all();
+	$categoryModel = Menu::find()->where(['state_id' => Category::STATE_ACTIVE])->limit(10)->all();
 	?>
    <nav class="frntre-nav">
 	<ul>

@@ -326,7 +326,7 @@ public function beforeValidate()
             [['category_id', 'menu_id', 'price'], 'required'],
             [['category_id', 'menu_id', 'price', 'state_id', 'type_id', 'created_by_id'], 'integer'],
             [['created_on', 'updated_on'], 'safe'],
-            [['image_file'], 'string', 'max' => 255],
+            // [['image_file'], 'string', 'max' => 255],
             [['category_id'], 'exist', 'skipOnError' => true, 'targetClass' => Category::className(), 'targetAttribute' => ['category_id' => 'id']],
             [['created_by_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['created_by_id' => 'id']],
             [['menu_id'], 'exist', 'skipOnError' => true, 'targetClass' => Menu::className(), 'targetAttribute' => ['menu_id' => 'id']],

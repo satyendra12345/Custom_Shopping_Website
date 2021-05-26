@@ -34,101 +34,100 @@ use app\components\TActiveForm;
 class CategoryController extends TController
 {
 
-  public function behaviors() {
+    public function behaviors()
+    {
 
-		return [
+        return [
 
-				'access' => [
+            'access' => [
 
-						'class' => AccessControl::className (),
+                'class' => AccessControl::className(),
 
-						'ruleConfig' => [
+                'ruleConfig' => [
 
-								'class' => AccessRule::className ()
+                    'class' => AccessRule::className()
 
-						],
+                ],
 
-						'rules' => [
+                'rules' => [
 
-								[
+                    [
 
-										'actions' => [
+                        'actions' => [
 
-												'clear',
+                            'clear',
 
-												'delete',
+                            'delete',
 
-										],
+                        ],
 
-										'allow' => true,
+                        'allow' => true,
 
-										'matchCallback' => function () {
+                        'matchCallback' => function () {
 
-                                            return User::isAdmin();
+                            return User::isAdmin();
+                        }
 
-                                        }
+                    ],
 
-								],
+                    [
 
-								[
+                        'actions' => [
 
-										'actions' => [
+                            'index',
 
-												'index',
+                            'add',
 
-												'add',
+                            'view',
 
-												'view',
+                            'update',
 
-												'update',
+                            'clone',
 
-												'clone',
+                            'ajax',
 
-												'ajax',
+                            'mass'
 
-												'mass'
+                        ],
 
-										],
+                        'allow' => true,
 
-										'allow' => true,
+                        'roles' => [
 
-										'roles' => [
+                            '@'
 
-												'@'
+                        ]
 
-										]
+                    ],
 
-								],
+                    [
 
-								[
-
-										'actions' => [
-
+                        'actions' => [
 
 
-												'view',
 
-										],
+                            'view',
 
-										'allow' => true,
+                        ],
 
-										'roles' => [
+                        'allow' => true,
 
-												'?',
+                        'roles' => [
 
-												'*'
+                            '?',
 
-										]
+                            '*'
 
-								]
+                        ]
 
-						]
+                    ]
 
-				]
+                ]
 
-		];
+            ]
 
-	}
+        ];
+    }
 
 
 
@@ -150,7 +149,7 @@ class CategoryController extends TController
 
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
- 		$this->updateMenuItems();
+        $this->updateMenuItems();
 
         return $this->render('index', [
 
@@ -159,7 +158,6 @@ class CategoryController extends TController
             'dataProvider' => $dataProvider,
 
         ]);
-
     }
 
 
@@ -182,9 +180,6 @@ class CategoryController extends TController
         $this->updateMenuItems($model);
 
         return $this->render('view', ['model' => $model]);
-
-
-
     }
 
 
@@ -209,9 +204,9 @@ class CategoryController extends TController
 
         $model->state_id = Category::STATE_ACTIVE;
 
-        
 
-       /* if (is_numeric($id)) {
+
+        /* if (is_numeric($id)) {
 
             $post = Post::findOne($id);
 
@@ -229,40 +224,39 @@ class CategoryController extends TController
 
         }*/
 
-        
+
 
         $model->checkRelatedData([
 
-       	'created_by_id' => User::class,
+            'created_by_id' => User::class,
 
         ]);
 
-		$post = \yii::$app->request->post ();
+        $post = \yii::$app->request->post();
 
-		if (\yii::$app->request->isAjax && $model->load ( $post )) {
+        if (\yii::$app->request->isAjax && $model->load($post)) {
 
-			\yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+            \yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
 
-			return TActiveForm::validate ( $model );
+            return TActiveForm::validate($model);
+        }
 
-		}
+        if ($model->load($post)) {
+            $model->saveUploadedFile($model, 'image_file');
 
-        if ($model->load($post) && $model->save()) {
 
-            return $this->redirect($model->getUrl());
-
+            if ($model->save()) {
+                return $this->redirect($model->getUrl());
+            }
         }
 
         $this->updateMenuItems();
 
         return $this->render('add', [
 
-                'model' => $model,
+            'model' => $model,
 
-            ]);
-
-
-
+        ]);
     }
 
 
@@ -283,38 +277,38 @@ class CategoryController extends TController
     {
 
         $model = $this->findModel($id);
+        $old_image = $model->image_file;
 
 
+        $post = \yii::$app->request->post();
 
- 		$post = \yii::$app->request->post ();
+        if (\yii::$app->request->isAjax && $model->load($post)) {
 
-		if (\yii::$app->request->isAjax && $model->load ( $post )) {
+            \yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
 
-			\yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+            return TActiveForm::validate($model);
+        }
+        if (!empty($post['image_file'])) {
+            $old_image = $model->image_file;
+        }
 
-			return TActiveForm::validate ( $model );
-
-		}
-
-        if ($model->load($post) && $model->save()) {
-
-            return $this->redirect($model->getUrl());
-
+        if ($model->load($post)) {
+            $model->saveUploadedFile($model, 'image_file', $old_image);
+            if ($model->save()) {
+               return $this->redirect($model->getUrl());
+            }
         }
 
         $this->updateMenuItems($model);
 
         return $this->render('update', [
 
-                'model' => $model,
+            'model' => $model,
 
-            ]);
-
-
-
+        ]);
     }
 
-    
+
 
     /**
 
@@ -333,7 +327,7 @@ class CategoryController extends TController
 
         $old = $this->findModel($id);
 
-        
+
 
         $model = new Category();
 
@@ -341,39 +335,34 @@ class CategoryController extends TController
 
         $model->state_id = Category::STATE_ACTIVE;
 
-        
+
 
         //$model->id  = $old->id$model->title  = $old->title$model->description  = $old->description$model->image_file  = $old->image_file//$model->state_id  = $old->state_id$model->type_id  = $old->type_id//$model->created_on  = $old->created_on$model->updated_on  = $old->updated_on//$model->created_by_id  = $old->created_by_id		
 
- 		$post = \yii::$app->request->post ();
+        $post = \yii::$app->request->post();
 
-		if (\yii::$app->request->isAjax && $model->load ( $post )) {
+        if (\yii::$app->request->isAjax && $model->load($post)) {
 
-			\yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+            \yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
 
-			return TActiveForm::validate ( $model );
-
-		}
+            return TActiveForm::validate($model);
+        }
 
         if ($model->load($post) && $model->save()) {
 
             return $this->redirect($model->getUrl());
-
         }
 
         $this->updateMenuItems($model);
 
         return $this->render('update', [
 
-                'model' => $model,
+            'model' => $model,
 
-            ]);
-
-
-
+        ]);
     }
 
-    
+
 
     /**
 
@@ -394,22 +383,18 @@ class CategoryController extends TController
 
 
 
-		if(\yii::$app->request->post())
+        if (\yii::$app->request->post()) {
 
-		{
+            $model->delete();
 
-			$model->delete();
+            return $this->redirect(['index']);
+        }
 
-        	return $this->redirect(['index']);
+        return $this->render('delete', [
 
-		}
+            'model' => $model,
 
-		return $this->render('delete', [
-
-                'model' => $model,
-
-            ]);
-
+        ]);
     }
 
     /**
@@ -432,13 +417,11 @@ class CategoryController extends TController
         foreach ($query->each() as $model) {
 
             $model->delete();
-
         }
 
         if ($truncate) {
 
             Category::truncate();
-
         }
 
         \Yii::$app->session->setFlash('success', 'Category Cleared !!!');
@@ -448,7 +431,6 @@ class CategoryController extends TController
             'index'
 
         ]);
-
     }
 
 
@@ -474,33 +456,28 @@ class CategoryController extends TController
 
 
 
-			if ($accessCheck && ! ($model->isAllowed ()))
+            if ($accessCheck && !($model->isAllowed()))
 
-				throw new HttpException ( 403, Yii::t ( 'app', 'You are not allowed to access this page.' ) );
+                throw new HttpException(403, Yii::t('app', 'You are not allowed to access this page.'));
 
 
 
             return $model;
-
         } else {
 
             throw new NotFoundHttpException('The requested page does not exist.');
-
         }
-
     }
 
-   protected function updateMenuItems($model = null)
+    protected function updateMenuItems($model = null)
 
     {
 
         switch (\Yii::$app->controller->action->id) {
 
-            
 
-            case 'add':
 
-                {
+            case 'add': {
 
                     $this->menu['manage'] = [
 
@@ -517,14 +494,11 @@ class CategoryController extends TController
                         // 'visible' => User::isAdmin ()
 
                     ];
-
                 }
 
                 break;
 
-            case 'index':
-
-                {
+            case 'index': {
 
                     $this->menu['add'] = [
 
@@ -563,14 +537,11 @@ class CategoryController extends TController
                         'visible' => User::isAdmin()
 
                     ];
-
                 }
 
                 break;
 
-            case 'update':
-
-                {
+            case 'update': {
 
                     $this->menu['add'] = [
 
@@ -603,18 +574,15 @@ class CategoryController extends TController
                         // 'visible' => User::isAdmin ()
 
                     ];
-
                 }
 
                 break;
 
- 
+
 
             default:
 
-            case 'view':
-
-                {
+            case 'view': {
 
                     $this->menu['manage'] = [
 
@@ -646,7 +614,7 @@ class CategoryController extends TController
 
                         );
 
-                      $this->menu['update'] = [
+                        $this->menu['update'] = [
 
                             'label' => '<span class="glyphicon glyphicon-pencil"></span>',
 
@@ -669,14 +637,8 @@ class CategoryController extends TController
                             // 'visible' => User::isAdmin ()
 
                         ];
-
                     }
-
                 }
-
         }
-
     }
-
 }
-

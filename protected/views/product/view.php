@@ -21,7 +21,7 @@ $this->params['breadcrumbs'][] = (string)$model;
 
       <div class="product-view">
 
-         <?php echo  \app\components\PageHeader::widget(['model'=>$model]); ?>
+         <?php echo  \app\components\PageHeader::widget(['model' => $model]); ?>
 
       </div>
 
@@ -30,99 +30,124 @@ $this->params['breadcrumbs'][] = (string)$model;
    <div class="card">
 
       <div class="card-body">
+         <div class="row">
+            <div class="col-md-2 pr0">
+               <div class="profileimage">
+                  <?= $model->displayImage($model->image_file, ['class' => 'profile-pic'], 'default.png', true); ?>
+               </div>
+            </div>
 
-         <?php echo \app\components\TDetailView::widget([
+            <div class="col-md-10">
 
-         'id'	=> 'product-detail-view',
+               <?php echo \app\components\TDetailView::widget([
 
-         'model' => $model,
+                  'id'   => 'product-detail-view',
 
-         'options'=>['class'=>'table table-bordered'],
+                  'model' => $model,
 
-         'attributes' => [
+                  'options' => ['class' => 'table table-bordered'],
+
+                  'attributes' => [
 
                      'id',
-            'title:html',
-            'description:html',
-            'image_file',
-            'category_id',
-            'menu_id',
-            'price',
-            [
+                     'title:html',
+                     'description:html',
+                     'image_file',
+                     [
 
-			'attribute' => 'state_id',
+                        'attribute' => 'category_id',
 
-			'format'=>'raw',
+                        'format' => 'raw',
 
-			'value' => $model->getStateBadge(),],
-            [
+                        'value' => $model->getRelatedDataLink('category_id'),
 
-			'attribute' => 'type_id',
 
-			'value' => $model->getType(),
+                     ],
+                     [
 
-			],
-            'created_on:datetime',
-            'updated_on:datetime',
-            [
+                        'attribute' => 'menu_id',
 
-            			'attribute' => 'created_by_id',
+                        'format' => 'raw',
 
-            			'format'=>'raw',
+                        'value' => $model->getRelatedDataLink('menu_id'),
 
-            			'value' => $model->getRelatedDataLink('created_by_id'),
 
-            			],
+                     ],
+                     'price',
+                     [
 
-         ],
+                        'attribute' => 'state_id',
 
-         ]) ?>
+                        'format' => 'raw',
 
-         <?php  echo $model->description;?>
+                        'value' => $model->getStateBadge(),
+                     ],
+                     [
 
-         <?php
-         echo UserAction::widget ( [
+                        'attribute' => 'type_id',
 
-         'model' => $model,
+                        'value' => $model->getType(),
 
-         'attribute' => 'state_id',
+                     ],
+                     'created_on:datetime',
+                     'updated_on:datetime',
+                     [
 
-         'states' => $model->getStateOptions ()
+                        'attribute' => 'created_by_id',
 
-         ] );
+                        'format' => 'raw',
 
-         ?>
+                        'value' => $model->getRelatedDataLink('created_by_id'),
 
-      </div>
+                     ],
 
-   </div>
+                  ],
 
-   
-   <div class="card">
+               ]) ?>
 
-      <div class="card-body">
+               <?php echo $model->description; ?>
 
-         <div
+               <?php
+               echo UserAction::widget([
 
-            class="product-panel">
+                  'model' => $model,
 
-            <?php
+                  'attribute' => 'state_id',
 
-            $this->context->startPanel();
+                  'states' => $model->getStateOptions()
 
-            
-            $this->context->addPanel('Feeds', 'feeds', 'Feed',$model /*,null,true*/);
+               ]);
 
-            
-            $this->context->endPanel();
+               ?>
 
-            ?>
+            </div>
 
          </div>
 
+
+         <div class="card">
+
+            <div class="card-body">
+
+               <div class="product-panel">
+
+                  <?php
+
+                  $this->context->startPanel();
+
+
+                  $this->context->addPanel('Feeds', 'feeds', 'Feed', $model /*,null,true*/);
+
+
+                  $this->context->endPanel();
+
+                  ?>
+
+               </div>
+
+            </div>
+
+         </div>
+
+
       </div>
-
-   </div>
-
-   
-</div>

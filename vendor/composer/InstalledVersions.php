@@ -32,7 +32,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '1efe75f68d2966324f06984edad53de6db763c9d',
+    'reference' => '8eab8986016df887caf7be10529253231a3a44ef',
     'name' => 'project/ainehome',
   ),
   'versions' => 
@@ -72,6 +72,15 @@ private static $installed = array (
       array (
       ),
       'reference' => 'f6e92d49b7786aee8abf15a197fc503ab3e065e5',
+    ),
+    'alexantr/yii2-elfinder' => 
+    array (
+      'pretty_version' => '1.7.0',
+      'version' => '1.7.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '868088746cefe3fdc576475ae50a398eeba86e99',
     ),
     'behat/gherkin' => 
     array (
@@ -781,7 +790,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '1efe75f68d2966324f06984edad53de6db763c9d',
+      'reference' => '8eab8986016df887caf7be10529253231a3a44ef',
     ),
     'psr/cache' => 
     array (
@@ -958,6 +967,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '99732be0ddb3361e16ad77b68ba41efc8e979019',
+    ),
+    'studio-42/elfinder' => 
+    array (
+      'pretty_version' => '2.1.57',
+      'version' => '2.1.57.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '087524b1d7a4d76cfd848dee2093cd8daf987f78',
     ),
     'swiftmailer/swiftmailer' => 
     array (

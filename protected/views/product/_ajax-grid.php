@@ -31,11 +31,19 @@ if (! empty($menu))
             'id',
             /* 'title:html',*/
             /* 'description:html',*/
-            ['attribute' => 'image_file','filter'=>$searchModel->getFileOptions(),
+            // ['attribute' => 'image_file','filter'=>$searchModel->getFileOptions(),
 
-			'value' => function ($data) { return $data->getFileOptions($data->image_file);  },],
-            'category_id',
-            'menu_id',
+			// 'value' => function ($data) { return $data->getFileOptions($data->image_file);  },],
+            [
+				'attribute' => 'category_id',
+				'format'=>'raw',
+				'value' => function ($data) { return $data->getRelatedDataLink('category_id');  },
+			],
+            [
+				'attribute' => 'menu_id',
+				'format'=>'raw',
+				'value' => function ($data) { return $data->getRelatedDataLink('menu_id');  },
+			],
             'price',
             [
 

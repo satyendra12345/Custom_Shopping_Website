@@ -108,7 +108,7 @@ class UserController extends TController
      * @return string
      */
     public function actionMass($action = 'delete')
-    {   
+    {
         \Yii::$app->response->format = 'json';
         $response['status'] = 'NOK';
         $status = User::massDelete();
@@ -256,7 +256,7 @@ class UserController extends TController
                 ]);
                 if ($user) {
                     $user->generatePasswordResetToken();
-                    if (! $user->save(false, [
+                    if (!$user->save(false, [
                         'activation_key'
                     ])) {
                         throw new \yii\base\Exception(\Yii::t('app', "Cant Generate Authentication Key"));
@@ -283,7 +283,7 @@ class UserController extends TController
     {
         $this->layout = User::LAYOUT_GUEST_MAIN;
         $model = User::findByPasswordResetToken($token);
-        if (! ($model)) {
+        if (!($model)) {
             \Yii::$app->session->setFlash('error', \Yii::t('app', 'This URL is expired.'));
         }
         $newModel = new User([
@@ -319,9 +319,6 @@ class UserController extends TController
         $model->scenario = User::SCENARIO_UPDATE;
         $post = \yii::$app->request->post();
         $old_image = $model->profile_file;
-    
-       
-
         $password = $model->password;
 
         if (Yii::$app->request->isAjax && $model->load($post)) {
@@ -330,7 +327,7 @@ class UserController extends TController
         }
 
         if ($model->load($post)) {
-            if (! empty($post['User']['password'])) {
+            if (!empty($post['User']['password'])) {
                 $model->setPassword($post['User']['password']);
             } else {
                 $model->password = $password;
@@ -387,7 +384,7 @@ class UserController extends TController
         $user = User::find()->where([
             'activation_key' => $id
         ])->one();
-        if (! empty($user)) {
+        if (!empty($user)) {
             $user->email_verified = User::EMAIL_VERIFIED;
             if ($user->save()) {
                 if (Yii::$app->user->login($user, 3600 * 24 * 30)) {
@@ -443,7 +440,7 @@ class UserController extends TController
     public function actionLogin()
     {
         $this->layout = User::LAYOUT_GUEST_MAIN;
-        if (! \Yii::$app->user->isGuest) {
+        if (!\Yii::$app->user->isGuest) {
             return $this->goHome();
         }
         $model = new LoginForm();
@@ -467,7 +464,7 @@ class UserController extends TController
     {
         $this->layout = User::LAYOUT_MAIN;
         $model = $this->findModel($id);
-        if (! ($model->isAllowed()))
+        if (!($model->isAllowed()))
             throw new \yii\web\HttpException(403, Yii::t('app', 'You are not allowed to access this page.'));
 
         $newModel = new User([
@@ -507,7 +504,7 @@ class UserController extends TController
     {
         if (($model = User::findOne($id)) !== null) {
 
-            if (! ($model->isAllowed()))
+            if (!($model->isAllowed()))
                 throw new HttpException(403, Yii::t('app', 'You are not allowed to access this page.'));
 
             return $model;
@@ -520,8 +517,7 @@ class UserController extends TController
     {
         switch (\Yii::$app->controller->action->id) {
 
-            case 'add':
-                {
+            case 'add': {
                     $this->menu['add'] = [
                         'label' => '<span class="glyphicon glyphicon-list"></span>',
                         'title' => Yii::t('app', 'Manage'),
@@ -532,8 +528,7 @@ class UserController extends TController
                     ];
                 }
                 break;
-            case 'index':
-                {
+            case 'index': {
                     $this->menu['add'] = [
                         'label' => '<span class="glyphicon glyphicon-plus"></span>',
                         'title' => Yii::t('app', 'Add'),
@@ -545,8 +540,7 @@ class UserController extends TController
                 }
 
                 break;
-            case 'update':
-                {
+            case 'update': {
                     $this->menu['add'] = [
                         'label' => '<span class="glyphicon glyphicon-plus"></span>',
                         'title' => Yii::t('app', 'add'),
@@ -557,8 +551,7 @@ class UserController extends TController
                     ];
                 }
                 break;
-            case 'view':
-                {
+            case 'view': {
                     if ($model != null && ($model->role_id != User::ROLE_ADMIN) && \Yii::$app->hasModule('shadow'))
                         $this->menu['shadow'] = [
                             'label' => '<span class="glyphicon glyphicon-refresh ">Shadow</span>',

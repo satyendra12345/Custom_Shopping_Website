@@ -31,12 +31,21 @@ if (! empty($menu))
             'id',
             /* 'title',*/
             'description:html',
-            /* ['attribute' => 'image_file','filter'=>$searchModel->getFileOptions(),
-			'value' => function ($data) { return $data->getFileOptions($data->image_file);  },],*/
-            [
-			'attribute' => 'state_id','format'=>'raw','filter'=>isset($searchModel)?$searchModel->getStateOptions():null,
+        
+		     'image_file',
+			
+			
+            /* ['attribute' => 'image_file','filter'=>$searchModel->getFileOptions(),
+             
+            
+			'value' => function ($data) { return $data->getFileOptions($data->image_file);  },],
+            [
+
+			'attribute' => 'state_id','format'=>'raw','filter'=>isset($searchModel)?$searchModel->getStateOptions():null,
+
 			'value' => function ($data) { return $data->getStateBadge();  },],
-            ['attribute' => 'type_id','filter'=>isset($searchModel)?$searchModel->getTypeOptions():null,
+            ['attribute' => 'type_id','filter'=>isset($searchModel)?$searchModel->getTypeOptions():null,
+
 			'value' => function ($data) { return $data->getType();  },],
             /* 'created_on:datetime',*/
             /* 'updated_on:datetime',*/

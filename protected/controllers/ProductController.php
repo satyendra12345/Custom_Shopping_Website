@@ -45,6 +45,8 @@ use app\models\User;
 use yii\web\HttpException;
 
 use app\components\TActiveForm;
+use yii\helpers\VarDumper;
+use yii\web\UploadedFile;
 
 /**
 
@@ -56,101 +58,100 @@ class ProductController extends TController
 
 {
 
-  public function behaviors() {
+    public function behaviors()
+    {
 
-		return [
+        return [
 
-				'access' => [
+            'access' => [
 
-						'class' => AccessControl::className (),
+                'class' => AccessControl::className(),
 
-						'ruleConfig' => [
+                'ruleConfig' => [
 
-								'class' => AccessRule::className ()
+                    'class' => AccessRule::className()
 
-						],
+                ],
 
-						'rules' => [
+                'rules' => [
 
-								[
+                    [
 
-										'actions' => [
+                        'actions' => [
 
-												'clear',
+                            'clear',
 
-												'delete',
+                            'delete',
 
-										],
+                        ],
 
-										'allow' => true,
+                        'allow' => true,
 
-										'matchCallback' => function () {
+                        'matchCallback' => function () {
 
-                                            return User::isAdmin();
+                            return User::isAdmin();
+                        }
 
-                                        }
+                    ],
 
-								],
+                    [
 
-								[
+                        'actions' => [
 
-										'actions' => [
+                            'index',
 
-												'index',
+                            'add',
 
-												'add',
+                            'view',
 
-												'view',
+                            'update',
 
-												'update',
+                            'clone',
 
-												'clone',
+                            'ajax',
 
-												'ajax',
+                            'mass'
 
-												'mass'
+                        ],
 
-										],
+                        'allow' => true,
 
-										'allow' => true,
+                        'roles' => [
 
-										'roles' => [
+                            '@'
 
-												'@'
+                        ]
 
-										]
+                    ],
 
-								],
+                    [
 
-								[
-
-										'actions' => [
-
+                        'actions' => [
 
 
-												'view',
 
-										],
+                            'view',
 
-										'allow' => true,
+                        ],
 
-										'roles' => [
+                        'allow' => true,
 
-												'?',
+                        'roles' => [
 
-												'*'
+                            '?',
 
-										]
+                            '*'
 
-								]
+                        ]
 
-						]
+                    ]
 
-				]
+                ]
 
-		];
+            ]
 
-	}
+        ];
+    }
 
 
 
@@ -173,7 +174,7 @@ class ProductController extends TController
 
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
- 		$this->updateMenuItems();
+        $this->updateMenuItems();
 
         return $this->render('index', [
 
@@ -182,8 +183,6 @@ class ProductController extends TController
             'dataProvider' => $dataProvider,
 
         ]);
-
-
     }
 
 
@@ -207,9 +206,6 @@ class ProductController extends TController
         $this->updateMenuItems($model);
 
         return $this->render('view', ['model' => $model]);
-
-
-
     }
 
 
@@ -234,62 +230,47 @@ class ProductController extends TController
 
         $model->state_id = Product::STATE_ACTIVE;
 
-        
-
-       /* if (is_numeric($id)) {
-
-            $post = Post::findOne($id);
-
-            if ($post == null)
-
-            {
-
-              throw new NotFoundHttpException('The requested post does not exist.');
-
-            }
-
-            $model->id = $id;
-
-                
-
-        }*/
-
-        
 
         $model->checkRelatedData([
 
-       
-	'created_by_id' => User::class,
+
+            'created_by_id' => User::class,
 
 
         ]);
 
-		$post = \yii::$app->request->post ();
+        $post = \yii::$app->request->post();
 
-		if (\yii::$app->request->isAjax && $model->load ( $post )) {
+        if (\yii::$app->request->isAjax && $model->load($post)) {
 
-			\yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+            \yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
 
-			return TActiveForm::validate ( $model );
+            return TActiveForm::validate($model);
+        }
 
-		}
-
-        if ($model->load($post) && $model->save()) {
-
-            return $this->redirect($model->getUrl());
-
+        if ($model->load($post)) {
+            //  $model->image_file = UploadedFile::getInstances($model, 'image_file');
+            //  VarDumper::dump($model->image_file);
+            
+            //  foreach ($model->image_file as $key => $file) {
+               
+               
+            //     $model->saveUploadedFile($model, $file->name);
+            //  }
+         
+           $model->saveUploadedFile($model, 'image_file');
+            if ($model->save()) {
+                return $this->redirect($model->getUrl());
+            }
         }
 
         $this->updateMenuItems();
 
         return $this->render('add', [
 
-                'model' => $model,
+            'model' => $model,
 
-            ]);
-
-
-
+        ]);
     }
 
 
@@ -307,42 +288,32 @@ class ProductController extends TController
      */
 
     public function actionUpdate($id)
-
     {
 
         $model = $this->findModel($id);
 
-
-
- 		$post = \yii::$app->request->post ();
-
-		if (\yii::$app->request->isAjax && $model->load ( $post )) {
-
-			\yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
-
-			return TActiveForm::validate ( $model );
-
-		}
-
-        if ($model->load($post) && $model->save()) {
-
-            return $this->redirect($model->getUrl());
-
+        $post = \yii::$app->request->post();
+        $old_image = $model->image_file;
+        if (\yii::$app->request->isAjax && $model->load($post)) {
+            \yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+            return TActiveForm::validate($model);
         }
-
+        if (!empty($post['image_file'])) {
+            $old_image = $model->image_file;
+        }
+        if ($model->load($post)) {
+            $model->saveUploadedFile($model, 'image_file', $old_image);
+            if ($model->save()) {
+                return $this->redirect($model->getUrl());
+            }
+        }
         $this->updateMenuItems($model);
-
         return $this->render('update', [
-
-                'model' => $model,
-
-            ]);
-
-
-
+            'model' => $model,
+        ]);
     }
 
-    
+
 
     /**
 
@@ -362,7 +333,7 @@ class ProductController extends TController
 
         $old = $this->findModel($id);
 
-        
+
 
         $model = new Product();
 
@@ -370,40 +341,33 @@ class ProductController extends TController
 
         $model->state_id = Product::STATE_ACTIVE;
 
-        
-
         //$model->id  = $old->id$model->title  = $old->title$model->description  = $old->description$model->image_file  = $old->image_file$model->category_id  = $old->category_id$model->menu_id  = $old->menu_id$model->price  = $old->price//$model->state_id  = $old->state_id$model->type_id  = $old->type_id//$model->created_on  = $old->created_on$model->updated_on  = $old->updated_on//$model->created_by_id  = $old->created_by_id
-		
 
- 		$post = \yii::$app->request->post ();
 
-		if (\yii::$app->request->isAjax && $model->load ( $post )) {
+        $post = \yii::$app->request->post();
 
-			\yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+        if (\yii::$app->request->isAjax && $model->load($post)) {
 
-			return TActiveForm::validate ( $model );
+            \yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
 
-		}
+            return TActiveForm::validate($model);
+        }
 
         if ($model->load($post) && $model->save()) {
 
             return $this->redirect($model->getUrl());
-
         }
 
         $this->updateMenuItems($model);
 
         return $this->render('update', [
 
-                'model' => $model,
+            'model' => $model,
 
-            ]);
-
-
-
+        ]);
     }
 
-    
+
 
     /**
 
@@ -425,22 +389,18 @@ class ProductController extends TController
 
 
 
-		if(\yii::$app->request->post())
+        if (\yii::$app->request->post()) {
 
-		{
+            $model->delete();
 
-			$model->delete();
+            return $this->redirect(['index']);
+        }
 
-        	return $this->redirect(['index']);
+        return $this->render('delete', [
 
-		}
+            'model' => $model,
 
-		return $this->render('delete', [
-
-                'model' => $model,
-
-            ]);
-
+        ]);
     }
 
     /**
@@ -464,13 +424,11 @@ class ProductController extends TController
         foreach ($query->each() as $model) {
 
             $model->delete();
-
         }
 
         if ($truncate) {
 
             Product::truncate();
-
         }
 
         \Yii::$app->session->setFlash('success', 'Product Cleared !!!');
@@ -480,7 +438,6 @@ class ProductController extends TController
             'index'
 
         ]);
-
     }
 
 
@@ -508,33 +465,28 @@ class ProductController extends TController
 
 
 
-			if ($accessCheck && ! ($model->isAllowed ()))
+            if ($accessCheck && !($model->isAllowed()))
 
-				throw new HttpException ( 403, Yii::t ( 'app', 'You are not allowed to access this page.' ) );
+                throw new HttpException(403, Yii::t('app', 'You are not allowed to access this page.'));
 
 
 
             return $model;
-
         } else {
 
             throw new NotFoundHttpException('The requested page does not exist.');
-
         }
-
     }
 
-   protected function updateMenuItems($model = null)
+    protected function updateMenuItems($model = null)
 
     {
 
         switch (\Yii::$app->controller->action->id) {
 
-            
 
-            case 'add':
 
-                {
+            case 'add': {
 
                     $this->menu['manage'] = [
 
@@ -551,14 +503,11 @@ class ProductController extends TController
                         // 'visible' => User::isAdmin ()
 
                     ];
-
                 }
 
                 break;
 
-            case 'index':
-
-                {
+            case 'index': {
 
                     $this->menu['add'] = [
 
@@ -597,14 +546,11 @@ class ProductController extends TController
                         'visible' => User::isAdmin()
 
                     ];
-
                 }
 
                 break;
 
-            case 'update':
-
-                {
+            case 'update': {
 
                     $this->menu['add'] = [
 
@@ -637,18 +583,15 @@ class ProductController extends TController
                         // 'visible' => User::isAdmin ()
 
                     ];
-
                 }
 
                 break;
 
- 
+
 
             default:
 
-            case 'view':
-
-                {
+            case 'view': {
 
                     $this->menu['manage'] = [
 
@@ -680,7 +623,7 @@ class ProductController extends TController
 
                         );
 
-                      $this->menu['update'] = [
+                        $this->menu['update'] = [
 
                             'label' => '<span class="glyphicon glyphicon-pencil"></span>',
 
@@ -703,14 +646,8 @@ class ProductController extends TController
                             // 'visible' => User::isAdmin ()
 
                         ];
-
                     }
-
                 }
-
         }
-
     }
-
 }
-

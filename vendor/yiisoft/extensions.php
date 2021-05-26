@@ -211,4 +211,13 @@ return array (
       '@lajax/languagepicker' => $vendorDir . '/lajax/yii2-language-picker',
     ),
   ),
+  'alexantr/yii2-elfinder' => 
+  array (
+    'name' => 'alexantr/yii2-elfinder',
+    'version' => '1.7.0.0',
+    'alias' => 
+    array (
+      '@alexantr/elfinder' => $vendorDir . '/alexantr/yii2-elfinder/src',
+    ),
+  ),
 );

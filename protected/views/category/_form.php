@@ -15,19 +15,34 @@ use app\models\User;
 
       'id' => 'category-form',
       'options' => [
-         'class' => 'row'
+         'class' => 'row',
+         'enctype'=>'multipart/form-data'
       ]
    ]);
    echo $form->errorSummary($model);
    ?>
-   <?php echo $form->field($model, 'title')->textInput(['maxlength' => 128]) ?>
-   <?php echo  $form->field($model, 'description')->widget(app\components\TRichTextEditor::className(), ['options' => ['rows' => 6], 'preset' => 'basic']); //$form->field($model, 'description')->textarea(['rows' => 6]); 
-   ?>
-   <?php /*echo $form->field($model, 'image_file')->fileInput() */ ?>
-   <?php if (User::isAdmin()) { ?> <?php echo $form->field($model, 'state_id')->dropDownList($model->getStateOptions(), ['prompt' => '']) ?>
-   <?php } ?> <?php echo $form->field($model, 'type_id')->dropDownList($model->getTypeOptions(), ['prompt' => '']) ?>
-   <div class="col-md-12 text-right">
-      <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Save') : Yii::t('app', 'Update'), ['id' => 'category-form-submit', 'class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
-   </div>
-   <?php TActiveForm::end(); ?>
+   <div class="row">
+      <div class="col-md-6">
+         <?php echo $form->field($model, 'title')->textInput(['maxlength' => 128]) ?>
+      </div>
+      <div class="col-md-3">
+         <?php echo  $form->field($model, 'description')->widget(app\components\TRichTextEditor::className(), ['options' => ['rows' => 6], 'preset' => 'basic']); //$form->field($model, 'description')->textarea(['rows' => 6]); 
+         ?>
+      </div>
+      <div class="col-md-6">
+         <?php echo $form->field($model, 'image_file')->fileInput(); ?>
+      </div>
+      <div class="col-md-3">
+         <?php if (User::isAdmin()) { ?> <?php echo $form->field($model, 'state_id')->dropDownList($model->getStateOptions(), ['prompt' => '']) ?>
+         <?php } ?>
+      </div>
+      <div class="col-md-3">
+         <?php echo $form->field($model, 'type_id')->dropDownList($model->getTypeOptions(), ['prompt' => '']) ?>
+      </div>
+      </div>
+      <div class="col-md-12 text-right">
+         <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Save') : Yii::t('app', 'Update'), ['id' => 'category-form-submit', 'class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+      </div>
+      <?php TActiveForm::end(); ?>
+   
 </div>

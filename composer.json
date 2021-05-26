@@ -44,7 +44,8 @@
 		"2amigos/yii2-file-upload-widget" : "~1.0",
 		"bizley/contenttools" : "^1.4",
 		"devgroup/yii2-jsoneditor" : "*",
-		"lesha724/yii2-document-viewer": "*"
+		"lesha724/yii2-document-viewer": "*",
+		"alexantr/yii2-elfinder": "^1.7"
 	},
 	"require-dev" : {
 		"yiisoft/yii2-debug" : "*",

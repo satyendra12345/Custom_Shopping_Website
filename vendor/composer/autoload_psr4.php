@@ -45,6 +45,7 @@ return array(
     'cebe\\markdown\\' => array($vendorDir . '/cebe/markdown'),
     'bryglen\\apnsgcm\\' => array($vendorDir . '/bryglen/yii2-apns-gcm'),
     'bizley\\contenttools\\' => array($vendorDir . '/bizley/contenttools/src'),
+    'alexantr\\elfinder\\' => array($vendorDir . '/alexantr/yii2-elfinder/src'),
     'alexantr\\ckeditor\\' => array($vendorDir . '/alexantr/yii2-ckeditor/src'),
     'ZipStream\\' => array($vendorDir . '/maennchen/zipstream-php/src'),
     'Webmozart\\Assert\\' => array($vendorDir . '/webmozart/assert/src'),

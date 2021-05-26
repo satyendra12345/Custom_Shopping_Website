@@ -19,6 +19,7 @@
 namespace app\models;
 
 use Yii;
+use yii\helpers\ArrayHelper;
 
 class Notice extends \app\components\TActiveRecord {
 	public function __toString() {
