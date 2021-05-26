@@ -88,6 +88,34 @@ CREATE TABLE IF NOT EXISTS `tbl_file` (
   INDEX(`create_time`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+
+
+
+-- -------------------------------------------
+-- TABLE `tbl_payment`
+-- -------------------------------------------
+DROP TABLE IF EXISTS `tbl_payment`;
+CREATE TABLE IF NOT EXISTS `tbl_payment` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(1024) COLLATE utf8_unicode_ci NOT NULL,
+  `key` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `value` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `state_id` int(11) DEFAULT NULL,
+  `type_id` int(11) NOT NULL DEFAULT '0',
+  `create_time` datetime DEFAULT NULL,
+  `created_by_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX(`title`),
+  INDEX(`create_time`),
+  KEY `fk_payment_created_by` (`created_by_id`),
+  CONSTRAINT `fk_payment_created_by` FOREIGN KEY (`created_by_id`) REFERENCES `tbl_user` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+
+
+
+
 -- -------------------------------------------
 -- TABLE `tbl_notice`
 -- -------------------------------------------
