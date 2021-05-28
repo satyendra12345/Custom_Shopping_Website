@@ -125,6 +125,21 @@ $this->params['breadcrumbs'][] = (string)$model;
          </div>
 
 
+         <br><br><br>
+         <div class="jumbotron text-center">Product Images <div>
+
+<?php $productImageArray = json_decode($model->image_file);
+
+foreach ($productImageArray as $key => $value) {
+?>
+   
+   <?= $model->displayImage($productImageArray[$key], ['class' => 'profile-pic'], 'default.png', true); ?>
+
+<?php } ?>
+
+
+
+
          <div class="card">
 
             <div class="card-body">

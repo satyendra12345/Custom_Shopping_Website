@@ -221,55 +221,36 @@ class ProductController extends TController
      */
 
     public function actionAdd(/* $id*/)
-
     {
-
         $model = new Product();
-
         $model->loadDefaultValues();
-
         $model->state_id = Product::STATE_ACTIVE;
-
-
         $model->checkRelatedData([
-
-
             'created_by_id' => User::class,
-
-
         ]);
-
         $post = \yii::$app->request->post();
-
         if (\yii::$app->request->isAjax && $model->load($post)) {
-
             \yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
-
             return TActiveForm::validate($model);
         }
-
         if ($model->load($post)) {
-            //  $model->image_file = UploadedFile::getInstances($model, 'image_file');
-            //  VarDumper::dump($model->image_file);
-            
-            //  foreach ($model->image_file as $key => $file) {
-               
-               
-            //     $model->saveUploadedFile($model, $file->name);
-            //  }
-         
-           $model->saveUploadedFile($model, 'image_file');
+            $model->image_file = UploadedFile::getInstances($model, 'image_file');
+            $index = 0;
+            foreach ($model->image_file as  $image_file) {
+                $basepath = UPLOAD_PATH;
+                $filename = time() . '_product.' . $image_file->extension;
+                $image_file->saveAs($basepath . $filename);
+                $file_array[$index] = $filename;
+                $index++;
+            }
+            $model->image_file = json_encode($file_array);
             if ($model->save()) {
                 return $this->redirect($model->getUrl());
             }
         }
-
         $this->updateMenuItems();
-
         return $this->render('add', [
-
             'model' => $model,
-
         ]);
     }
 
@@ -291,18 +272,41 @@ class ProductController extends TController
     {
 
         $model = $this->findModel($id);
+        $flag = true;
 
         $post = \yii::$app->request->post();
         $old_image = $model->image_file;
         if (\yii::$app->request->isAjax && $model->load($post)) {
             \yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
-            return TActiveForm::validate($model);
+            return
+                TActiveForm::validate($model);
         }
-        if (!empty($post['image_file'])) {
-            $old_image = $model->image_file;
+
+        // VarDumper::dump($post);
+        // exit;
+        if (empty($model->image_file)) {
+            $model->image_file = $old_image;
+            $flag = false;
         }
+
         if ($model->load($post)) {
-            $model->saveUploadedFile($model, 'image_file', $old_image);
+
+            if ($flag) {
+                $model->image_file = UploadedFile::getInstances($model, 'image_file');
+                $index = 0;
+                foreach ($model->image_file as  $image_file) {
+                    $basepath = UPLOAD_PATH;
+                    $filename = time() . '_product.' . $image_file->extension;
+                    $image_file->saveAs($basepath . $filename);
+                    $file_array[$index] = $filename;
+                    $index++;
+                }
+
+                $model->image_file = json_encode($file_array);
+            } else {
+                $model->image_file = $old_image;
+            }
+
             if ($model->save()) {
                 return $this->redirect($model->getUrl());
             }
