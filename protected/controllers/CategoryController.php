@@ -195,11 +195,9 @@ class CategoryController extends TController
      */
 
     public function actionAdd(/* $id*/)
-
-    {
+      {
 
         $model = new Category();
-
         $model->loadDefaultValues();
 
         $model->state_id = Category::STATE_ACTIVE;

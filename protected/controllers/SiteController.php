@@ -4,9 +4,11 @@ namespace app\controllers;
 
 use app\components\TActiveForm;
 use app\components\TController;
+use app\models\Cart;
 use app\models\Category as ModelsCategory;
 use app\models\ContactForm;
 use app\models\EmailQueue;
+use app\models\Product;
 use app\models\search\Category;
 use app\models\User;
 use Yii;
@@ -39,7 +41,8 @@ class SiteController extends TController
                             'content-tools-image-rotate',
                             'cart',
                             'listing',
-                            'product-view'
+                            'product-view',
+                            'add-cart'
                         ],
                         'allow' => true,
                         'roles' => [
@@ -81,7 +84,7 @@ class SiteController extends TController
     public function actionIndex()
     {
         $this->updateMenuItems();
-        if (! \Yii::$app->user->isGuest) {
+        if (!\Yii::$app->user->isGuest) {
             if (User::isAdmin()) {
                 $this->layout = User::LAYOUT_MAIN;
                 return $this->redirect('dashboard');
@@ -92,7 +95,7 @@ class SiteController extends TController
         } else {
             $userModel = new User();
             $this->layout = User::LAYOUT_GUEST_MAIN;
-            return $this->render('index',['userModel'=>$userModel]);
+            return $this->render('index', ['userModel' => $userModel]);
         }
     }
 
@@ -102,15 +105,49 @@ class SiteController extends TController
         $this->updateMenuItems();
         $this->layout = User::LAYOUT_GUEST_MAIN;
         return $this->render('cart');
-        
     }
 
     public function actionListing()
     {
         $this->updateMenuItems();
         $this->layout = User::LAYOUT_GUEST_MAIN;
+
+
         return $this->render('listing');
-        
+    }
+
+    public function actionAddCart($product_id)
+    {
+
+        $productModel = Cart::findOne($product_id);
+        $category_id = $productModel['category_id'];
+        $menu_id = $productModel['menu_id'];
+
+        if (!empty(Yii::$app->user->identity)) {
+            $cartModel = new Cart();
+            $cartModel->created_by_id = $_SERVER['REMOTE_ADDR'];
+            $cartModel->product_id = $product_id;
+            if ($cartModel->save()) {
+                Yii::$app->session->flash('success', 'Cart Updated Successfully');
+            } else {
+                Yii::$app->session->flash('danger', 'Error in Cart Adding ');
+            }
+        } else {
+            $cartModel = new Cart();
+            $cartModel->created_by_id = $_SERVER['REMOTE_ADDR'];
+            $cartModel->product_id = $product_id;
+            $cartModel->state_id=Product::STATE_ACTIVE;
+            if ($cartModel->save(false)) {
+                Yii::$app->session->setFlash('success', 'Cart Updated Successfully');
+            }
+            if ($cartModel->save()) {
+                Yii::$app->session->setFlash('danger', 'Error in Cart Adding ');
+            }
+        }
+
+        $this->updateMenuItems($cartModel);
+
+        return  $this->render('listing',['category_id'=>$category_id,'menu_id' => $menu_id] );
     }
 
     public function actionProductView()
@@ -118,7 +155,6 @@ class SiteController extends TController
         $this->updateMenuItems();
         $this->layout = User::LAYOUT_GUEST_MAIN;
         return $this->render('product_view');
-        
     }
 
     public function actionContact()

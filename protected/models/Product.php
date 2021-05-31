@@ -62,14 +62,10 @@ use yii\helpers\ArrayHelper;
 
 
  * @property string $image_file
-
-
+ 
+ * @property string $thumb_main_file
  * @property integer $category_id
-
-
  * @property integer $menu_id
-
-
  * @property integer $price
 
 
@@ -157,6 +153,7 @@ class Product extends \app\components\TActiveRecord
 
 	const STATE_DELETED 	= 2;
 
+	const USER_GUEST = 01;
 
 
 	public static function getStateOptions()
@@ -313,6 +310,13 @@ class Product extends \app\components\TActiveRecord
 			[['image_file'], 'trim'],
 			[
 				['image_file'], 'file',
+
+				'skipOnEmpty' => true,
+
+				'extensions' => 'png,jpg,jpeg'
+			],
+			[
+				['thumb_main_file'], 'file',
 
 				'skipOnEmpty' => true,
 

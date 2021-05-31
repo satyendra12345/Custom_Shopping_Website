@@ -1,3 +1,17 @@
+<?php
+
+use app\models\Product;
+use yii\helpers\Url;
+
+$requestData = Yii::$app->request->get();
+$product_id = $requestData['product_id'];
+$productModel = Product::findOne($product_id);
+$productImageArray = json_decode($productModel['image_file']);
+
+
+?>
+
+
 
 <!-- Frntre Mid Wrap -->
 <section class="frntre-mid-wrap product-detail">
@@ -6,84 +20,30 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="whitebox-wrap">
-            <h1 class="product-title">L Shape Sofa Six Seater In Fabric (Cream Brown)</h1>
+            <h1 class="product-title"><?=$productModel->title?></h1>
             <div class="product-slider">
               <div class="frntre-main-slider has-rounded-arrow">
                 <div class="item">
-                  <img src="<?= $this->theme->getUrl('assets_html/images/product2.jpg')?>" data-zoom-image="<?= $this->theme->getUrl('assets_html/images/product2.jpg')?>" alt="Nia Velvet 81.5 Square Arm Sleeper" class="frntre-zoom">
+                  <img src="<?= Url::home(true) . 'protected/uploads/' . $productModel->thumb_main_file;?>" data-zoom-image="<?= Url::home(true) . 'protected/uploads/' . $productModel->thumb_main_file; ?> " alt="Nia Velvet 81.5 Square Arm Sleeper" class="frntre-zoom">
                   <span class="badge">Sale</span>
                 </div>
-                <div class="item">
-                  <img src="<?= $this->theme->getUrl('assets_html/images/product3.jpg')?>" data-zoom-image="<?= $this->theme->getUrl('assets_html/images/product3.jpg')?>" alt="Nia Velvet 81.5 Square Arm Sleeper" class="frntre-zoom">
-                </div>
-                <div class="item">
-                  <img src="<?= $this->theme->getUrl('assets_html/images/product2.jpg')?>" data-zoom-image="<?= $this->theme->getUrl('assets_html/images/product2.jpg')?>" alt="Nia Velvet 81.5 Square Arm Sleeper" class="frntre-zoom">
-                </div>
-                <div class="item">
-                  <img src="<?= $this->theme->getUrl('assets_html/images/product3.jpg')?>" data-zoom-image="<?= $this->theme->getUrl('assets_html/images/product3.jpg')?>" alt="Nia Velvet 81.5 Square Arm Sleeper" class="frntre-zoom">
-                </div>
-                <div class="item">
-                  <img src="<?= $this->theme->getUrl('assets_html/images/product2.jpg')?>" data-zoom-image="<?= $this->theme->getUrl('assets_html/images/product2.jpg')?>" alt="Nia Velvet 81.5 Square Arm Sleeper" class="frntre-zoom">
-                </div>
-                <div class="item">
-                  <img src="<?= $this->theme->getUrl('assets_html/images/product3.jpg')?>" data-zoom-image="<?= $this->theme->getUrl('assets_html/images/product3.jpg')?>" alt="Nia Velvet 81.5 Square Arm Sleeper" class="frntre-zoom">
-                </div>
-                <div class="item">
-                  <img src="<?= $this->theme->getUrl('assets_html/images/product2.jpg')?>" data-zoom-image="<?= $this->theme->getUrl('assets_html/images/product2.jpg')?>" alt="Nia Velvet 81.5 Square Arm Sleeper" class="frntre-zoom">
-                </div>
-                <div class="item">
-                  <img src="<?= $this->theme->getUrl('assets_html/images/product3.jpg')?>" data-zoom-image="<?= $this->theme->getUrl('assets_html/images/product3.jpg')?>" alt="Nia Velvet 81.5 Square Arm Sleeper" class="frntre-zoom">
-                </div>
-                <div class="item">
-                  <img src="<?= $this->theme->getUrl('assets_html/images/product2.jpg')?>" data-zoom-image="<?= $this->theme->getUrl('assets_html/images/product2.jpg')?>" alt="Nia Velvet 81.5 Square Arm Sleeper" class="frntre-zoom">
-                </div>
-                <div class="item">
-                  <img src="<?= $this->theme->getUrl('assets_html/images/product3.jpg')?>" data-zoom-image="<?= $this->theme->getUrl('assets_html/images/product2.jpg')?>" alt="Nia Velvet 81.5 Square Arm Sleeper" class="frntre-zoom">
-                </div>
-                <div class="item">
-                  <img src="<?= $this->theme->getUrl('assets_html/images/product2.jpg')?>" data-zoom-image="<?= $this->theme->getUrl('assets_html/images/product2.jpg')?>" alt="Nia Velvet 81.5 Square Arm Sleeper" class="frntre-zoom">
-                </div>
-                <div class="item">
-                  <img src="<?= $this->theme->getUrl('assets_html/images/product3.jpg')?>" data-zoom-image="<?= $this->theme->getUrl('assets_html/images/product3.jpg')?>" alt="Nia Velvet 81.5 Square Arm Sleeper" class="frntre-zoom">
-                </div>
+                <?php foreach ($productImageArray as $key => $value) {
+                    $imageName = $productImageArray[$key];
+                ?>
+                 <div class="item">
+                    <img src="<?= Url::home(true) . 'protected/uploads/' . $imageName; ?>" data-zoom-image="<?= Url::home(true) . 'protected/uploads/' . $imageName; ?>" alt="Nia Velvet 81.5 Square Arm Sleeper" class="frntre-zoom">
+                  </div>
+
+                <?php  } ?>
               </div>
               <div class="frntre-thumb-slider">
+                <?php foreach ($productImageArray as $key => $value) {
+                  $imageName = $productImageArray[$key];
+                ?>
                 <div class="item">
-                  <div class="frntre-image"><img src="<?= $this->theme->getUrl('assets_html/images/product-thumb1.jpg')?>" alt="Nia Velvet 81.5 Square Arm Sleeper"></div>
+                 <div class="frntre-image"><img src="<?=Url::home(true) . 'protected/uploads/' . $imageName; ?>"alt="Nia Velvet 81.5 Square Arm Sleeper"></div>
                 </div>
-                <div class="item">
-                  <div class="frntre-image"><img src="<?= $this->theme->getUrl('assets_html/images/product-thumb2.jpg')?>" alt="Nia Velvet 81.5 Square Arm Sleeper"></div>
-                </div>
-                <div class="item">
-                  <div class="frntre-image"><img src="<?= $this->theme->getUrl('assets_html/images/product-thumb3.jpg')?>" alt="Nia Velvet 81.5 Square Arm Sleeper"></div>
-                </div>
-                <div class="item">
-                  <div class="frntre-image"><img src="<?= $this->theme->getUrl('assets_html/images/product-thumb4.jpg')?>" alt="Nia Velvet 81.5 Square Arm Sleeper"></div>
-                </div>
-                <div class="item">
-                  <div class="frntre-image"><img src="<?= $this->theme->getUrl('assets_html/images/product-thumb5.jpg')?>" alt="Nia Velvet 81.5 Square Arm Sleeper"></div>
-                </div>
-                <div class="item">
-                  <div class="frntre-image"><img src="<?= $this->theme->getUrl('assets_html/images/product-thumb6.jpg')?>" alt="Nia Velvet 81.5 Square Arm Sleeper"></div>
-                </div>
-                <div class="item">
-                  <div class="frntre-image"><img src="<?= $this->theme->getUrl('assets_html/images/product-thumb7.jpg')?>" alt="Nia Velvet 81.5 Square Arm Sleeper"></div>
-                </div>
-                <div class="item">
-                  <div class="frntre-image"><img src="<?= $this->theme->getUrl('assets_html/images/product-thumb8.jpg')?>" alt="Nia Velvet 81.5 Square Arm Sleeper"></div>
-                </div>
-                <div class="item">
-                  <div class="frntre-image"><img src="<?= $this->theme->getUrl('assets_html/images/product-thumb9.jpg')?>" alt="Nia Velvet 81.5 Square Arm Sleeper"></div>
-                </div>
-                <div class="item">
-                  <div class="frntre-image"><img src="<?= $this->theme->getUrl('assets_html/images/product-thumb10.jpg')?>" alt="Nia Velvet 81.5 Square Arm Sleeper"></div>
-                </div>
-                <div class="item">
-                  <div class="frntre-image"><img src="<?= $this->theme->getUrl('assets_html/images/product-thumb1.jpg')?>" alt="Nia Velvet 81.5 Square Arm Sleeper"></div>
-                </div>
-                <div class="item">
-                  <div class="frntre-image"><img src="<?= $this->theme->getUrl('assets_html/images/product-thumb2.jpg')?>" alt="Nia Velvet 81.5 Square Arm Sleeper"></div>
-                </div>
+                <?php  } ?>
               </div>
             </div>
           </div>
@@ -98,7 +58,7 @@
                         <div class="product-wrap">
                           <h6 class="viewing-item">Item you're currently viewing</h6>
                           <div class="frntre-image">
-                            <img src="<?= $this->theme->getUrl('assets_html/images/product2.jpg')?>" alt="Aeryn Sectional">
+                            <img src="<?= $this->theme->getUrl('assets_html/images/product2.jpg') ?>" alt="Aeryn Sectional">
                           </div>
                           <div class="product-info">
                             <h3 class="product-bundle">
@@ -118,7 +78,7 @@
                       <a href="#0" class="product-list">
                         <div class="product-wrap">
                           <div class="frntre-image">
-                            <img src="<?= $this->theme->getUrl('assets_html/images/product-color3.jpg')?>" alt="Aeryn Sectional">
+                            <img src="<?= $this->theme->getUrl('assets_html/images/product-color3.jpg') ?>" alt="Aeryn Sectional">
                           </div>
                           <div class="product-info">
                             <h2 class="product-title">Aeryn Sectional by Beachcrest Home</h2>
@@ -142,7 +102,7 @@
                       <a href="#0" class="product-list">
                         <div class="product-wrap">
                           <div class="frntre-image">
-                            <img src="<?= $this->theme->getUrl('assets_html/images/product4.jpg')?>" alt="Aeryn Sectional">
+                            <img src="<?= $this->theme->getUrl('assets_html/images/product4.jpg') ?>" alt="Aeryn Sectional">
                           </div>
                           <div class="product-info">
                             <h2 class="product-title">Aeryn Sectional by Beachcrest Home</h2>
@@ -185,18 +145,18 @@
             <div class="row">
               <div id="zoomWindow"></div>
               <div class="col-md-7 order-md-1">
-                <h2 class="product-price">$839.99 <span>$1,799.00</span> <span class="off">74% Off</span> <span class="product-status">On Sale</span></h2>
+                <h2 class="product-price"><?=$productModel->price.' INR'?><span>$1,799.00</span> <span class="off">74% Off</span> <span class="product-status">On Sale</span></h2>
                 <div class="product-colors">
                   <h3><strong>Color:</strong> <span class="product-color-name">Color 1</span></h3>
                   <ul>
                     <li>
-                      <a href="#0" data-color="Color 1"><img src="<?= $this->theme->getUrl('assets_html/images/product-color6.jpg')?>" alt="L Shape Sofa Six Seater In Fabric (Cream Brown)"></a>
+                      <a href="#0" data-color="Color 1"><img src="<?= $this->theme->getUrl('assets_html/images/product-color6.jpg') ?>" alt="L Shape Sofa Six Seater In Fabric (Cream Brown)"></a>
                     </li>
                     <li>
-                      <a href="#0" data-color="Color 2"><img src="<?= $this->theme->getUrl('assets_html/images/product-color7.jpg')?>" alt="L Shape Sofa Six Seater In Fabric (Cream Brown)"></a>
+                      <a href="#0" data-color="Color 2"><img src="<?= $this->theme->getUrl('assets_html/images/product-color7.jpg') ?>" alt="L Shape Sofa Six Seater In Fabric (Cream Brown)"></a>
                     </li>
                     <li>
-                      <a href="#0" data-color="Color 3"><img src="<?= $this->theme->getUrl('assets_html/images/product-color8.jpg')?>" alt="L Shape Sofa Six Seater In Fabric (Cream Brown)"></a>
+                      <a href="#0" data-color="Color 3"><img src="<?= $this->theme->getUrl('assets_html/images/product-color8.jpg') ?>" alt="L Shape Sofa Six Seater In Fabric (Cream Brown)"></a>
                     </li>
                   </ul>
                 </div>
@@ -241,8 +201,8 @@
                     <label for="Quantity">Qty:</label>
                     <input type="number" name="Quantity" value="1" min="1" max="10" class="form-control" id="Quantity">
                   </div>
-                  <a href="#0" class="btn btn-dark">
-                    <svg viewBox="0 0 28 28" class="frntre-icon">
+                <a href="<?=Url::toRoute(['site/add-cart','product_id'=>$product_id])?>"  class="btn btn-dark">
+               <svg viewBox="0 0 28 28" class="frntre-icon">
                       <path d="M23.2 8.6c-.5-.1-1.1.2-1.2.8L20.6 16h-8.4L9.6 8.7c-.1-.4-.5-.7-.9-.7H5c-.6 0-1 .4-1 1s.4 1 1 1h3l2.6 7.3s0 .1.1.1c0 .1.1.1.1.2l.1.1c.1.1.1.1.2.1 0 0 .1 0 .1.1.1 0 .2.1.3.1h9.9c.5 0 .9-.3 1-.8L24 9.8c.1-.5-.2-1.1-.8-1.2z"></path>
                       <circle cx="12.5" cy="20.5" r="1.5"></circle>
                       <circle cx="20.5" cy="20.5" r="1.5"></circle>
@@ -250,25 +210,14 @@
                     </svg>
                     Add to Cart
                   </a>
+
                 </div>
               </div>
               <div class="col-md-12 order-md-3">
                 <div class="product-overview">
                   <h5 class="border-title">Product Overview</h5>
                   <div class="frntre-scroll">
-                    <p>Nothing says class, sophistication and smooth comfort quite like velvet, and the Nia Pin tufted transitional futon is the ultimate in style! The design itself is stunning. It combines thick cushioning with tufted velvet, sleek arms, tapered wooden legs, and a vintage look that takes you back to the bold and luxurious days of the 1950s. With a variety of colors to match your décor, this sofa can fit perfectly with a contemporary look, classic style or more rustic-looking living space.</p>
-                    <p>What’s more, the split-back design seating can be independently lowered into lounging or sleeping position so you can sit up to watch your favorite movie, lounge back to chat with friends or offer overnight guests a perfectly comfortable place to spend the night. The Nia Pin tufted transitional futon comes with soft padding under all four feet to make it easy to move around and ensure your floors are never scuffed or scratched.</p>
-                    <ul>
-                      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-                      <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                      <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
-                      <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
-                      <li>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</li>
-                      <li>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</li>
-                    </ul>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                   <?=$productModel->description?>
                   </div>
                 </div>
               </div>
@@ -279,31 +228,31 @@
                       <div class="whitebox-wrap">
                         <div class="guarantee-list">
                           <div class="frntre-image">
-                            <div class="icon-wrap"><img src="<?= $this->theme->getUrl('assets_html/images/icon4.png')?>" alt="Top Seller"></div>
+                            <div class="icon-wrap"><img src="<?= $this->theme->getUrl('assets_html/images/icon4.png') ?>" alt="Top Seller"></div>
                           </div>
                           <div class="guarantee-info">Leading Name (Top Amazon.com Seller)</div>
                         </div>
                         <div class="guarantee-list">
                           <div class="frntre-image">
-                            <div class="icon-wrap"><img src="<?= $this->theme->getUrl('assets_html/images/icon5.png')?>" alt="Free Shipping"></div>
+                            <div class="icon-wrap"><img src="<?= $this->theme->getUrl('assets_html/images/icon5.png') ?>" alt="Free Shipping"></div>
                           </div>
                           <div class="guarantee-info">Free Shipping Over 10,000</div>
                         </div>
                         <div class="guarantee-list">
                           <div class="frntre-image">
-                            <div class="icon-wrap"><img src="<?= $this->theme->getUrl('assets_html/images/icon6.jpg')?>" alt="Free Assembly"></div>
+                            <div class="icon-wrap"><img src="<?= $this->theme->getUrl('assets_html/images/icon6.jpg') ?>" alt="Free Assembly"></div>
                           </div>
                           <div class="guarantee-info">Free Assembly from Us </div>
                         </div>
                         <div class="guarantee-list">
                           <div class="frntre-image">
-                            <div class="icon-wrap"><img src="<?= $this->theme->getUrl('assets_html/images/icon7.png')?>" alt="Easy Returns"></div>
+                            <div class="icon-wrap"><img src="<?= $this->theme->getUrl('assets_html/images/icon7.png') ?>" alt="Easy Returns"></div>
                           </div>
                           <div class="guarantee-info">Easy Returns 14 Days with No Question Asked</div>
                         </div>
                         <div class="guarantee-list">
                           <div class="frntre-image">
-                            <div class="icon-wrap"><img src="<?= $this->theme->getUrl('assets_html/images/icon8.png')?>" alt="No Cost EMI"></div>
+                            <div class="icon-wrap"><img src="<?= $this->theme->getUrl('assets_html/images/icon8.png') ?>" alt="No Cost EMI"></div>
                           </div>
                           <div class="guarantee-info">No Cost EMI Available on Leading Banks Credit Card</div>
                         </div>
@@ -330,7 +279,7 @@
           <div class="product-wrap">
             <span class="badge">Sale</span>
             <div class="frntre-image">
-              <img src="<?= $this->theme->getUrl('assets_html/images/product2.jpg')?>" alt="Aeryn Sectional">
+              <img src="<?= $this->theme->getUrl('assets_html/images/product2.jpg') ?>" alt="Aeryn Sectional">
             </div>
             <div class="product-info">
               <h2 class="product-title">Aeryn Sectional by Beachcrest Home</h2>
@@ -343,7 +292,7 @@
         <a href="#0" class="product-list">
           <div class="product-wrap">
             <div class="frntre-image">
-              <img src="<?= $this->theme->getUrl('assets_html/images/product3.jpg')?>" alt="Edmeston Chesterfield 54.75 Rolled Arm Loveseat">
+              <img src="<?= $this->theme->getUrl('assets_html/images/product3.jpg') ?>" alt="Edmeston Chesterfield 54.75 Rolled Arm Loveseat">
             </div>
             <div class="product-info">
               <h2 class="product-title">Edmeston by Birch Lane</h2>
@@ -356,7 +305,7 @@
         <a href="#0" class="product-list">
           <div class="product-wrap">
             <div class="frntre-image">
-              <img src="<?= $this->theme->getUrl('assets_html/images/product2.jpg')?>" alt="Aeryn Sectional">
+              <img src="<?= $this->theme->getUrl('assets_html/images/product2.jpg') ?>" alt="Aeryn Sectional">
             </div>
             <div class="product-info">
               <h2 class="product-title">Aeryn Sectional by Beachcrest Home</h2>
@@ -370,7 +319,7 @@
           <div class="product-wrap">
             <span class="badge">Sale</span>
             <div class="frntre-image">
-              <img src="<?= $this->theme->getUrl('assets_html/images/product3.jpg')?>" alt="Edmeston Chesterfield 54.75 Rolled Arm Loveseat">
+              <img src="<?= $this->theme->getUrl('assets_html/images/product3.jpg') ?>" alt="Edmeston Chesterfield 54.75 Rolled Arm Loveseat">
             </div>
             <div class="product-info">
               <h2 class="product-title">Edmeston by Birch Lane</h2>
@@ -380,11 +329,11 @@
         </a>
       </div>
       <div class="item">
-        <a href="#0" class="product-list">
+        <a href="#0"  class="product-list">
           <div class="product-wrap">
             <span class="badge">Sale</span>
             <div class="frntre-image">
-              <img src="<?= $this->theme->getUrl('assets_html/images/product2.jpg')?>" alt="Aeryn Sectional">
+              <img src="<?= $this->theme->getUrl('assets_html/images/product2.jpg') ?>" alt="Aeryn Sectional">
             </div>
             <div class="product-info">
               <h2 class="product-title">Aeryn Sectional by Beachcrest Home</h2>
@@ -397,7 +346,7 @@
         <a href="#0" class="product-list">
           <div class="product-wrap">
             <div class="frntre-image">
-              <img src="<?= $this->theme->getUrl('assets_html/images/product3.jpg')?>" alt="Edmeston Chesterfield 54.75 Rolled Arm Loveseat">
+              <img src="<?= $this->theme->getUrl('assets_html/images/product3.jpg') ?>" alt="Edmeston Chesterfield 54.75 Rolled Arm Loveseat">
             </div>
             <div class="product-info">
               <h2 class="product-title">Edmeston by Birch Lane</h2>
@@ -409,3 +358,17 @@
     </div>
   </div>
 </section>
+<?php
+if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+  $ip = $_SERVER['HTTP_CLIENT_IP'];
+} elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+  $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+} else {
+  $ip = $_SERVER['REMOTE_ADDR'];
+}
+?>
+
+<script>
+
+
+</script>

@@ -1,4 +1,5 @@
 <?php
+
 date_default_timezone_set('Asia/Kolkata');
 
 define('PROJECT_ID', 'AineProject');  //TODO:must change
@@ -23,6 +24,8 @@ if (YII_ENV == 'dev') {
 defined('DATECHECK') or define('DATECHECK', "2019-12-31");
 defined('VERSION') or define('VERSION', "1.0");
 defined('FILE_MODE') or define('FILE_MODE', 0755);
+
+
 
 defined('UPLOAD_PATH') or define('UPLOAD_PATH', dirname(__FILE__) . '/protected/uploads/');
 defined('MODULE_PATH') or define('MODULE_PATH', dirname(__FILE__) . '/protected/modules/');

@@ -82,6 +82,7 @@ class TBaseController extends Controller
             self::addMenu(Yii::t('app', 'User'), '//user', 'user', (User::isAdmin())),
             self::addMenu(Yii::t('app', 'Category'), '//category', 'list', (User::isAdmin())),
             self::addMenu(Yii::t('app', 'Products'), '//product', 'tag', (User::isAdmin())),
+            self::addMenu(Yii::t('app', 'Cart'), '//cart', 'tag', (User::isAdmin())),
             self::addMenu(Yii::t('app', 'Orders'), '//order', 'tag', (User::isAdmin())),
 
             self::addMenu(Yii::t('app', 'Menu Navigation bar'), '//menu', 'tag', (User::isAdmin())),

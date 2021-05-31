@@ -26,23 +26,26 @@ use kartik\file\FileInput;
       <?php echo $form->field($model, 'title')->textInput(); ?>
       <?php echo  $form->field($model, 'description')->widget(app\components\TRichTextEditor::className(), ['options' => ['rows' => 6], 'preset' => 'basic']); //$form->field($model, 'description')->textarea(['rows' => 6]); 
       ?>
+
+          <?php echo $form->field($model, 'thumb_main_file')->fileInput(); ?>
+
       <?php
 
       echo FileInput::widget([
          'model' => $model,
-         'attribute' => 'image_file',
+         'attribute' => 'image_file[]',
          'name' => 'image_file[]',
          'options' => [
             'multiple' => true,
             'accept' => 'image/*'
          ],
          'pluginOptions' => [
-            'showCaption' => false,
+            'showCaption' => true,
             'showRemove' => false,
             'showUpload' => false,
             'browseClass' => 'btn btn-primary btn-block',
-            'browseIcon' => '<i class="glyphicon glyphicon-camera"></i> ',
-            'browseLabel' =>  'Attach Business Card',
+            'browseIcon' => '<i class="glyphicon glyphicon-camera"></i>',
+            'browseLabel' =>  'Add Product Images',
             'allowedFileExtensions' => ['jpg', 'gif', 'png','jpeg'],
             'overwriteInitial' => false
          ],

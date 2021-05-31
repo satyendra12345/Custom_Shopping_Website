@@ -45,6 +45,7 @@ use app\models\User;
 use yii\web\HttpException;
 
 use app\components\TActiveForm;
+use app\models\Cart;
 use yii\helpers\VarDumper;
 use yii\web\UploadedFile;
 
@@ -131,6 +132,7 @@ class ProductController extends TController
 
 
                             'view',
+                            'add-cart'
 
                         ],
 
@@ -209,7 +211,7 @@ class ProductController extends TController
     }
 
 
-
+   
     /**
 
      * Creates a new Product model.
@@ -234,11 +236,15 @@ class ProductController extends TController
             return TActiveForm::validate($model);
         }
         if ($model->load($post)) {
+
+           $x=  $model->saveUploadedFile($model, 'thumb_main_file');
+          
+
             $model->image_file = UploadedFile::getInstances($model, 'image_file');
             $index = 0;
             foreach ($model->image_file as  $image_file) {
                 $basepath = UPLOAD_PATH;
-                $filename = time() . '_product.' . $image_file->extension;
+                $filename = time().$index .'_product.'. $image_file->extension;
                 $image_file->saveAs($basepath . $filename);
                 $file_array[$index] = $filename;
                 $index++;
@@ -288,15 +294,16 @@ class ProductController extends TController
             $model->image_file = $old_image;
             $flag = false;
         }
-
+        $file_array=[];
         if ($model->load($post)) {
+
 
             if ($flag) {
                 $model->image_file = UploadedFile::getInstances($model, 'image_file');
                 $index = 0;
                 foreach ($model->image_file as  $image_file) {
                     $basepath = UPLOAD_PATH;
-                    $filename = time() . '_product.' . $image_file->extension;
+                    $filename = time() .$index. '_product.' . $image_file->extension;
                     $image_file->saveAs($basepath . $filename);
                     $file_array[$index] = $filename;
                     $index++;

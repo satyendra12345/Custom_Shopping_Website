@@ -298,6 +298,26 @@ CREATE TABLE IF NOT EXISTS `tbl_menu` (
 
 -- -------------------------------------------
 
+-- TABLE `tbl_menu`
+
+
+DROP TABLE IF EXISTS `tbl_cart`;
+CREATE TABLE IF NOT EXISTS `tbl_cart` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `product_id` int  NOT NULL,
+  `state_id` int(11) NOT NULL DEFAULT '0',
+  `type_id` int(11) NOT NULL DEFAULT '0',
+  `created_on` datetime DEFAULT NULL,
+  `updated_on` datetime DEFAULT NULL,
+  `created_by_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_cart_product_id` (`product_id`),
+  CONSTRAINT `fk_cart_product_id` FOREIGN KEY (`product_id`) REFERENCES `tbl_product` (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+-- -------------------------------------------
+
 -- TABLE `tbl_product`
 
 -- -------------------------------------------
@@ -307,6 +327,7 @@ CREATE TABLE IF NOT EXISTS `tbl_product` (
   `title` text COLLATE utf8_unicode_ci,
   `description` text COLLATE utf8_unicode_ci NOT NULL,
   `image_file` varchar(255) NOT NULL,
+  `thumb_main_file` varchar(255) NOT NULL,
   `category_id` int(11) NOT NULL,
   `menu_id` int(11) NOT NULL,
   `price` int(11) NOT NULL,

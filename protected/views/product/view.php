@@ -3,6 +3,7 @@
 use app\components\useraction\UserAction;
 
 use app\modules\comment\widgets\CommentsWidget;
+use yii\helpers\VarDumper;
 
 /* @var $this yii\web\View */
 
@@ -33,7 +34,7 @@ $this->params['breadcrumbs'][] = (string)$model;
          <div class="row">
             <div class="col-md-2 pr0">
                <div class="profileimage">
-                  <?= $model->displayImage($model->image_file, ['class' => 'profile-pic'], 'default.png', true); ?>
+                  <?= $model->displayImage($model->thumb_main_file, ['class' => 'profile-pic'], 'default.png', true); ?>
                </div>
             </div>
 
@@ -128,41 +129,44 @@ $this->params['breadcrumbs'][] = (string)$model;
          <br><br><br>
          <div class="jumbotron text-center">Product Images <div>
 
-<?php $productImageArray = json_decode($model->image_file);
+               <?php $productImageArray = json_decode($model->image_file);
 
-foreach ($productImageArray as $key => $value) {
-?>
-   
-   <?= $model->displayImage($productImageArray[$key], ['class' => 'profile-pic'], 'default.png', true); ?>
+               if (isset($productImageArray)) {
 
-<?php } ?>
+                  foreach ($productImageArray as $key => $value) {
+               ?>
 
+                     <?= $model->displayImage($productImageArray[$key], ['class' => 'profile-pic'], 'default.png', true); ?>
 
-
-
-         <div class="card">
-
-            <div class="card-body">
-
-               <div class="product-panel">
-
-                  <?php
-
-                  $this->context->startPanel();
+               <?php }
+               } ?>
 
 
-                  $this->context->addPanel('Feeds', 'feeds', 'Feed', $model /*,null,true*/);
 
 
-                  $this->context->endPanel();
+               <div class="card">
 
-                  ?>
+                  <div class="card-body">
+
+                     <div class="product-panel">
+
+                        <?php
+
+                        $this->context->startPanel();
+
+
+                        $this->context->addPanel('Feeds', 'feeds', 'Feed', $model /*,null,true*/);
+
+
+                        $this->context->endPanel();
+
+                        ?>
+
+                     </div>
+
+                  </div>
 
                </div>
 
+
             </div>
-
-         </div>
-
-
-      </div>

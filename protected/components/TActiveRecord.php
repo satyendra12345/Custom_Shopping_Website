@@ -143,19 +143,19 @@ class TActiveRecord extends TBaseActiveRecord
 
         if ($this->hasAttribute('id')) {
 
-            Comment::deleteRelatedAll(array(
-                'model_id' => $this->id,
-                'model_type' => get_class($this)
-            ));
+            // Comment::deleteRelatedAll(array(
+            //     'model_id' => $this->id,
+            //     'model_type' => get_class($this)
+            // ));
             Feed::deleteRelatedAll(array(
                 'model_id' => $this->id,
                 'model_type' => get_class($this)
             ));
 
-            File::deleteRelatedAll(array(
-                'model_id' => $this->id,
-                'model_type' => get_class($this)
-            ));
+            // File::deleteRelatedAll(array(
+            //     'model_id' => $this->id,
+            //     'model_type' => get_class($this)
+            // ));
         }
         return true;
     }

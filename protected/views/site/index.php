@@ -38,7 +38,7 @@ $categoryModel = ModelsCategory::find()->where(['state_id' => Category::STATE_AC
 		<div class="row">
 			<?php foreach ($categoryModel as $category) { ?>
 				<div class="col-lg-2 col-md-4 col-6">
-					<a href="<?=Url::toRoute(['site/listing','category_id'=>$category->id,'menu_id'=>$category->id]) ?>" class="product-item">
+					<a href="<?= Url::toRoute(['site/listing', 'category_id' => $category->id, 'menu_id' => $category->id]) ?>" class="product-item">
 						<div class="frntre-image"><img src="<?= $this->theme->getUrl('assets_html/images/product1.png') ?>" alt="Furniture"></div>
 						<div class="product-name"><?= $category->title ?></div>
 					</a>
@@ -212,6 +212,7 @@ $categoryModel = ModelsCategory::find()->where(['state_id' => Category::STATE_AC
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">
 			<div class="modal-body frntre-login">
+				
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
 				<ul class="nav nav-tabs nav-justified justify-content-center">
 					<li class="nav-item">
@@ -223,7 +224,8 @@ $categoryModel = ModelsCategory::find()->where(['state_id' => Category::STATE_AC
 				</ul>
 				<div class="tab-content">
 					<div class="tab-pane active" id="Login">
-			
+                        <form action=<?php echo Url::toRoute(['user/login']); ?> method="POST">
+
 						<div class="form-group">
 							<div class="control-icon">
 								<svg viewBox="0 0 514 514" class="frntre-icon">
@@ -277,7 +279,7 @@ $categoryModel = ModelsCategory::find()->where(['state_id' => Category::STATE_AC
 						</div>
 					</div>
 					<div class="tab-pane" id="Signup">
-						<form>
+					<form action=<?php echo Url::toRoute(['user/signup']); ?> method="POST">  
 							<div class="form-group">
 								<div class="control-icon">
 									<svg viewBox="0 0 514 378" class="frntre-icon">
