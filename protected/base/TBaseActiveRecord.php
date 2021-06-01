@@ -6,6 +6,7 @@ use app\models\User;
 use Yii;
 use yii\db\ActiveRecord;
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 /**
  * This is the generic model class
@@ -28,7 +29,8 @@ class TBaseActiveRecord extends ActiveRecord
     {
         $opt = [
             'class' => 'img-fluid',
-            'id' => 'profile_file'
+            'id' => 'profile_file',
+            'data-zoom-image' => 'fff'
         ];
 
         $arr = array_merge($opt, $options);
@@ -43,6 +45,39 @@ class TBaseActiveRecord extends ActiveRecord
                 'file' => $file
             ];
         }
+
+        if (! empty($file) && file_exists(UPLOAD_PATH . '/' . $file)) {
+            return Html::img($url, $arr);
+        } else {
+            return Html::img(\Yii::$app->view->theme->getUrl('/img/') . $defaultImg, $arr);
+        }
+    }
+
+    public function displayImageWithZoom($file, $options = [], $defaultImg = 'default.png', $isThumb = false)
+    {
+       
+        if ($isThumb) {
+            $url = [
+                '/file/file/thumbnail',
+                'filename' => $file
+            ];
+        } else {
+            $url = [
+                '/file/file/files',
+                'file' => $file
+            ];
+        }
+
+        $opt = [
+            'class' => 'img-fluid',
+            'id' => 'profile_file',
+           
+        ];
+
+        $arr = array_merge($opt, $options);
+
+       $opt['data-zoom-image'] = Url::to($url);
+       $arr = array_merge($opt, $options);
 
         if (! empty($file) && file_exists(UPLOAD_PATH . '/' . $file)) {
             return Html::img($url, $arr);

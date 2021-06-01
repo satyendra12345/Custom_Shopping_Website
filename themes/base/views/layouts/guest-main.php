@@ -67,7 +67,7 @@ $this->beginPage() ?>
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-lg-7 col-md-9 col-7">
-					<a href="#0" class="frntre-brand"><img src=<?= $this->theme->getUrl('assets_html/images/logo.png') ?> alt="Furniture" width="150"></a>
+					<a href="<?=Url::toRoute(['site/index'])?>" class="frntre-brand"><img src=<?= $this->theme->getUrl('assets_html/images/logo.png') ?> alt="Furniture" width="150"></a>
 					<form class="frntre-search">
 						<svg viewBox="0 0 28 28" class="frntre-icon">
 							<path d="M21.7 20.3l-3.4-3.4c2-2.7 1.8-6.4-.6-8.9C15 5.3 10.6 5.3 8 8c-2.7 2.7-2.7 7 0 9.6 1.3 1.3 3.1 2 4.8 2 1.4 0 2.8-.5 4-1.3l3.4 3.4c.2.2.5.3.7.3s.5-.1.7-.3c.5-.4.5-1 .1-1.4zM9.4 16.2a4.77 4.77 0 0 1 0-6.8c.9-.9 2.2-1.4 3.4-1.4s2.5.5 3.4 1.4c1.9 1.9 1.9 4.9 0 6.8a4.77 4.77 0 0 1-6.8 0z"></path>

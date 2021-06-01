@@ -11,9 +11,9 @@ use yii\helpers\VarDumper;
 <?php
 $modelTest = new Product();
 $requestData = Yii::$app->request->get();
-if(isset($requestData['category_id']) && $requestData['menu_id']){
-$category_id = $requestData['category_id'];
-$menu_id = $requestData['menu_id'];
+if (isset($requestData['category_id']) && $requestData['menu_id']) {
+  $category_id = $requestData['category_id'];
+  $menu_id = $requestData['menu_id'];
 }
 
 
@@ -23,14 +23,13 @@ $menu_id = $requestData['menu_id'];
   <div class="row full-col-479">
 
     <?php
-    if(isset($requestData['category_id']) && $requestData['menu_id']){
-    $models = Product::find()->asArray()->where([
-      'category_id' => $category_id,
-      'menu_id' => $menu_id
-    ])
-      ->all();
-    }
-    else{
+    if (isset($requestData['category_id']) && $requestData['menu_id']) {
+      $models = Product::find()->asArray()->where([
+        'category_id' => $category_id,
+        'menu_id' => $menu_id
+      ])
+        ->all();
+    } else {
       $models = Product::find()->all();
     }
     foreach ($models as $model) {
@@ -49,7 +48,10 @@ $menu_id = $requestData['menu_id'];
               <span class="badge">Sale </span>
 
               <div class="frntre-image" style="height:auto;">
-                <?=$modelTest->displayImage($model['thumb_main_file'], ['class' => 'profile-pic'], 'default.png', true); ?>
+
+
+
+                <?= $modelTest->displayImage($model['thumb_main_file'], ['class' => 'profile-pic'], 'default.png', true); ?>
                 <div class="view-icon">
                   <svg viewBox="0 0 514 356" class="frntre-icon">
 
@@ -62,12 +64,9 @@ $menu_id = $requestData['menu_id'];
               <div class="product-info">
                 <ul class="product-thumbs">
                   <?php foreach ($productImageArray as $key => $value) {
-
                     $imageName = $productImageArray[$key];
-                
-
                   ?>
-                    <li><img src="<?=Url::home(true).'protected/uploads/'.$imageName;?>"></li> <?php } ?>
+                    <li> <?= $modelTest->displayImage($imageName, ['class' => 'profile-pic'], 'default.png', true); ?></li> <?php } ?>
 
                 </ul>
                 <h2 class="product-title"><?= $model['title'] ?></h2>

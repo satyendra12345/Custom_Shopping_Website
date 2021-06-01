@@ -56,7 +56,6 @@ use yii\web\UploadedFile;
  */
 
 class ProductController extends TController
-
 {
 
     public function behaviors()

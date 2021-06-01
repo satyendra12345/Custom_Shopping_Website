@@ -7,7 +7,7 @@ $requestData = Yii::$app->request->get();
 $product_id = $requestData['product_id'];
 $productModel = Product::findOne($product_id);
 $productImageArray = json_decode($productModel['image_file']);
-
+$modelTest = new Product();
 
 ?>
 
@@ -24,14 +24,14 @@ $productImageArray = json_decode($productModel['image_file']);
             <div class="product-slider">
               <div class="frntre-main-slider has-rounded-arrow">
                 <div class="item">
-                  <img src="<?= Url::home(true) . 'protected/uploads/' . $productModel->thumb_main_file;?>" data-zoom-image="<?= Url::home(true) . 'protected/uploads/' . $productModel->thumb_main_file; ?> " alt="Nia Velvet 81.5 Square Arm Sleeper" class="frntre-zoom">
+                <?=$modelTest->displayImageWithZoom($productModel->thumb_main_file, ['class' => 'frntre-image'], 'default.png', true); ?>
                   <span class="badge">Sale</span>
                 </div>
                 <?php foreach ($productImageArray as $key => $value) {
                     $imageName = $productImageArray[$key];
                 ?>
                  <div class="item">
-                    <img src="<?= Url::home(true) . 'protected/uploads/' . $imageName; ?>" data-zoom-image="<?= Url::home(true) . 'protected/uploads/' . $imageName; ?>" alt="Nia Velvet 81.5 Square Arm Sleeper" class="frntre-zoom">
+               <?=  $modelTest->displayImageWithZoom($imageName, ['class' => 'frntre-image'], 'default.png', true); ?>
                   </div>
 
                 <?php  } ?>
@@ -41,7 +41,7 @@ $productImageArray = json_decode($productModel['image_file']);
                   $imageName = $productImageArray[$key];
                 ?>
                 <div class="item">
-                 <div class="frntre-image"><img src="<?=Url::home(true) . 'protected/uploads/' . $imageName; ?>"alt="Nia Velvet 81.5 Square Arm Sleeper"></div>
+                 <div class="frntre-image"><?=$modelTest->displayImageWithZoom($imageName, ['class' => 'frntre-image'], 'default.png', true); ?></div>
                 </div>
                 <?php  } ?>
               </div>
