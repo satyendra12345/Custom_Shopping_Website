@@ -148,26 +148,13 @@ $this->beginPage() ?>
 						
 						?>
 						<li class="right-align" data-hover="Cart">
-                      	<a href="javascript:void(0);">
+                      	<a href="<?=Url::toRoute(['site/cart'])?>">
 								<svg viewBox="0 0 28 28" class="frntre-icon">
 									<path d="M20.86 18.14H10.19l.91-1.31h9.76a1 1 0 0 0 1-.83L23 9.38a1 1 0 0 0-.23-.81 1 1 0 0 0-.77-.36H9.63l-.38-1.46a1 1 0 0 0-1-.75H6a1 1 0 1 0 0 2h1.51l2 7.64-2 2.93a1 1 0 0 0-.06 1 1 1 0 0 0 .89.53h.46a1.38 1.38 0 1 0 2.4 0h6.74a1.47 1.47 0 0 0-.17.66 1.38 1.38 0 1 0 2.57-.66h.52a1 1 0 1 0 0-2v.04zm-.05-7.93L20 14.83h-8.65l-1.2-4.62h10.66z"></path>
 								</svg>
 								<span class="user-menu"><?=$cart_count?><a href="<?=Url::toRoute(['listing'])?>"></a></span>
 							</a>
-							<div class="cart-popup" data-hover-popup="Cart">
-
-							  <?php  
-							 $cartItem = Cart::find()->where(['created_by_id' => $_SERVER['REMOTE_ADDR']])->all();
-							 foreach($cartItem as $item){
-							 ?>
-								<h2>Product Id <?=$item->product_id ?></h2>
-								<p>Created BY <?=$item->created_by_id?></p>
-								<a href="javascript:void(0);" class="btn btn-dark btn-block" data-toggle="modal" data-target="#LoginSignup">Sign In</a>
-							<?php  } ?>
-							</div>
-						</li>
-					</ul>
-				</div>
+							
 			</div>
 		</div>
 	</header>

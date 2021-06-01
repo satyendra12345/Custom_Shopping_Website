@@ -32595,3 +32595,70 @@ $_SERVER = [
     'REQUEST_TIME' => 1622542063
     'SERVER_ADDR' => false
 ]
+2021-06-01 16:03:12 [::1][-][u57fdsh21tcrniv0re2ijfetur][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/checkout in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php:152
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('checkout', Array)
+#1 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/checkout', Array)
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php:116
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#1 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#2 {main}
+2021-06-01 16:03:12 [::1][-][u57fdsh21tcrniv0re2ijfetur][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_session_AineProject' => 'u57fdsh21tcrniv0re2ijfetur'
+    'language' => '98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a:2:{i:0;s:8:\"language\";i:1;s:2:\"en\";}'
+    '_csrf_AineProject' => '370e5835494e69eccd84a45a9280f386eb6bd26772d2681d74598309bcd176e5a:2:{i:0;s:17:\"_csrf_AineProject\";i:1;s:32:\"BAL4wSrpxRnlj7ct5x621QgZcWAvOvEE\";}'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'success' => -1
+    ]
+    'success' => 'Cart Updated Successfully'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '51493'
+    'SERVER_SOFTWARE' => 'PHP 7.3.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/site/checkout'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website\\index.php'
+    'PATH_INFO' => '/site/checkout'
+    'PHP_SELF' => '/index.php/site/checkout'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_SEC_CH_UA' => '\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"91\", \"Chromium\";v=\"91\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8000/site/cart'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_session_AineProject=u57fdsh21tcrniv0re2ijfetur; language=98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _csrf_AineProject=370e5835494e69eccd84a45a9280f386eb6bd26772d2681d74598309bcd176e5a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_csrf_AineProject%22%3Bi%3A1%3Bs%3A32%3A%22BAL4wSrpxRnlj7ct5x621QgZcWAvOvEE%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1622543592.6128
+    'REQUEST_TIME' => 1622543592
+    'SERVER_ADDR' => false
+]

@@ -1,3 +1,7 @@
+<?php
+
+use yii\helpers\Url;
+?>
 
 <!-- Frntre Mid Wrap -->
 
@@ -345,7 +349,7 @@
 
               </dl>
 
-              <button type="submit" class="btn btn-dark btn-lg btn-block">Proceed to Checkout</button>
+              <button type="submit" class="btn btn-dark btn-lg btn-block" style="color:white"><a href="<?=Url::toRoute(['site/check-out'])?>">Proceed to Checkout</a></button>
 
             </div>
 

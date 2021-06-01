@@ -5,11 +5,9 @@ namespace app\controllers;
 use app\components\TActiveForm;
 use app\components\TController;
 use app\models\Cart;
-use app\models\Category as ModelsCategory;
 use app\models\ContactForm;
 use app\models\EmailQueue;
 use app\models\Product;
-use app\models\search\Category;
 use app\models\User;
 use Yii;
 use yii\filters\AccessControl;
@@ -42,7 +40,8 @@ class SiteController extends TController
                             'cart',
                             'listing',
                             'product-view',
-                            'add-cart'
+                            'add-cart',
+                            'check-out'
                         ],
                         'allow' => true,
                         'roles' => [
@@ -107,6 +106,14 @@ class SiteController extends TController
         return $this->render('cart');
     }
 
+    public function actionCheckOut()
+    {
+        $this->updateMenuItems();
+        $this->layout = User::LAYOUT_GUEST_MAIN;
+        return $this->render('checkout');
+    }
+
+
     public function actionListing()
     {
         $this->updateMenuItems();
@@ -120,8 +127,8 @@ class SiteController extends TController
     {
 
         $productModel = Cart::findOne($product_id);
-        $category_id = $productModel['category_id'];
-        $menu_id = $productModel['menu_id'];
+        // $category_id = $productModel['category_id'];
+        // $menu_id = $productModel['menu_id'];
 
         if (!empty(Yii::$app->user->identity)) {
             $cartModel = new Cart();
@@ -136,7 +143,7 @@ class SiteController extends TController
             $cartModel = new Cart();
             $cartModel->created_by_id = $_SERVER['REMOTE_ADDR'];
             $cartModel->product_id = $product_id;
-            $cartModel->state_id=Product::STATE_ACTIVE;
+            $cartModel->state_id = Product::STATE_ACTIVE;
             if ($cartModel->save(false)) {
                 Yii::$app->session->setFlash('success', 'Cart Updated Successfully');
             }
@@ -147,7 +154,7 @@ class SiteController extends TController
 
         $this->updateMenuItems($cartModel);
 
-        return  $this->render('listing',['category_id'=>$category_id,'menu_id' => $menu_id] );
+        return  $this->render('listing');
     }
 
     public function actionProductView()
