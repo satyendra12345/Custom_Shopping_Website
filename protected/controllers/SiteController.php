@@ -135,9 +135,9 @@ class SiteController extends TController
             $cartModel->created_by_id = $_SERVER['REMOTE_ADDR'];
             $cartModel->product_id = $product_id;
             if ($cartModel->save()) {
-                Yii::$app->session->flash('success', 'Cart Updated Successfully');
+                Yii::$app->session->setFlash('success', 'Cart Updated Successfully');
             } else {
-                Yii::$app->session->flash('danger', 'Error in Cart Adding ');
+                Yii::$app->session->setFlash('danger', 'Error in Cart Adding ');
             }
         } else {
             $cartModel = new Cart();

@@ -2,8 +2,6 @@
 
 use app\components\useraction\UserAction;
 
-use app\modules\comment\widgets\CommentsWidget;
-
 /* @var $this yii\web\View */
 
 /* @var $model app\models\Cart */
@@ -126,8 +124,4 @@ $this->params['breadcrumbs'][] = (string)$model;
       </div>
 
    </div>
-
-   
-   <?php echo CommentsWidget::widget(['model'=>$model]); ?>
-
 </div>
