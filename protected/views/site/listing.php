@@ -48,10 +48,7 @@ if (isset($requestData['category_id']) && $requestData['menu_id']) {
               <span class="badge">Sale </span>
 
               <div class="frntre-image" style="height:auto;">
-
-
-
-                <?= $modelTest->displayImage($model['thumb_main_file'], ['class' => 'profile-pic'], 'default.png', true); ?>
+         <?= $modelTest->displayImage($model['thumb_main_file'], ['class' => 'profile-pic'], 'default.png', true); ?>
                 <div class="view-icon">
                   <svg viewBox="0 0 514 356" class="frntre-icon">
 
