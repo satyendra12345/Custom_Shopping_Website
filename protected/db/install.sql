@@ -308,6 +308,7 @@ CREATE TABLE IF NOT EXISTS `tbl_cart` (
   `state_id` int(11) NOT NULL DEFAULT '0',
   `type_id` int(11) NOT NULL DEFAULT '0',
   `created_on` datetime DEFAULT NULL,
+  `browser_id` varchar DEFAULT NULL,
   `updated_on` datetime DEFAULT NULL,
   `created_by_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),

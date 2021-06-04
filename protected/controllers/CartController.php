@@ -130,6 +130,7 @@ class CartController extends TController
 
 
                             'view',
+                            'remove'
 
                         ],
 
@@ -422,6 +423,8 @@ class CartController extends TController
         ]);
     }
 
+
+
     /**
 
      * Truncate an existing Cart model.
@@ -460,6 +463,16 @@ class CartController extends TController
     }
 
 
+    public function actionRemove($id)
+    {
+        $request = Yii::$app->request->get();
+
+        $model = Cart::findOne($request['id']);
+        if ($model) {
+            $model->delete();
+        }
+        return $this->redirect(['site/cart']);
+    }
 
     /**
 

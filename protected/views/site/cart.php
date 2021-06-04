@@ -111,7 +111,7 @@ use phpbrowscap\Browscap;
 
                     <div class="cart-right">
 
-                      <h4 class="product-price"><?=$cart_item->product->price;?> <span>$1,799.00</span></h4>
+                      <h4 class="product-price"><?=$cart_item->product->price.' INR';?></h4>
 
                       <div class="clearfix">
 
@@ -153,7 +153,7 @@ use phpbrowscap\Browscap;
 
                       <div class="cart-actions">
 
-                        <a href="#0">
+                        <a href="<?=Url::toRoute(['cart/remove','id'=>$cart_item->id])?>">
 
                           <svg viewBox="0 0 28 28" class="frntre-icon">
 
@@ -268,9 +268,9 @@ use phpbrowscap\Browscap;
                 <dd class="col-4">$3,888.56</dd>
 
               </dl>
-
+              <?php if($total_price>0) { ?>
               <button type="submit" class="btn btn-dark btn-lg btn-block" style="color:white"><a href="<?=Url::toRoute(['site/check-out'])?>">Proceed to Checkout</a></button>
-
+              <?php } ?>
             </div>
 
           </div>

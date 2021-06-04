@@ -16,6 +16,7 @@ use app\modules\page\models\Page;
 use bizley\contenttools\actions\UploadAction;
 use bizley\contenttools\actions\InsertAction;
 use bizley\contenttools\actions\RotateAction;
+use yii\helpers\VarDumper;
 
 class SiteController extends TController
 {
@@ -41,7 +42,8 @@ class SiteController extends TController
                             'listing',
                             'product-view',
                             'add-cart',
-                            'check-out'
+                            'check-out',
+                            'remove'
                         ],
                         'allow' => true,
                         'roles' => [
@@ -123,6 +125,9 @@ class SiteController extends TController
         return $this->render('listing');
     }
 
+
+    
+  
     public function actionAddCart($product_id)
     {
         $bc = new Browscap(BASE_PATH . "/runtime/cache");

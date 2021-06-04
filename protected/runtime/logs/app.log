@@ -33462,3 +33462,1179 @@ $_SERVER = [
     'REQUEST_TIME' => 1622796623
     'SERVER_ADDR' => false
 ]
+2021-06-04 14:59:54 [::1][-][odbf2i4mf27svhpln68q8kb4li][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: cart/remove in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php:152
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('remove', Array)
+#1 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('cart/remove', Array)
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php:116
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#1 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#2 {main}
+2021-06-04 14:59:54 [::1][-][odbf2i4mf27svhpln68q8kb4li][info][application] $_GET = [
+    'id' => '37'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_session_AineProject' => 'odbf2i4mf27svhpln68q8kb4li'
+    'language' => '98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a:2:{i:0;s:8:\"language\";i:1;s:2:\"en\";}'
+    '_csrf_AineProject' => '1c316dcf4426f0667b9b594faadb50065746810f51c68642602a8e4b41d531e5a:2:{i:0;s:17:\"_csrf_AineProject\";i:1;s:32:\"s1HUvRJJgdQiqtS8ffeaYN9eeLlYaxXu\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '64559'
+    'SERVER_SOFTWARE' => 'PHP 7.3.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/cart/remove/37'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website\\index.php'
+    'PATH_INFO' => '/cart/remove/37'
+    'PHP_SELF' => '/index.php/cart/remove/37'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"91\", \"Chromium\";v=\"91\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8000/site/cart'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_session_AineProject=odbf2i4mf27svhpln68q8kb4li; language=98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _csrf_AineProject=1c316dcf4426f0667b9b594faadb50065746810f51c68642602a8e4b41d531e5a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_csrf_AineProject%22%3Bi%3A1%3Bs%3A32%3A%22s1HUvRJJgdQiqtS8ffeaYN9eeLlYaxXu%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1622798994.7685
+    'REQUEST_TIME' => 1622798994
+    'SERVER_ADDR' => false
+]
+2021-06-04 15:01:53 [::1][-][bbilgc6k04te2tadnh8rbqgat0][error][yii\base\ErrorException:64] yii\base\ErrorException: Cannot use empty array elements in arrays in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\CartController.php:132
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2021-06-04 15:01:53 [::1][-][bbilgc6k04te2tadnh8rbqgat0][info][application] $_GET = [
+    'id' => '37'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'language' => '98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a:2:{i:0;s:8:\"language\";i:1;s:2:\"en\";}'
+    '_csrf_AineProject' => '32627fcc5e845a336ff97a96b4bdd00deb43cce341fa8a2ece95fcea21433d97a:2:{i:0;s:17:\"_csrf_AineProject\";i:1;s:32:\"U4O9re9b5Z_tALIYCCpPPhVNBlnqSAWE\";}'
+    '_session_AineProject' => 'bbilgc6k04te2tadnh8rbqgat0'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'success' => -1
+        'danger' => -1
+    ]
+    'success' => 'Cart Updated Successfully'
+    'danger' => 'Error in Cart Adding '
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '51273'
+    'SERVER_SOFTWARE' => 'PHP 7.3.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/cart/remove/37'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website\\index.php'
+    'PATH_INFO' => '/cart/remove/37'
+    'PHP_SELF' => '/index.php/cart/remove/37'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"91\", \"Chromium\";v=\"91\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8000/site/cart'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'language=98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _csrf_AineProject=32627fcc5e845a336ff97a96b4bdd00deb43cce341fa8a2ece95fcea21433d97a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_csrf_AineProject%22%3Bi%3A1%3Bs%3A32%3A%22U4O9re9b5Z_tALIYCCpPPhVNBlnqSAWE%22%3B%7D; _session_AineProject=bbilgc6k04te2tadnh8rbqgat0'
+    'REQUEST_TIME_FLOAT' => 1622799113.3763
+    'REQUEST_TIME' => 1622799113
+    'SERVER_ADDR' => false
+]
+2021-06-04 15:02:07 [::1][-][bbilgc6k04te2tadnh8rbqgat0][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\CartController.php:516
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\CartController.php(431): app\controllers\CartController->findModel('37')
+#1 [internal function]: app\controllers\CartController->actionRemove('37')
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('remove', Array)
+#5 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('cart/remove', Array)
+#6 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#7 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#8 {main}
+2021-06-04 15:02:06 [::1][-][bbilgc6k04te2tadnh8rbqgat0][info][application] $_GET = [
+    'id' => '37'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'language' => '98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a:2:{i:0;s:8:\"language\";i:1;s:2:\"en\";}'
+    '_csrf_AineProject' => '32627fcc5e845a336ff97a96b4bdd00deb43cce341fa8a2ece95fcea21433d97a:2:{i:0;s:17:\"_csrf_AineProject\";i:1;s:32:\"U4O9re9b5Z_tALIYCCpPPhVNBlnqSAWE\";}'
+    '_session_AineProject' => 'bbilgc6k04te2tadnh8rbqgat0'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'success' => -1
+        'danger' => -1
+    ]
+    'success' => 'Cart Updated Successfully'
+    'danger' => 'Error in Cart Adding '
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '52867'
+    'SERVER_SOFTWARE' => 'PHP 7.3.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/cart/remove/37'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website\\index.php'
+    'PATH_INFO' => '/cart/remove/37'
+    'PHP_SELF' => '/index.php/cart/remove/37'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"91\", \"Chromium\";v=\"91\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8000/site/cart'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'language=98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _csrf_AineProject=32627fcc5e845a336ff97a96b4bdd00deb43cce341fa8a2ece95fcea21433d97a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_csrf_AineProject%22%3Bi%3A1%3Bs%3A32%3A%22U4O9re9b5Z_tALIYCCpPPhVNBlnqSAWE%22%3B%7D; _session_AineProject=bbilgc6k04te2tadnh8rbqgat0'
+    'REQUEST_TIME_FLOAT' => 1622799126.9451
+    'REQUEST_TIME' => 1622799126
+    'SERVER_ADDR' => false
+]
+2021-06-04 15:02:10 [::1][-][bbilgc6k04te2tadnh8rbqgat0][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\CartController.php:516
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\CartController.php(431): app\controllers\CartController->findModel('37')
+#1 [internal function]: app\controllers\CartController->actionRemove('37')
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('remove', Array)
+#5 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('cart/remove', Array)
+#6 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#7 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#8 {main}
+2021-06-04 15:02:10 [::1][-][bbilgc6k04te2tadnh8rbqgat0][info][application] $_GET = [
+    'id' => '37'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'language' => '98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a:2:{i:0;s:8:\"language\";i:1;s:2:\"en\";}'
+    '_csrf_AineProject' => '32627fcc5e845a336ff97a96b4bdd00deb43cce341fa8a2ece95fcea21433d97a:2:{i:0;s:17:\"_csrf_AineProject\";i:1;s:32:\"U4O9re9b5Z_tALIYCCpPPhVNBlnqSAWE\";}'
+    '_session_AineProject' => 'bbilgc6k04te2tadnh8rbqgat0'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'success' => -1
+        'danger' => -1
+    ]
+    'success' => 'Cart Updated Successfully'
+    'danger' => 'Error in Cart Adding '
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '61730'
+    'SERVER_SOFTWARE' => 'PHP 7.3.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/cart/remove/37'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website\\index.php'
+    'PATH_INFO' => '/cart/remove/37'
+    'PHP_SELF' => '/index.php/cart/remove/37'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"91\", \"Chromium\";v=\"91\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8000/site/cart'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'language=98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _csrf_AineProject=32627fcc5e845a336ff97a96b4bdd00deb43cce341fa8a2ece95fcea21433d97a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_csrf_AineProject%22%3Bi%3A1%3Bs%3A32%3A%22U4O9re9b5Z_tALIYCCpPPhVNBlnqSAWE%22%3B%7D; _session_AineProject=bbilgc6k04te2tadnh8rbqgat0'
+    'REQUEST_TIME_FLOAT' => 1622799130.5793
+    'REQUEST_TIME' => 1622799130
+    'SERVER_ADDR' => false
+]
+2021-06-04 15:02:51 [::1][-][odbf2i4mf27svhpln68q8kb4li][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\CartController.php:516
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\CartController.php(431): app\controllers\CartController->findModel('37')
+#1 [internal function]: app\controllers\CartController->actionRemove('37')
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('remove', Array)
+#5 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('cart/remove', Array)
+#6 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#7 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#8 {main}
+2021-06-04 15:02:51 [::1][-][odbf2i4mf27svhpln68q8kb4li][info][application] $_GET = [
+    'id' => '37'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_session_AineProject' => 'odbf2i4mf27svhpln68q8kb4li'
+    'language' => '98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a:2:{i:0;s:8:\"language\";i:1;s:2:\"en\";}'
+    '_csrf_AineProject' => '1c316dcf4426f0667b9b594faadb50065746810f51c68642602a8e4b41d531e5a:2:{i:0;s:17:\"_csrf_AineProject\";i:1;s:32:\"s1HUvRJJgdQiqtS8ffeaYN9eeLlYaxXu\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '52581'
+    'SERVER_SOFTWARE' => 'PHP 7.3.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/cart/remove/37'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website\\index.php'
+    'PATH_INFO' => '/cart/remove/37'
+    'PHP_SELF' => '/index.php/cart/remove/37'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"91\", \"Chromium\";v=\"91\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8000/site/cart'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_session_AineProject=odbf2i4mf27svhpln68q8kb4li; language=98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _csrf_AineProject=1c316dcf4426f0667b9b594faadb50065746810f51c68642602a8e4b41d531e5a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_csrf_AineProject%22%3Bi%3A1%3Bs%3A32%3A%22s1HUvRJJgdQiqtS8ffeaYN9eeLlYaxXu%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1622799171.5926
+    'REQUEST_TIME' => 1622799171
+    'SERVER_ADDR' => false
+]
+2021-06-04 15:04:08 [::1][-][odbf2i4mf27svhpln68q8kb4li][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\CartController.php:516
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\CartController.php(431): app\controllers\CartController->findModel('37')
+#1 [internal function]: app\controllers\CartController->actionRemove('37')
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('remove', Array)
+#5 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('cart/remove', Array)
+#6 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#7 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#8 {main}
+2021-06-04 15:04:08 [::1][-][odbf2i4mf27svhpln68q8kb4li][info][application] $_GET = [
+    'id' => '37'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_session_AineProject' => 'odbf2i4mf27svhpln68q8kb4li'
+    'language' => '98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a:2:{i:0;s:8:\"language\";i:1;s:2:\"en\";}'
+    '_csrf_AineProject' => '1c316dcf4426f0667b9b594faadb50065746810f51c68642602a8e4b41d531e5a:2:{i:0;s:17:\"_csrf_AineProject\";i:1;s:32:\"s1HUvRJJgdQiqtS8ffeaYN9eeLlYaxXu\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '61053'
+    'SERVER_SOFTWARE' => 'PHP 7.3.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/cart/remove/37'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website\\index.php'
+    'PATH_INFO' => '/cart/remove/37'
+    'PHP_SELF' => '/index.php/cart/remove/37'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"91\", \"Chromium\";v=\"91\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8000/site/cart'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_session_AineProject=odbf2i4mf27svhpln68q8kb4li; language=98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _csrf_AineProject=1c316dcf4426f0667b9b594faadb50065746810f51c68642602a8e4b41d531e5a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_csrf_AineProject%22%3Bi%3A1%3Bs%3A32%3A%22s1HUvRJJgdQiqtS8ffeaYN9eeLlYaxXu%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1622799248.131
+    'REQUEST_TIME' => 1622799248
+    'SERVER_ADDR' => false
+]
+2021-06-04 15:07:07 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\CartController.php:516
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\CartController.php(431): app\controllers\CartController->findModel('27')
+#1 [internal function]: app\controllers\CartController->actionRemove('27')
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('remove', Array)
+#5 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('cart/remove', Array)
+#6 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#7 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#8 {main}
+2021-06-04 15:07:07 [::1][-][-][info][application] $_GET = [
+    'id' => '27'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_session_AineProject' => 'odbf2i4mf27svhpln68q8kb4li'
+    'language' => '98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a:2:{i:0;s:8:\"language\";i:1;s:2:\"en\";}'
+    '_csrf_AineProject' => '1c316dcf4426f0667b9b594faadb50065746810f51c68642602a8e4b41d531e5a:2:{i:0;s:17:\"_csrf_AineProject\";i:1;s:32:\"s1HUvRJJgdQiqtS8ffeaYN9eeLlYaxXu\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost:8000/cart/delete/37'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '65110'
+    'SERVER_SOFTWARE' => 'PHP 7.3.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/cart/remove/27'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website\\index.php'
+    'PATH_INFO' => '/cart/remove/27'
+    'PHP_SELF' => '/index.php/cart/remove/27'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"91\", \"Chromium\";v=\"91\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8000/site/cart'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_session_AineProject=odbf2i4mf27svhpln68q8kb4li; language=98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _csrf_AineProject=1c316dcf4426f0667b9b594faadb50065746810f51c68642602a8e4b41d531e5a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_csrf_AineProject%22%3Bi%3A1%3Bs%3A32%3A%22s1HUvRJJgdQiqtS8ffeaYN9eeLlYaxXu%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1622799427.5193
+    'REQUEST_TIME' => 1622799427
+    'SERVER_ADDR' => false
+]
+2021-06-04 15:07:08 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\CartController.php:516
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\CartController.php(431): app\controllers\CartController->findModel('27')
+#1 [internal function]: app\controllers\CartController->actionRemove('27')
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('remove', Array)
+#5 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('cart/remove', Array)
+#6 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#7 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#8 {main}
+2021-06-04 15:07:08 [::1][-][-][info][application] $_GET = [
+    'id' => '27'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_session_AineProject' => 'odbf2i4mf27svhpln68q8kb4li'
+    'language' => '98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a:2:{i:0;s:8:\"language\";i:1;s:2:\"en\";}'
+    '_csrf_AineProject' => '1c316dcf4426f0667b9b594faadb50065746810f51c68642602a8e4b41d531e5a:2:{i:0;s:17:\"_csrf_AineProject\";i:1;s:32:\"s1HUvRJJgdQiqtS8ffeaYN9eeLlYaxXu\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost:8000/cart/delete/37'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '51790'
+    'SERVER_SOFTWARE' => 'PHP 7.3.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/cart/remove/27'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website\\index.php'
+    'PATH_INFO' => '/cart/remove/27'
+    'PHP_SELF' => '/index.php/cart/remove/27'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"91\", \"Chromium\";v=\"91\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8000/site/cart'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_session_AineProject=odbf2i4mf27svhpln68q8kb4li; language=98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _csrf_AineProject=1c316dcf4426f0667b9b594faadb50065746810f51c68642602a8e4b41d531e5a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_csrf_AineProject%22%3Bi%3A1%3Bs%3A32%3A%22s1HUvRJJgdQiqtS8ffeaYN9eeLlYaxXu%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1622799428.6873
+    'REQUEST_TIME' => 1622799428
+    'SERVER_ADDR' => false
+]
+2021-06-04 15:07:09 [::1][-][odbf2i4mf27svhpln68q8kb4li][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\CartController.php:516
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\CartController.php(431): app\controllers\CartController->findModel('27')
+#1 [internal function]: app\controllers\CartController->actionRemove('27')
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('remove', Array)
+#5 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('cart/remove', Array)
+#6 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#7 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#8 {main}
+2021-06-04 15:07:09 [::1][-][odbf2i4mf27svhpln68q8kb4li][info][application] $_GET = [
+    'id' => '27'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_session_AineProject' => 'odbf2i4mf27svhpln68q8kb4li'
+    'language' => '98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a:2:{i:0;s:8:\"language\";i:1;s:2:\"en\";}'
+    '_csrf_AineProject' => '1c316dcf4426f0667b9b594faadb50065746810f51c68642602a8e4b41d531e5a:2:{i:0;s:17:\"_csrf_AineProject\";i:1;s:32:\"s1HUvRJJgdQiqtS8ffeaYN9eeLlYaxXu\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost:8000/cart/delete/37'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '58069'
+    'SERVER_SOFTWARE' => 'PHP 7.3.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/cart/remove/27'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website\\index.php'
+    'PATH_INFO' => '/cart/remove/27'
+    'PHP_SELF' => '/index.php/cart/remove/27'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"91\", \"Chromium\";v=\"91\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8000/site/cart'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_session_AineProject=odbf2i4mf27svhpln68q8kb4li; language=98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _csrf_AineProject=1c316dcf4426f0667b9b594faadb50065746810f51c68642602a8e4b41d531e5a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_csrf_AineProject%22%3Bi%3A1%3Bs%3A32%3A%22s1HUvRJJgdQiqtS8ffeaYN9eeLlYaxXu%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1622799429.8324
+    'REQUEST_TIME' => 1622799429
+    'SERVER_ADDR' => false
+]
+2021-06-04 15:07:25 [::1][-][odbf2i4mf27svhpln68q8kb4li][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\CartController.php:516
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\CartController.php(431): app\controllers\CartController->findModel('27')
+#1 [internal function]: app\controllers\CartController->actionRemove('27')
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('remove', Array)
+#5 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('cart/remove', Array)
+#6 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#7 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#8 {main}
+2021-06-04 15:07:25 [::1][-][odbf2i4mf27svhpln68q8kb4li][info][application] $_GET = [
+    'id' => '27'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_session_AineProject' => 'odbf2i4mf27svhpln68q8kb4li'
+    'language' => '98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a:2:{i:0;s:8:\"language\";i:1;s:2:\"en\";}'
+    '_csrf_AineProject' => '1c316dcf4426f0667b9b594faadb50065746810f51c68642602a8e4b41d531e5a:2:{i:0;s:17:\"_csrf_AineProject\";i:1;s:32:\"s1HUvRJJgdQiqtS8ffeaYN9eeLlYaxXu\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost:8000/cart/delete/34'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '54083'
+    'SERVER_SOFTWARE' => 'PHP 7.3.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/cart/remove/27'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website\\index.php'
+    'PATH_INFO' => '/cart/remove/27'
+    'PHP_SELF' => '/index.php/cart/remove/27'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"91\", \"Chromium\";v=\"91\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8000/site/cart'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_session_AineProject=odbf2i4mf27svhpln68q8kb4li; language=98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _csrf_AineProject=1c316dcf4426f0667b9b594faadb50065746810f51c68642602a8e4b41d531e5a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_csrf_AineProject%22%3Bi%3A1%3Bs%3A32%3A%22s1HUvRJJgdQiqtS8ffeaYN9eeLlYaxXu%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1622799445.3843
+    'REQUEST_TIME' => 1622799445
+    'SERVER_ADDR' => false
+]
+2021-06-04 15:09:59 [::1][-][bbilgc6k04te2tadnh8rbqgat0][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\CartController.php:517
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\CartController.php(431): app\controllers\CartController->findModel('37')
+#1 [internal function]: app\controllers\CartController->actionRemove('37')
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('remove', Array)
+#5 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('cart/remove', Array)
+#6 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#7 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#8 {main}
+2021-06-04 15:09:59 [::1][-][bbilgc6k04te2tadnh8rbqgat0][info][application] $_GET = [
+    'id' => '37'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'language' => '98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a:2:{i:0;s:8:\"language\";i:1;s:2:\"en\";}'
+    '_csrf_AineProject' => '32627fcc5e845a336ff97a96b4bdd00deb43cce341fa8a2ece95fcea21433d97a:2:{i:0;s:17:\"_csrf_AineProject\";i:1;s:32:\"U4O9re9b5Z_tALIYCCpPPhVNBlnqSAWE\";}'
+    '_session_AineProject' => 'bbilgc6k04te2tadnh8rbqgat0'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'success' => -1
+        'danger' => -1
+    ]
+    'success' => 'Cart Updated Successfully'
+    'danger' => 'Error in Cart Adding '
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '52424'
+    'SERVER_SOFTWARE' => 'PHP 7.3.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/cart/remove/37'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website\\index.php'
+    'PATH_INFO' => '/cart/remove/37'
+    'PHP_SELF' => '/index.php/cart/remove/37'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"91\", \"Chromium\";v=\"91\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8000/site/cart'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'language=98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _csrf_AineProject=32627fcc5e845a336ff97a96b4bdd00deb43cce341fa8a2ece95fcea21433d97a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_csrf_AineProject%22%3Bi%3A1%3Bs%3A32%3A%22U4O9re9b5Z_tALIYCCpPPhVNBlnqSAWE%22%3B%7D; _session_AineProject=bbilgc6k04te2tadnh8rbqgat0'
+    'REQUEST_TIME_FLOAT' => 1622799599.5101
+    'REQUEST_TIME' => 1622799599
+    'SERVER_ADDR' => false
+]
+2021-06-04 15:10:31 [::1][-][bbilgc6k04te2tadnh8rbqgat0][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\CartController.php:509
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\CartController.php(431): app\controllers\CartController->findModel('37')
+#1 [internal function]: app\controllers\CartController->actionRemove('37')
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('remove', Array)
+#5 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('cart/remove', Array)
+#6 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#7 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#8 {main}
+2021-06-04 15:10:31 [::1][-][bbilgc6k04te2tadnh8rbqgat0][info][application] $_GET = [
+    'id' => '37'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'language' => '98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a:2:{i:0;s:8:\"language\";i:1;s:2:\"en\";}'
+    '_csrf_AineProject' => '32627fcc5e845a336ff97a96b4bdd00deb43cce341fa8a2ece95fcea21433d97a:2:{i:0;s:17:\"_csrf_AineProject\";i:1;s:32:\"U4O9re9b5Z_tALIYCCpPPhVNBlnqSAWE\";}'
+    '_session_AineProject' => 'bbilgc6k04te2tadnh8rbqgat0'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'success' => -1
+        'danger' => -1
+    ]
+    'success' => 'Cart Updated Successfully'
+    'danger' => 'Error in Cart Adding '
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '52641'
+    'SERVER_SOFTWARE' => 'PHP 7.3.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/cart/remove/37'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website\\index.php'
+    'PATH_INFO' => '/cart/remove/37'
+    'PHP_SELF' => '/index.php/cart/remove/37'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"91\", \"Chromium\";v=\"91\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8000/site/cart'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'language=98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _csrf_AineProject=32627fcc5e845a336ff97a96b4bdd00deb43cce341fa8a2ece95fcea21433d97a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_csrf_AineProject%22%3Bi%3A1%3Bs%3A32%3A%22U4O9re9b5Z_tALIYCCpPPhVNBlnqSAWE%22%3B%7D; _session_AineProject=bbilgc6k04te2tadnh8rbqgat0'
+    'REQUEST_TIME_FLOAT' => 1622799631.613
+    'REQUEST_TIME' => 1622799631
+    'SERVER_ADDR' => false
+]
+2021-06-04 15:14:35 [::1][-][jo49b40sh8oi4a74ap2hhj6jud][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\CartController.php:509
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\CartController.php(431): app\controllers\CartController->findModel('37')
+#1 [internal function]: app\controllers\CartController->actionRemove('37')
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('remove', Array)
+#5 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('cart/remove', Array)
+#6 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#7 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#8 {main}
+2021-06-04 15:14:35 [::1][-][jo49b40sh8oi4a74ap2hhj6jud][info][application] $_GET = [
+    'id' => '37'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'language' => '98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a:2:{i:0;s:8:\"language\";i:1;s:2:\"en\";}'
+    '_csrf_AineProject' => 'b3a22b1f21b99e4653a859752a68fe317f3bf790c8244a2542aea071cab40faea:2:{i:0;s:17:\"_csrf_AineProject\";i:1;s:32:\"r_GZQR81TZXvYiwmu9Yb56jJplDp5bjS\";}'
+    '_session_AineProject' => 'jo49b40sh8oi4a74ap2hhj6jud'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'success' => -1
+        'danger' => -1
+    ]
+    'success' => 'Cart Updated Successfully'
+    'danger' => 'Error in Cart Adding '
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '54991'
+    'SERVER_SOFTWARE' => 'PHP 7.3.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/cart/remove/37'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website\\index.php'
+    'PATH_INFO' => '/cart/remove/37'
+    'PHP_SELF' => '/index.php/cart/remove/37'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"91\", \"Chromium\";v=\"91\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8000/site/cart'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'language=98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _csrf_AineProject=b3a22b1f21b99e4653a859752a68fe317f3bf790c8244a2542aea071cab40faea%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_csrf_AineProject%22%3Bi%3A1%3Bs%3A32%3A%22r_GZQR81TZXvYiwmu9Yb56jJplDp5bjS%22%3B%7D; _session_AineProject=jo49b40sh8oi4a74ap2hhj6jud'
+    'REQUEST_TIME_FLOAT' => 1622799875.3079
+    'REQUEST_TIME' => 1622799875
+    'SERVER_ADDR' => false
+]
+2021-06-04 15:15:28 [::1][-][jo49b40sh8oi4a74ap2hhj6jud][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: app\controllers\SiteController::findModel() in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Component.php:301
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\SiteController.php(133): yii\base\Component->__call('findModel', Array)
+#1 [internal function]: app\controllers\SiteController->actionRemove('37')
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('remove', Array)
+#5 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/remove', Array)
+#6 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#7 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#8 {main}
+2021-06-04 15:15:28 [::1][-][jo49b40sh8oi4a74ap2hhj6jud][info][application] $_GET = [
+    'id' => '37'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'language' => '98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a:2:{i:0;s:8:\"language\";i:1;s:2:\"en\";}'
+    '_csrf_AineProject' => 'b3a22b1f21b99e4653a859752a68fe317f3bf790c8244a2542aea071cab40faea:2:{i:0;s:17:\"_csrf_AineProject\";i:1;s:32:\"r_GZQR81TZXvYiwmu9Yb56jJplDp5bjS\";}'
+    '_session_AineProject' => 'jo49b40sh8oi4a74ap2hhj6jud'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'success' => -1
+        'danger' => -1
+    ]
+    'success' => 'Cart Updated Successfully'
+    'danger' => 'Error in Cart Adding '
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '51976'
+    'SERVER_SOFTWARE' => 'PHP 7.3.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/site/remove/37'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website\\index.php'
+    'PATH_INFO' => '/site/remove/37'
+    'PHP_SELF' => '/index.php/site/remove/37'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"91\", \"Chromium\";v=\"91\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8000/site/cart'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'language=98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _csrf_AineProject=b3a22b1f21b99e4653a859752a68fe317f3bf790c8244a2542aea071cab40faea%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_csrf_AineProject%22%3Bi%3A1%3Bs%3A32%3A%22r_GZQR81TZXvYiwmu9Yb56jJplDp5bjS%22%3B%7D; _session_AineProject=jo49b40sh8oi4a74ap2hhj6jud'
+    'REQUEST_TIME_FLOAT' => 1622799928.4269
+    'REQUEST_TIME' => 1622799928
+    'SERVER_ADDR' => false
+]
+2021-06-04 15:16:03 [::1][-][jo49b40sh8oi4a74ap2hhj6jud][error][Error] Error: Call to a member function delete() on null in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\SiteController.php:134
+Stack trace:
+#0 [internal function]: app\controllers\SiteController->actionRemove('37')
+#1 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('remove', Array)
+#4 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/remove', Array)
+#5 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#6 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#7 {main}
+2021-06-04 15:16:02 [::1][-][jo49b40sh8oi4a74ap2hhj6jud][info][application] $_GET = [
+    'id' => '37'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'language' => '98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a:2:{i:0;s:8:\"language\";i:1;s:2:\"en\";}'
+    '_csrf_AineProject' => 'b3a22b1f21b99e4653a859752a68fe317f3bf790c8244a2542aea071cab40faea:2:{i:0;s:17:\"_csrf_AineProject\";i:1;s:32:\"r_GZQR81TZXvYiwmu9Yb56jJplDp5bjS\";}'
+    '_session_AineProject' => 'jo49b40sh8oi4a74ap2hhj6jud'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'success' => -1
+        'danger' => -1
+    ]
+    'success' => 'Cart Updated Successfully'
+    'danger' => 'Error in Cart Adding '
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '61819'
+    'SERVER_SOFTWARE' => 'PHP 7.3.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/site/remove/37'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website\\index.php'
+    'PATH_INFO' => '/site/remove/37'
+    'PHP_SELF' => '/index.php/site/remove/37'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"91\", \"Chromium\";v=\"91\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8000/site/cart'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'language=98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _csrf_AineProject=b3a22b1f21b99e4653a859752a68fe317f3bf790c8244a2542aea071cab40faea%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_csrf_AineProject%22%3Bi%3A1%3Bs%3A32%3A%22r_GZQR81TZXvYiwmu9Yb56jJplDp5bjS%22%3B%7D; _session_AineProject=jo49b40sh8oi4a74ap2hhj6jud'
+    'REQUEST_TIME_FLOAT' => 1622799962.9679
+    'REQUEST_TIME' => 1622799962
+    'SERVER_ADDR' => false
+]
+2021-06-04 15:20:38 [::1][-][jo49b40sh8oi4a74ap2hhj6jud][error][Error] Error: Call to a member function delete() on null in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\SiteController.php:135
+Stack trace:
+#0 [internal function]: app\controllers\SiteController->actionRemove('37')
+#1 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('remove', Array)
+#4 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/remove', Array)
+#5 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#6 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#7 {main}
+2021-06-04 15:20:38 [::1][-][jo49b40sh8oi4a74ap2hhj6jud][info][application] $_GET = [
+    'id' => '37'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'language' => '98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a:2:{i:0;s:8:\"language\";i:1;s:2:\"en\";}'
+    '_csrf_AineProject' => 'b3a22b1f21b99e4653a859752a68fe317f3bf790c8244a2542aea071cab40faea:2:{i:0;s:17:\"_csrf_AineProject\";i:1;s:32:\"r_GZQR81TZXvYiwmu9Yb56jJplDp5bjS\";}'
+    '_session_AineProject' => 'jo49b40sh8oi4a74ap2hhj6jud'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'success' => -1
+        'danger' => -1
+    ]
+    'success' => 'Cart Updated Successfully'
+    'danger' => 'Error in Cart Adding '
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '57390'
+    'SERVER_SOFTWARE' => 'PHP 7.3.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/site/remove/37'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website\\index.php'
+    'PATH_INFO' => '/site/remove/37'
+    'PHP_SELF' => '/index.php/site/remove/37'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"91\", \"Chromium\";v=\"91\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8000/site/cart'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'language=98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _csrf_AineProject=b3a22b1f21b99e4653a859752a68fe317f3bf790c8244a2542aea071cab40faea%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_csrf_AineProject%22%3Bi%3A1%3Bs%3A32%3A%22r_GZQR81TZXvYiwmu9Yb56jJplDp5bjS%22%3B%7D; _session_AineProject=jo49b40sh8oi4a74ap2hhj6jud'
+    'REQUEST_TIME_FLOAT' => 1622800238.4817
+    'REQUEST_TIME' => 1622800238
+    'SERVER_ADDR' => false
+]
+2021-06-04 15:25:27 [::1][-][jo49b40sh8oi4a74ap2hhj6jud][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: app\components\TRequest::post in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Component.php:155
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\SiteController.php(132): yii\base\Component->__get('post')
+#1 [internal function]: app\controllers\SiteController->actionRemove('37')
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('remove', Array)
+#5 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/remove', Array)
+#6 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#7 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#8 {main}
+2021-06-04 15:25:27 [::1][-][jo49b40sh8oi4a74ap2hhj6jud][info][application] $_GET = [
+    'id' => '37'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'language' => '98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a:2:{i:0;s:8:\"language\";i:1;s:2:\"en\";}'
+    '_csrf_AineProject' => 'b3a22b1f21b99e4653a859752a68fe317f3bf790c8244a2542aea071cab40faea:2:{i:0;s:17:\"_csrf_AineProject\";i:1;s:32:\"r_GZQR81TZXvYiwmu9Yb56jJplDp5bjS\";}'
+    '_session_AineProject' => 'jo49b40sh8oi4a74ap2hhj6jud'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'success' => -1
+        'danger' => -1
+    ]
+    'success' => 'Cart Updated Successfully'
+    'danger' => 'Error in Cart Adding '
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '65256'
+    'SERVER_SOFTWARE' => 'PHP 7.3.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/site/remove/37'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website\\index.php'
+    'PATH_INFO' => '/site/remove/37'
+    'PHP_SELF' => '/index.php/site/remove/37'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"91\", \"Chromium\";v=\"91\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8000/site/cart'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'language=98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _csrf_AineProject=b3a22b1f21b99e4653a859752a68fe317f3bf790c8244a2542aea071cab40faea%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_csrf_AineProject%22%3Bi%3A1%3Bs%3A32%3A%22r_GZQR81TZXvYiwmu9Yb56jJplDp5bjS%22%3B%7D; _session_AineProject=jo49b40sh8oi4a74ap2hhj6jud'
+    'REQUEST_TIME_FLOAT' => 1622800527.1532
+    'REQUEST_TIME' => 1622800527
+    'SERVER_ADDR' => false
+]
+2021-06-04 15:28:34 [::1][-][jo49b40sh8oi4a74ap2hhj6jud][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/remove in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php:152
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('remove', Array)
+#1 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/remove', Array)
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php:116
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#1 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#2 {main}
+2021-06-04 15:28:34 [::1][-][jo49b40sh8oi4a74ap2hhj6jud][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'language' => '98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a:2:{i:0;s:8:\"language\";i:1;s:2:\"en\";}'
+    '_csrf_AineProject' => 'b3a22b1f21b99e4653a859752a68fe317f3bf790c8244a2542aea071cab40faea:2:{i:0;s:17:\"_csrf_AineProject\";i:1;s:32:\"r_GZQR81TZXvYiwmu9Yb56jJplDp5bjS\";}'
+    '_session_AineProject' => 'jo49b40sh8oi4a74ap2hhj6jud'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'success' => -1
+        'danger' => -1
+    ]
+    'success' => 'Cart Updated Successfully'
+    'danger' => 'Error in Cart Adding '
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '61345'
+    'SERVER_SOFTWARE' => 'PHP 7.3.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/site/remove/1'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website\\index.php'
+    'PATH_INFO' => '/site/remove/1'
+    'PHP_SELF' => '/index.php/site/remove/1'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"91\", \"Chromium\";v=\"91\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8000/site/cart'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'language=98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _csrf_AineProject=b3a22b1f21b99e4653a859752a68fe317f3bf790c8244a2542aea071cab40faea%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_csrf_AineProject%22%3Bi%3A1%3Bs%3A32%3A%22r_GZQR81TZXvYiwmu9Yb56jJplDp5bjS%22%3B%7D; _session_AineProject=jo49b40sh8oi4a74ap2hhj6jud'
+    'REQUEST_TIME_FLOAT' => 1622800714.3989
+    'REQUEST_TIME' => 1622800714
+    'SERVER_ADDR' => false
+]
