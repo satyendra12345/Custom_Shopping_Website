@@ -32662,3 +32662,803 @@ $_SERVER = [
     'REQUEST_TIME' => 1622543592
     'SERVER_ADDR' => false
 ]
+2021-06-04 09:58:40 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+ in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Connection.php:719
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Connection.php(719): PDO->__construct('mysql:host=127....', 'root', '', Array)
+#1 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Connection.php(638): yii\db\Connection->createPdoInstance()
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Connection.php(1059): yii\db\Connection->open()
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Connection.php(1046): yii\db\Connection->getMasterPdo()
+#4 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#9 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\mysql\Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#10 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#11 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Connection.php(876): yii\db\Schema->getQueryBuilder()
+#12 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Query.php(480): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\ActiveQuery.php(352): yii\db\Query->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#15 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Query.php(368): yii\db\ActiveQuery->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#16 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\components\TController.php(214): yii\db\Query->count()
+#17 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(179): app\components\TController->beforeAction(Object(yii\base\InlineAction))
+#18 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('', Array)
+#19 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('', Array)
+#20 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#21 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#22 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+ in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Connection.php:649
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Connection.php(1059): yii\db\Connection->open()
+#1 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Connection.php(1046): yii\db\Connection->getMasterPdo()
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\mysql\Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#8 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Schema.php(249): yii\db\mysql\Schema->createQueryBuilder()
+#9 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Connection.php(876): yii\db\Schema->getQueryBuilder()
+#10 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#11 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Query.php(480): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#12 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\ActiveQuery.php(352): yii\db\Query->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#13 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Query.php(368): yii\db\ActiveQuery->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#14 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\components\TController.php(214): yii\db\Query->count()
+#15 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(179): app\components\TController->beforeAction(Object(yii\base\InlineAction))
+#16 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('', Array)
+#17 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('', Array)
+#18 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#19 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2021-06-04 09:58:39 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '55705'
+    'SERVER_SOFTWARE' => 'PHP 7.3.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website\\index.php'
+    'PHP_SELF' => '/index.php'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"91\", \"Chromium\";v=\"91\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'REQUEST_TIME_FLOAT' => 1622780918.7116
+    'REQUEST_TIME' => 1622780918
+    'SERVER_ADDR' => false
+]
+2021-06-04 10:03:14 [::1][2][n4dvbtr9aqc1qv54d1vqmbf49t][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not allowed to perform this action. in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\filters\AccessControl.php:158
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\filters\AccessControl.php(140): yii\filters\AccessControl->denyAccess(Object(app\components\WebUser))
+#1 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Component.php(628): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(300): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Controller.php(216): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\base\TBaseController.php(45): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\components\TController.php(221): app\base\TBaseController->beforeAction(Object(yii\base\InlineAction))
+#8 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(179): app\components\TController->beforeAction(Object(yii\base\InlineAction))
+#9 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('index', Array)
+#10 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('dashboard/index', Array)
+#11 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#12 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#13 {main}
+2021-06-04 10:03:14 [::1][2][n4dvbtr9aqc1qv54d1vqmbf49t][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'language' => '98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a:2:{i:0;s:8:\"language\";i:1;s:2:\"en\";}'
+    '_session_AineProject' => 'n4dvbtr9aqc1qv54d1vqmbf49t'
+    '_user_AineProject' => '1e2e6d0694d13ba3ff58b8a47f25baad8b9a678ac954db4bcfc070dcb942ba16a:2:{i:0;s:17:\"_user_AineProject\";i:1;s:57:\"[2,\"9bEccQ4n0lnnzkKkt9h-NNpVzQAUGJO9_1622781076\",2592000]\";}'
+    '_csrf_AineProject' => '32627fcc5e845a336ff97a96b4bdd00deb43cce341fa8a2ece95fcea21433d97a:2:{i:0;s:17:\"_csrf_AineProject\";i:1;s:32:\"U4O9re9b5Z_tALIYCCpPPhVNBlnqSAWE\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    '__key' => '9bEccQ4n0lnnzkKkt9h-NNpVzQAUGJO9_1622781076'
+    '__expire' => 1622867594
+    'ADMIN_MODE' => false
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '63489'
+    'SERVER_SOFTWARE' => 'PHP 7.3.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/dashboard/index'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website\\index.php'
+    'PATH_INFO' => '/dashboard/index'
+    'PHP_SELF' => '/index.php/dashboard/index'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_CH_UA' => '\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"91\", \"Chromium\";v=\"91\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_REFERER' => 'http://localhost:8000/user/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'language=98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _session_AineProject=n4dvbtr9aqc1qv54d1vqmbf49t; _user_AineProject=1e2e6d0694d13ba3ff58b8a47f25baad8b9a678ac954db4bcfc070dcb942ba16a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_user_AineProject%22%3Bi%3A1%3Bs%3A57%3A%22%5B2%2C%229bEccQ4n0lnnzkKkt9h-NNpVzQAUGJO9_1622781076%22%2C2592000%5D%22%3B%7D; _csrf_AineProject=32627fcc5e845a336ff97a96b4bdd00deb43cce341fa8a2ece95fcea21433d97a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_csrf_AineProject%22%3Bi%3A1%3Bs%3A32%3A%22U4O9re9b5Z_tALIYCCpPPhVNBlnqSAWE%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1622781194.1874
+    'REQUEST_TIME' => 1622781194
+    'SERVER_ADDR' => false
+]
+2021-06-04 12:58:41 [::1][-][bbilgc6k04te2tadnh8rbqgat0][error][ArgumentCountError] ArgumentCountError: Too few arguments to function phpbrowscap\Browscap::__construct(), 0 passed in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\views\site\product_view.php on line 12 and exactly 1 expected in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\garetjax\phpbrowscap\src\phpbrowscap\Browscap.php:215
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\views\site\product_view.php(12): phpbrowscap\Browscap->__construct()
+#1 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\View.php(348): require('C:\\Users\\CZ12\\D...')
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\Users\\CZ12\\D...', Array)
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\Users\\CZ12\\D...', Array, Object(app\controllers\SiteController))
+#4 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(410): yii\base\View->render('product_view', Array, Object(app\controllers\SiteController))
+#5 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\components\TController.php(407): yii\base\Controller->render('product_view', Array)
+#6 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\SiteController.php(164): app\components\TController->render('product_view')
+#7 [internal function]: app\controllers\SiteController->actionProductView()
+#8 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#10 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('product-view', Array)
+#11 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/product-vi...', Array)
+#12 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#13 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#14 {main}
+2021-06-04 12:58:41 [::1][-][bbilgc6k04te2tadnh8rbqgat0][info][application] $_GET = [
+    'product_id' => '39'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'language' => '98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a:2:{i:0;s:8:\"language\";i:1;s:2:\"en\";}'
+    '_csrf_AineProject' => '32627fcc5e845a336ff97a96b4bdd00deb43cce341fa8a2ece95fcea21433d97a:2:{i:0;s:17:\"_csrf_AineProject\";i:1;s:32:\"U4O9re9b5Z_tALIYCCpPPhVNBlnqSAWE\";}'
+    '_session_AineProject' => 'bbilgc6k04te2tadnh8rbqgat0'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'success' => -1
+    ]
+    'success' => 'Cart Updated Successfully'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '52707'
+    'SERVER_SOFTWARE' => 'PHP 7.3.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/site/product-view?product_id=39'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website\\index.php'
+    'PATH_INFO' => '/site/product-view'
+    'PHP_SELF' => '/index.php/site/product-view'
+    'QUERY_STRING' => 'product_id=39'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"91\", \"Chromium\";v=\"91\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8000/site/add-cart?product_id=33'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'language=98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _csrf_AineProject=32627fcc5e845a336ff97a96b4bdd00deb43cce341fa8a2ece95fcea21433d97a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_csrf_AineProject%22%3Bi%3A1%3Bs%3A32%3A%22U4O9re9b5Z_tALIYCCpPPhVNBlnqSAWE%22%3B%7D; _session_AineProject=bbilgc6k04te2tadnh8rbqgat0'
+    'REQUEST_TIME_FLOAT' => 1622791721.2695
+    'REQUEST_TIME' => 1622791721
+    'SERVER_ADDR' => false
+]
+2021-06-04 12:59:51 [::1][-][bbilgc6k04te2tadnh8rbqgat0][error][ArgumentCountError] ArgumentCountError: Too few arguments to function phpbrowscap\Browscap::__construct(), 0 passed in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\views\site\product_view.php on line 12 and exactly 1 expected in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\garetjax\phpbrowscap\src\phpbrowscap\Browscap.php:215
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\views\site\product_view.php(12): phpbrowscap\Browscap->__construct()
+#1 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\View.php(348): require('C:\\Users\\CZ12\\D...')
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\Users\\CZ12\\D...', Array)
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\Users\\CZ12\\D...', Array, Object(app\controllers\SiteController))
+#4 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(410): yii\base\View->render('product_view', Array, Object(app\controllers\SiteController))
+#5 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\components\TController.php(407): yii\base\Controller->render('product_view', Array)
+#6 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\SiteController.php(164): app\components\TController->render('product_view')
+#7 [internal function]: app\controllers\SiteController->actionProductView()
+#8 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#10 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('product-view', Array)
+#11 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/product-vi...', Array)
+#12 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#13 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#14 {main}
+2021-06-04 12:59:51 [::1][-][bbilgc6k04te2tadnh8rbqgat0][info][application] $_GET = [
+    'product_id' => '39'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'language' => '98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a:2:{i:0;s:8:\"language\";i:1;s:2:\"en\";}'
+    '_csrf_AineProject' => '32627fcc5e845a336ff97a96b4bdd00deb43cce341fa8a2ece95fcea21433d97a:2:{i:0;s:17:\"_csrf_AineProject\";i:1;s:32:\"U4O9re9b5Z_tALIYCCpPPhVNBlnqSAWE\";}'
+    '_session_AineProject' => 'bbilgc6k04te2tadnh8rbqgat0'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'success' => -1
+    ]
+    'success' => 'Cart Updated Successfully'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '58226'
+    'SERVER_SOFTWARE' => 'PHP 7.3.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/site/product-view?product_id=39'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website\\index.php'
+    'PATH_INFO' => '/site/product-view'
+    'PHP_SELF' => '/index.php/site/product-view'
+    'QUERY_STRING' => 'product_id=39'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"91\", \"Chromium\";v=\"91\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8000/site/add-cart?product_id=33'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'language=98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _csrf_AineProject=32627fcc5e845a336ff97a96b4bdd00deb43cce341fa8a2ece95fcea21433d97a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_csrf_AineProject%22%3Bi%3A1%3Bs%3A32%3A%22U4O9re9b5Z_tALIYCCpPPhVNBlnqSAWE%22%3B%7D; _session_AineProject=bbilgc6k04te2tadnh8rbqgat0'
+    'REQUEST_TIME_FLOAT' => 1622791791.7765
+    'REQUEST_TIME' => 1622791791
+    'SERVER_ADDR' => false
+]
+2021-06-04 13:00:30 [::1][-][bbilgc6k04te2tadnh8rbqgat0][error][phpbrowscap\Exception] phpbrowscap\Exception: The cache path data/ is invalid. Are you sure that it exists and that you have permission to access it? in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\garetjax\phpbrowscap\src\phpbrowscap\Browscap.php:230
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\views\site\product_view.php(12): phpbrowscap\Browscap->__construct(false)
+#1 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\View.php(348): require('C:\\Users\\CZ12\\D...')
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\Users\\CZ12\\D...', Array)
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\Users\\CZ12\\D...', Array, Object(app\controllers\SiteController))
+#4 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(410): yii\base\View->render('product_view', Array, Object(app\controllers\SiteController))
+#5 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\components\TController.php(407): yii\base\Controller->render('product_view', Array)
+#6 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\SiteController.php(164): app\components\TController->render('product_view')
+#7 [internal function]: app\controllers\SiteController->actionProductView()
+#8 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#10 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('product-view', Array)
+#11 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/product-vi...', Array)
+#12 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#13 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#14 {main}
+2021-06-04 13:00:29 [::1][-][bbilgc6k04te2tadnh8rbqgat0][info][application] $_GET = [
+    'product_id' => '39'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'language' => '98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a:2:{i:0;s:8:\"language\";i:1;s:2:\"en\";}'
+    '_csrf_AineProject' => '32627fcc5e845a336ff97a96b4bdd00deb43cce341fa8a2ece95fcea21433d97a:2:{i:0;s:17:\"_csrf_AineProject\";i:1;s:32:\"U4O9re9b5Z_tALIYCCpPPhVNBlnqSAWE\";}'
+    '_session_AineProject' => 'bbilgc6k04te2tadnh8rbqgat0'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'success' => -1
+    ]
+    'success' => 'Cart Updated Successfully'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '64907'
+    'SERVER_SOFTWARE' => 'PHP 7.3.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/site/product-view?product_id=39'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website\\index.php'
+    'PATH_INFO' => '/site/product-view'
+    'PHP_SELF' => '/index.php/site/product-view'
+    'QUERY_STRING' => 'product_id=39'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"91\", \"Chromium\";v=\"91\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8000/site/add-cart?product_id=33'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'language=98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _csrf_AineProject=32627fcc5e845a336ff97a96b4bdd00deb43cce341fa8a2ece95fcea21433d97a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_csrf_AineProject%22%3Bi%3A1%3Bs%3A32%3A%22U4O9re9b5Z_tALIYCCpPPhVNBlnqSAWE%22%3B%7D; _session_AineProject=bbilgc6k04te2tadnh8rbqgat0'
+    'REQUEST_TIME_FLOAT' => 1622791829.8647
+    'REQUEST_TIME' => 1622791829
+    'SERVER_ADDR' => false
+]
+2021-06-04 13:02:02 [::1][-][bbilgc6k04te2tadnh8rbqgat0][error][phpbrowscap\Exception] phpbrowscap\Exception: The cache path C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website/protectedruntime/cache is invalid. Are you sure that it exists and that you have permission to access it? in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\garetjax\phpbrowscap\src\phpbrowscap\Browscap.php:230
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\views\site\product_view.php(12): phpbrowscap\Browscap->__construct(false)
+#1 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\View.php(348): require('C:\\Users\\CZ12\\D...')
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\Users\\CZ12\\D...', Array)
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\Users\\CZ12\\D...', Array, Object(app\controllers\SiteController))
+#4 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(410): yii\base\View->render('product_view', Array, Object(app\controllers\SiteController))
+#5 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\components\TController.php(407): yii\base\Controller->render('product_view', Array)
+#6 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\SiteController.php(164): app\components\TController->render('product_view')
+#7 [internal function]: app\controllers\SiteController->actionProductView()
+#8 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#10 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('product-view', Array)
+#11 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/product-vi...', Array)
+#12 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#13 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#14 {main}
+2021-06-04 13:02:01 [::1][-][bbilgc6k04te2tadnh8rbqgat0][info][application] $_GET = [
+    'product_id' => '39'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'language' => '98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a:2:{i:0;s:8:\"language\";i:1;s:2:\"en\";}'
+    '_csrf_AineProject' => '32627fcc5e845a336ff97a96b4bdd00deb43cce341fa8a2ece95fcea21433d97a:2:{i:0;s:17:\"_csrf_AineProject\";i:1;s:32:\"U4O9re9b5Z_tALIYCCpPPhVNBlnqSAWE\";}'
+    '_session_AineProject' => 'bbilgc6k04te2tadnh8rbqgat0'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'success' => -1
+    ]
+    'success' => 'Cart Updated Successfully'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '54126'
+    'SERVER_SOFTWARE' => 'PHP 7.3.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/site/product-view?product_id=39'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website\\index.php'
+    'PATH_INFO' => '/site/product-view'
+    'PHP_SELF' => '/index.php/site/product-view'
+    'QUERY_STRING' => 'product_id=39'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"91\", \"Chromium\";v=\"91\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8000/site/add-cart?product_id=33'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'language=98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _csrf_AineProject=32627fcc5e845a336ff97a96b4bdd00deb43cce341fa8a2ece95fcea21433d97a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_csrf_AineProject%22%3Bi%3A1%3Bs%3A32%3A%22U4O9re9b5Z_tALIYCCpPPhVNBlnqSAWE%22%3B%7D; _session_AineProject=bbilgc6k04te2tadnh8rbqgat0'
+    'REQUEST_TIME_FLOAT' => 1622791921.893
+    'REQUEST_TIME' => 1622791921
+    'SERVER_ADDR' => false
+]
+2021-06-04 13:38:44 [::1][-][bbilgc6k04te2tadnh8rbqgat0][error][yii\db\Exception] PDOException: SQLSTATE[HY000]: General error: 1364 Field 'browser_id' doesn't have a default value in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Command.php:1302
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Command.php(1302): PDOStatement->execute()
+#1 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Command.php(1102): yii\db\Command->internalExecute('INSERT INTO `tb...')
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Schema.php(433): yii\db\Command->execute()
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\ActiveRecord.php(600): yii\db\Schema->insert('{{%cart}}', Array)
+#4 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(false, NULL)
+#6 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\components\TActiveRecord.php(457): yii\db\BaseActiveRecord->save(false, NULL)
+#7 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\SiteController.php(148): app\components\TActiveRecord->save(false)
+#8 [internal function]: app\controllers\SiteController->actionAddCart('39')
+#9 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#10 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#11 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('add-cart', Array)
+#12 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/add-cart', Array)
+#13 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#14 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#15 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000]: General error: 1364 Field 'browser_id' doesn't have a default value
+The SQL being executed was: INSERT INTO `tbl_cart` (`created_by_id`, `product_id`, `state_id`) VALUES (0, 39, 1) in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Schema.php:678
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Command.php(1307): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `tb...')
+#1 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Command.php(1102): yii\db\Command->internalExecute('INSERT INTO `tb...')
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Schema.php(433): yii\db\Command->execute()
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\ActiveRecord.php(600): yii\db\Schema->insert('{{%cart}}', Array)
+#4 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(false, NULL)
+#6 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\components\TActiveRecord.php(457): yii\db\BaseActiveRecord->save(false, NULL)
+#7 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\SiteController.php(148): app\components\TActiveRecord->save(false)
+#8 [internal function]: app\controllers\SiteController->actionAddCart('39')
+#9 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#10 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#11 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('add-cart', Array)
+#12 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/add-cart', Array)
+#13 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#14 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#15 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1364
+    [2] => Field 'browser_id' doesn't have a default value
+)
+
+2021-06-04 13:38:43 [::1][-][bbilgc6k04te2tadnh8rbqgat0][info][application] $_GET = [
+    'product_id' => '39'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'language' => '98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a:2:{i:0;s:8:\"language\";i:1;s:2:\"en\";}'
+    '_csrf_AineProject' => '32627fcc5e845a336ff97a96b4bdd00deb43cce341fa8a2ece95fcea21433d97a:2:{i:0;s:17:\"_csrf_AineProject\";i:1;s:32:\"U4O9re9b5Z_tALIYCCpPPhVNBlnqSAWE\";}'
+    '_session_AineProject' => 'bbilgc6k04te2tadnh8rbqgat0'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'success' => -1
+    ]
+    'success' => 'Cart Updated Successfully'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '53098'
+    'SERVER_SOFTWARE' => 'PHP 7.3.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/site/add-cart?product_id=39'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website\\index.php'
+    'PATH_INFO' => '/site/add-cart'
+    'PHP_SELF' => '/index.php/site/add-cart'
+    'QUERY_STRING' => 'product_id=39'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"91\", \"Chromium\";v=\"91\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8000/site/product-view?product_id=39'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'language=98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _csrf_AineProject=32627fcc5e845a336ff97a96b4bdd00deb43cce341fa8a2ece95fcea21433d97a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_csrf_AineProject%22%3Bi%3A1%3Bs%3A32%3A%22U4O9re9b5Z_tALIYCCpPPhVNBlnqSAWE%22%3B%7D; _session_AineProject=bbilgc6k04te2tadnh8rbqgat0'
+    'REQUEST_TIME_FLOAT' => 1622794123.2689
+    'REQUEST_TIME' => 1622794123
+    'SERVER_ADDR' => false
+]
+2021-06-04 14:02:05 [::1][-][c2npk82kdloj3oq91qu0jg40dj][error][Error] Error: Class 'Browscap' not found in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\views\site\cart.php:45
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\View.php(348): require()
+#1 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\Users\\CZ12\\D...', Array)
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\Users\\CZ12\\D...', Array, Object(app\controllers\SiteController))
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(410): yii\base\View->render('cart', Array, Object(app\controllers\SiteController))
+#4 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\components\TController.php(407): yii\base\Controller->render('cart', Array)
+#5 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\SiteController.php(106): app\components\TController->render('cart')
+#6 [internal function]: app\controllers\SiteController->actionCart()
+#7 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#9 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('cart', Array)
+#10 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/cart', Array)
+#11 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#12 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#13 {main}
+2021-06-04 14:02:05 [::1][-][c2npk82kdloj3oq91qu0jg40dj][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'language' => '98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a:2:{i:0;s:8:\"language\";i:1;s:2:\"en\";}'
+    '_session_AineProject' => 'c2npk82kdloj3oq91qu0jg40dj'
+    '_csrf_AineProject' => '3e8c64cb95c20ae6c69fab8801ae1730666952761bfe23e7bc642bef759aa8dba:2:{i:0;s:17:\"_csrf_AineProject\";i:1;s:32:\"o_oSJZUXZWL9_IBaJjHoyFOJkydShQoU\";}'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'success' => -1
+        'danger' => -1
+    ]
+    '__returnUrl' => 'http://localhost:8000/user/logout'
+    'success' => 'Cart Updated Successfully'
+    'danger' => 'Error in Cart Adding '
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '51175'
+    'SERVER_SOFTWARE' => 'PHP 7.3.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/site/cart'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website\\index.php'
+    'PATH_INFO' => '/site/cart'
+    'PHP_SELF' => '/index.php/site/cart'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost:8000/site/index'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'language=98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _session_AineProject=c2npk82kdloj3oq91qu0jg40dj; _csrf_AineProject=3e8c64cb95c20ae6c69fab8801ae1730666952761bfe23e7bc642bef759aa8dba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_csrf_AineProject%22%3Bi%3A1%3Bs%3A32%3A%22o_oSJZUXZWL9_IBaJjHoyFOJkydShQoU%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'REQUEST_TIME_FLOAT' => 1622795525.3341
+    'REQUEST_TIME' => 1622795525
+    'SERVER_ADDR' => false
+]
+2021-06-04 14:08:07 [::1][-][bbilgc6k04te2tadnh8rbqgat0][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: app\models\Product::amount in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Component.php:155
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\BaseActiveRecord.php(298): yii\base\Component->__get('amount')
+#1 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\views\site\cart.php(109): yii\db\BaseActiveRecord->__get('amount')
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\View.php(348): require('C:\\Users\\CZ12\\D...')
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\Users\\CZ12\\D...', Array)
+#4 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\Users\\CZ12\\D...', Array, Object(app\controllers\SiteController))
+#5 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(410): yii\base\View->render('cart', Array, Object(app\controllers\SiteController))
+#6 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\components\TController.php(407): yii\base\Controller->render('cart', Array)
+#7 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\SiteController.php(106): app\components\TController->render('cart')
+#8 [internal function]: app\controllers\SiteController->actionCart()
+#9 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#10 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#11 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('cart', Array)
+#12 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/cart', Array)
+#13 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#14 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#15 {main}
+2021-06-04 14:08:06 [::1][-][bbilgc6k04te2tadnh8rbqgat0][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'language' => '98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a:2:{i:0;s:8:\"language\";i:1;s:2:\"en\";}'
+    '_csrf_AineProject' => '32627fcc5e845a336ff97a96b4bdd00deb43cce341fa8a2ece95fcea21433d97a:2:{i:0;s:17:\"_csrf_AineProject\";i:1;s:32:\"U4O9re9b5Z_tALIYCCpPPhVNBlnqSAWE\";}'
+    '_session_AineProject' => 'bbilgc6k04te2tadnh8rbqgat0'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'success' => -1
+        'danger' => -1
+    ]
+    'success' => 'Cart Updated Successfully'
+    'danger' => 'Error in Cart Adding '
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '65511'
+    'SERVER_SOFTWARE' => 'PHP 7.3.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/site/cart'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website\\index.php'
+    'PATH_INFO' => '/site/cart'
+    'PHP_SELF' => '/index.php/site/cart'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"91\", \"Chromium\";v=\"91\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8000/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'language=98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _csrf_AineProject=32627fcc5e845a336ff97a96b4bdd00deb43cce341fa8a2ece95fcea21433d97a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_csrf_AineProject%22%3Bi%3A1%3Bs%3A32%3A%22U4O9re9b5Z_tALIYCCpPPhVNBlnqSAWE%22%3B%7D; _session_AineProject=bbilgc6k04te2tadnh8rbqgat0'
+    'REQUEST_TIME_FLOAT' => 1622795886.2597
+    'REQUEST_TIME' => 1622795886
+    'SERVER_ADDR' => false
+]
+2021-06-04 14:20:25 [::1][-][odbf2i4mf27svhpln68q8kb4li][error][yii\db\Exception] PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list' in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Command.php:1302
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Command.php(1302): PDOStatement->execute()
+#1 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Command.php(1168): yii\db\Command->internalExecute('SELECT SUM(pric...')
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Command.php(436): yii\db\Command->queryInternal('fetchColumn', 0)
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Query.php(496): yii\db\Command->queryScalar()
+#4 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\ActiveQuery.php(352): yii\db\Query->queryScalar('SUM(price)', Object(yii\db\Connection))
+#5 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Query.php(385): yii\db\ActiveQuery->queryScalar('SUM(price)', Object(yii\db\Connection))
+#6 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\views\site\cart.php(57): yii\db\Query->sum('price')
+#7 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\View.php(348): require('C:\\Users\\CZ12\\D...')
+#8 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\Users\\CZ12\\D...', '[]')
+#9 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\Users\\CZ12\\D...', Array, Object(app\controllers\SiteController))
+#10 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(410): yii\base\View->render('cart', Array, Object(app\controllers\SiteController))
+#11 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\components\TController.php(407): yii\base\Controller->render('cart', Array)
+#12 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\SiteController.php(106): app\components\TController->render('cart')
+#13 [internal function]: app\controllers\SiteController->actionCart()
+#14 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#15 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#16 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('cart', Array)
+#17 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/cart', Array)
+#18 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#19 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#20 {main}
+
+Next yii\db\Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+The SQL being executed was: SELECT SUM(price) FROM `tbl_cart` WHERE `browser_id`='f4b84edb5adb83baff126c56d48ffc52' in C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Schema.php:678
+Stack trace:
+#0 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Command.php(1307): yii\db\Schema->convertException(Object(PDOException), 'SELECT SUM(pric...')
+#1 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Command.php(1168): yii\db\Command->internalExecute('SELECT SUM(pric...')
+#2 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Command.php(436): yii\db\Command->queryInternal('fetchColumn', 0)
+#3 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Query.php(496): yii\db\Command->queryScalar()
+#4 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\ActiveQuery.php(352): yii\db\Query->queryScalar('SUM(price)', Object(yii\db\Connection))
+#5 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\db\Query.php(385): yii\db\ActiveQuery->queryScalar('SUM(price)', Object(yii\db\Connection))
+#6 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\views\site\cart.php(57): yii\db\Query->sum('price')
+#7 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\View.php(348): require('C:\\Users\\CZ12\\D...')
+#8 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\Users\\CZ12\\D...', '[]')
+#9 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\Users\\CZ12\\D...', Array, Object(app\controllers\SiteController))
+#10 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(410): yii\base\View->render('cart', Array, Object(app\controllers\SiteController))
+#11 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\components\TController.php(407): yii\base\Controller->render('cart', Array)
+#12 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\protected\controllers\SiteController.php(106): app\components\TController->render('cart')
+#13 [internal function]: app\controllers\SiteController->actionCart()
+#14 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#15 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#16 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('cart', Array)
+#17 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/cart', Array)
+#18 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(app\components\TRequest))
+#19 C:\Users\CZ12\Desktop\custom_ainnehome\Custom_Shopping_Website\index.php(9): yii\base\Application->run()
+#20 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'price' in 'field list'
+)
+
+2021-06-04 14:20:24 [::1][-][odbf2i4mf27svhpln68q8kb4li][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_session_AineProject' => 'odbf2i4mf27svhpln68q8kb4li'
+    'language' => '98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a:2:{i:0;s:8:\"language\";i:1;s:2:\"en\";}'
+    '_csrf_AineProject' => '1c316dcf4426f0667b9b594faadb50065746810f51c68642602a8e4b41d531e5a:2:{i:0;s:17:\"_csrf_AineProject\";i:1;s:32:\"s1HUvRJJgdQiqtS8ffeaYN9eeLlYaxXu\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '56754'
+    'SERVER_SOFTWARE' => 'PHP 7.3.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8000'
+    'REQUEST_URI' => '/site/cart'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Users\\CZ12\\Desktop\\custom_ainnehome\\Custom_Shopping_Website\\index.php'
+    'PATH_INFO' => '/site/cart'
+    'PHP_SELF' => '/index.php/site/cart'
+    'HTTP_HOST' => 'localhost:8000'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"91\", \"Chromium\";v=\"91\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8000/site/listing?category_id=2&menu_id=2'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_session_AineProject=odbf2i4mf27svhpln68q8kb4li; language=98c0e4e51f1d42d2ebecf0759b39e1e07b06bde23ecd3d0aac70f28e3f6168f2a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22en%22%3B%7D; _csrf_AineProject=1c316dcf4426f0667b9b594faadb50065746810f51c68642602a8e4b41d531e5a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_csrf_AineProject%22%3Bi%3A1%3Bs%3A32%3A%22s1HUvRJJgdQiqtS8ffeaYN9eeLlYaxXu%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1622796623.9469
+    'REQUEST_TIME' => 1622796623
+    'SERVER_ADDR' => false
+]

@@ -1,6 +1,10 @@
 <?php
 
+use app\models\Cart;
 use yii\helpers\Url;
+use yii\helpers\VarDumper;
+use phpbrowscap\Browscap;
+
 ?>
 
 <!-- Frntre Mid Wrap -->
@@ -36,6 +40,30 @@ use yii\helpers\Url;
             <div class="whitebox-wrap">Shipment 1 of 2</div>
 
           </div>
+<!-- ------------------------------------------------ -->
+
+<?php 
+	$bc = new Browscap(BASE_PATH . "/runtime/cache");
+  $current_browser = $bc->getBrowser(null, true);
+  $str = json_encode($current_browser);
+  $browser_id = md5($str);
+  $total_price = 0;
+  if (Yii::$app->user->identity) {
+
+    $cart_items = Cart::find()->where(['created_by_id' =>Yii::$app->user->identity->id])->all();
+
+  } else {
+    $cart_items = Cart::find()->where(['browser_id' => $browser_id])->all();
+   
+  }
+ 
+ 
+ 
+  foreach($cart_items as $cart_item)
+  {
+    
+  $total_price+=$cart_item->product->price;
+?>
 
           <div class="whitebox">
 
@@ -55,7 +83,7 @@ use yii\helpers\Url;
 
                   <div class="col-sm-7">
 
-                    <h2 class="product-title"><a href="#0">Aeryn Sectional by Beachcrest Home Aeryn Sectional by Beachcrest Home Aeryn Sectional</a></h2>
+                    <h2 class="product-title"><a href="#0"><?=$cart_item->product->title;?></a></h2>
 
                     <h3>by Upper Square™ | W001708488</h3>
 
@@ -83,7 +111,7 @@ use yii\helpers\Url;
 
                     <div class="cart-right">
 
-                      <h4 class="product-price">$839.99 <span>$1,799.00</span></h4>
+                      <h4 class="product-price"><?=$cart_item->product->price;?> <span>$1,799.00</span></h4>
 
                       <div class="clearfix">
 
@@ -149,117 +177,9 @@ use yii\helpers\Url;
 
           </div>
 
-          <div class="whitebox">
-
-            <span class="badge">Sale</span>
-
-            <div class="whitebox-wrap cart-item">
-
-              <div class="frntre-image">
-
-                <a href="#0"><img src="<?=$this->theme->getUrl('assets_html/images/product6.jpg') ?>" alt="AerRumley Sofa"></a>
-
-              </div>
-
-              <div class="cart-info">
-
-                <div class="row">
-
-                  <div class="col-sm-7">
-
-                    <h2 class="product-title"><a href="#0">AerRumley Sofa</a></h2>
-
-                    <h3>by Upper Square™ | W001708488</h3>
-
-                    <h3>Upholstery Color: Stax Forest Green</h3>
-
-                    <div class="product-review">
-
-                      <a href="#0">
-
-                        <span class="rating-wrap">
-
-                          <span style="width: 91%;"></span>
-
-                        </span>
-
-                        <span class="rating-number">298</span>
-
-                      </a>
-
-                    </div>
-
-                  </div>
-
-                  <div class="col-sm-5">
-
-                    <div class="cart-right">
-
-                      <h4 class="product-price">$839.99 <span>$1,799.00</span></h4>
-
-                      <div class="clearfix">
-
-                        <div class="quantity-selector">
-
-                          <div class="form-group has-select-style">
-
-                            <label for="Quantity">Quantity</label>
-
-                            <select name="Quantity" class="form-control" id="Quantity">
-
-                              <option>1</option>
-
-                              <option>2</option>
-
-                              <option>3</option>
-
-                              <option>4</option>
-
-                              <option>5</option>
-
-                              <option>6</option>
-
-                              <option>7</option>
-
-                              <option>8</option>
-
-                              <option>9</option>
-
-                              <option>10</option>
-
-                            </select>
-
-                          </div>
-
-                        </div>
-
-                      </div>
-
-                      <div class="cart-actions">
-
-                        <a href="#0">
-
-                          <svg viewBox="0 0 28 28" class="frntre-icon">
-
-                            <path d="M20 9h-2.1c-.4-1.7-2-3-3.9-3s-3.4 1.3-3.9 3H8c-.6 0-1 .4-1 1s.4 1 1 1v8c0 1.7 1.3 3 3 3h6c1.7 0 3-1.3 3-3v-8c.6 0 1-.4 1-1s-.4-1-1-1zm-7 2h2v9h-2v-9zm1-3c.7 0 1.4.4 1.7 1h-3.4c.3-.6 1-1 1.7-1zm-4 11v-8h1v9c-.6 0-1-.4-1-1zm8 0c0 .6-.4 1-1 1v-9h1v8z"></path>
-
-                          </svg>Remove
-
-                        </a>
-
-                      </div>
-
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
+          <?php } ?>
+<!-- --------------- -->
+  
 
         </div>
 
@@ -305,7 +225,7 @@ use yii\helpers\Url;
 
                 <dt class="col-8">Subtotal:</dt>
 
-                <dd class="col-4">$5,244.92</dd>
+                <dd class="col-4"><?=$total_price . 'INR'?></dd>
 
                 <dt class="col-8">
 
@@ -341,7 +261,7 @@ use yii\helpers\Url;
 
                 <dt class="col-8 total">Total:</dt>
 
-                <dd class="col-4 total">$5,638.29</dd>
+                <dd class="col-4 total"><?=$total_price.'INR'?></dd>
 
                 <dt class="col-8">You Save:</dt>
 

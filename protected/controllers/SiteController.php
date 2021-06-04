@@ -1,7 +1,7 @@
 <?php
 
 namespace app\controllers;
-
+use phpbrowscap\Browscap;
 use app\components\TActiveForm;
 use app\components\TController;
 use app\models\Cart;
@@ -125,14 +125,16 @@ class SiteController extends TController
 
     public function actionAddCart($product_id)
     {
-
-        $productModel = Cart::findOne($product_id);
-        // $category_id = $productModel['category_id'];
-        // $menu_id = $productModel['menu_id'];
+        $bc = new Browscap(BASE_PATH . "/runtime/cache");
+        $current_browser = $bc->getBrowser(null, true);
+        $str = json_encode($current_browser);
+        $browser_id = md5($str);
+        
 
         if (!empty(Yii::$app->user->identity)) {
             $cartModel = new Cart();
             $cartModel->created_by_id = $_SERVER['REMOTE_ADDR'];
+            $cartModel->browser_id = $browser_id;
             $cartModel->product_id = $product_id;
             if ($cartModel->save()) {
                 Yii::$app->session->setFlash('success', 'Cart Updated Successfully');
@@ -141,7 +143,8 @@ class SiteController extends TController
             }
         } else {
             $cartModel = new Cart();
-            $cartModel->created_by_id = $_SERVER['REMOTE_ADDR'];
+            $cartModel->browser_id = $browser_id;
+            $cartModel->created_by_id = Product::USER_GUEST;
             $cartModel->product_id = $product_id;
             $cartModel->state_id = Product::STATE_ACTIVE;
             if ($cartModel->save(false)) {

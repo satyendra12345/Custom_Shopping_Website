@@ -630,6 +630,13 @@ class ComposerStaticInit5e76f4521b1351a195ea8f0a62797628
     );
 
     public static $prefixesPsr0 = array (
+        'p' => 
+        array (
+            'phpbrowscap' => 
+            array (
+                0 => __DIR__ . '/..' . '/garetjax/phpbrowscap/src',
+            ),
+        ),
         'P' => 
         array (
             'PHP_GCM' => 

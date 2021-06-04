@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'phpbrowscap' => array($vendorDir . '/garetjax/phpbrowscap/src'),
     'PHP_GCM' => array($vendorDir . '/php-gcm/php-gcm/src'),
     'HTMLPurifier' => array($vendorDir . '/ezyang/htmlpurifier/library'),
     'Diff' => array($vendorDir . '/phpspec/php-diff/lib'),

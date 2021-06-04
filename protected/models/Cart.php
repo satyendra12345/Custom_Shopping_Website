@@ -63,6 +63,8 @@ use yii\helpers\ArrayHelper;
 
     * @property string $created_on
 
+	* @property string $browser_id
+
 
     * @property string $updated_on
 
@@ -286,7 +288,7 @@ public function beforeValidate()
 		return [
             [['product_id'], 'required'],
             [['product_id', 'state_id', 'type_id', 'created_by_id'], 'integer'],
-            [['created_on', 'updated_on'], 'safe'],
+            [['created_on', 'updated_on','browser_id'], 'safe'],
             [['product_id'], 'exist', 'skipOnError' => true, 'targetClass' => Product::className(), 'targetAttribute' => ['product_id' => 'id']],
             [['state_id'], 'in', 'range' => array_keys(self::getStateOptions())],
             [['type_id'], 'in', 'range' => array_keys (self::getTypeOptions())]

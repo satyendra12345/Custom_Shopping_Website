@@ -45,7 +45,8 @@
 		"bizley/contenttools" : "^1.4",
 		"devgroup/yii2-jsoneditor" : "*",
 		"lesha724/yii2-document-viewer": "*",
-		"alexantr/yii2-elfinder": "^1.7"
+		"alexantr/yii2-elfinder": "^1.7",
+		"garetjax/phpbrowscap": "^2.0"
 	},
 	"require-dev" : {
 		"yiisoft/yii2-debug" : "*",

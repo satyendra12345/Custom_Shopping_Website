@@ -115,7 +115,7 @@ $this->params['breadcrumbs'][] = (string)$model;
             $this->context->addPanel('Feeds', 'feeds', 'Feed',$model /*,null,true*/);
 
             
-            $this->context->endPanel();
+             $this->context->endPanel();
 
             ?>
 

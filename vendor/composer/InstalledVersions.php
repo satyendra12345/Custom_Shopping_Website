@@ -32,7 +32,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '8eab8986016df887caf7be10529253231a3a44ef',
+    'reference' => '3fe90f72fa450fc1b44847decf8d451d45181200',
     'name' => 'project/ainehome',
   ),
   'versions' => 
@@ -391,6 +391,15 @@ private static $installed = array (
       array (
       ),
       'reference' => 'ed22aee8d17c7b396f74a58b1e7fefa4f90d5ef1',
+    ),
+    'garetjax/phpbrowscap' => 
+    array (
+      'pretty_version' => '2.0',
+      'version' => '2.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'ed661716d0d9158bac6ab3b074b18b70f8d18bef',
     ),
     'guzzlehttp/guzzle' => 
     array (
@@ -790,7 +799,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '8eab8986016df887caf7be10529253231a3a44ef',
+      'reference' => '3fe90f72fa450fc1b44847decf8d451d45181200',
     ),
     'psr/cache' => 
     array (

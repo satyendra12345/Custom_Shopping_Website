@@ -7,6 +7,7 @@ use app\models\Category;
 use app\models\Menu;
 use yii\helpers\Html;
 use yii\helpers\Url;
+use phpbrowscap\Browscap;
 /* @var $this \yii\web\View */
 /* @var $content string */
 
@@ -67,7 +68,7 @@ $this->beginPage() ?>
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-lg-7 col-md-9 col-7">
-					<a href="<?=Url::toRoute(['site/index'])?>" class="frntre-brand"><img src=<?= $this->theme->getUrl('assets_html/images/logo.png') ?> alt="Furniture" width="150"></a>
+					<a href="<?= Url::toRoute(['site/index']) ?>" class="frntre-brand"><img src=<?= $this->theme->getUrl('assets_html/images/logo.png') ?> alt="Furniture" width="150"></a>
 					<form class="frntre-search">
 						<svg viewBox="0 0 28 28" class="frntre-icon">
 							<path d="M21.7 20.3l-3.4-3.4c2-2.7 1.8-6.4-.6-8.9C15 5.3 10.6 5.3 8 8c-2.7 2.7-2.7 7 0 9.6 1.3 1.3 3.1 2 4.8 2 1.4 0 2.8-.5 4-1.3l3.4 3.4c.2.2.5.3.7.3s.5-.1.7-.3c.5-.4.5-1 .1-1.4zM9.4 16.2a4.77 4.77 0 0 1 0-6.8c.9-.9 2.2-1.4 3.4-1.4s2.5.5 3.4 1.4c1.9 1.9 1.9 4.9 0 6.8a4.77 4.77 0 0 1-6.8 0z"></path>
@@ -97,7 +98,7 @@ $this->beginPage() ?>
 								<h2>Welcome</h2>
 								<ul>
 									<li>
-										<a href="javascript:void(0);" data-toggle="modal" data-target="#LoginSignup">
+										<a href="#" data-toggle="modal" data-target="#LoginSignup">
 											<svg viewBox="0 0 28 28" class="frntre-icon">
 												<path d="M14 5a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm-3.65 15v-1.71a2.43 2.43 0 0 1 2.43-2.42h2.44a2.43 2.43 0 0 1 2.43 2.42V20a6.93 6.93 0 0 1-7.3 0zM14 13.51a1.29 1.29 0 1 1 0-2.58 1.29 1.29 0 0 1 0 2.58zm5.63 4.63a4.41 4.41 0 0 0-3-4 3.32 3.32 0 0 0 .62-1.91 3.29 3.29 0 0 0-6.58 0 3.32 3.32 0 0 0 .62 1.91 4.41 4.41 0 0 0-3 4A6.92 6.92 0 0 1 7 14a7 7 0 0 1 14 0 6.92 6.92 0 0 1-1.37 4.14z"></path>
 											</svg>
@@ -105,14 +106,14 @@ $this->beginPage() ?>
 										</a>
 									</li>
 									<li>
-										<a href="javascript:void(0);" data-toggle="modal" data-target="#LoginSignup">
+										<a href="<?= Url::toRoute('user/login') ?>" data-toggle="modal" data-target="#LoginSignup">
 											<svg viewBox="0 0 28 28" class="frntre-icon">
 												<path d="M23.71 6.59a1 1 0 0 0-1.06-.24L15.45 9a1 1 0 0 0-.58.56l-1.44 3.57-3.78-1.37 4.7-1.76a1 1 0 0 0 .54-1.38l-1.8-3.58a1 1 0 0 0-1.24-.49l-7.2 2.7a1 1 0 0 0-.58.57 1 1 0 0 0 0 .81L5.8 12v7.82a1 1 0 0 0 .65.93l7.15 2.69a1 1 0 0 0 .35.06 1 1 0 0 0 .53-.14l7-2.61a1 1 0 0 0 .65-.93V12l1.73-4.3a1 1 0 0 0-.15-1.11zm-7.15 4.16L21.23 9l-.79 2-4.67 1.75zm-4.85-4l.9 1.79-5.32 2-.9-1.8zM13 21.08l-5.2-1.95V13.2l5.2 1.94zm2 0v-5.94l5.2-1.94v5.93z"></path>
 											</svg>
 											<span class="user-menu">My Orders</span>
 										</a>
 									</li>
-									<li><a href="javascript:void(0);" class="btn btn-dark" data-toggle="modal" data-target="#LoginSignup">Sign In or Create an Account</a></li>
+									<li><a href="<?= Url::toRoute('user/login') ?>" class="btn btn-dark" data-toggle="modal" data-target="#LoginSignup">Sign In or Create an Account</a></li>
 								</ul>
 							</div>
 						</li>
@@ -143,28 +144,37 @@ $this->beginPage() ?>
 							</div>
 						</li>
 
-						<?php 
-						  $cart_count = Cart::find()->where(['created_by_id' => $_SERVER['REMOTE_ADDR']])->count();
-						
+						<?php
+
+						$bc = new Browscap(BASE_PATH . "/runtime/cache");
+						$current_browser = $bc->getBrowser(null, true);
+						$str = json_encode($current_browser);
+						$browser_id = md5($str);
+						if (Yii::$app->user->identity) {
+
+							$cart_count = Cart::find()->where(['created_by_id' =>Yii::$app->user->identity->id])->count();
+						} else {
+							$cart_count = Cart::find()->where(['browser_id' => $browser_id])->count();
+						}
 						?>
 						<li class="right-align" data-hover="Cart">
-                      	<a href="<?=Url::toRoute(['site/cart'])?>">
+							<a href="<?= Url::toRoute(['site/cart']) ?>">
 								<svg viewBox="0 0 28 28" class="frntre-icon">
 									<path d="M20.86 18.14H10.19l.91-1.31h9.76a1 1 0 0 0 1-.83L23 9.38a1 1 0 0 0-.23-.81 1 1 0 0 0-.77-.36H9.63l-.38-1.46a1 1 0 0 0-1-.75H6a1 1 0 1 0 0 2h1.51l2 7.64-2 2.93a1 1 0 0 0-.06 1 1 1 0 0 0 .89.53h.46a1.38 1.38 0 1 0 2.4 0h6.74a1.47 1.47 0 0 0-.17.66 1.38 1.38 0 1 0 2.57-.66h.52a1 1 0 1 0 0-2v.04zm-.05-7.93L20 14.83h-8.65l-1.2-4.62h10.66z"></path>
 								</svg>
-								<span class="user-menu"><?=$cart_count?><a href="<?=Url::toRoute(['listing'])?>"></a></span>
+								<span class="user-menu"><?= $cart_count ?><a href="<?= Url::toRoute(['listing']) ?>"></a></span>
 							</a>
-							
+
+				</div>
 			</div>
-		</div>
 	</header>
 	<!-- Frntre Nav -->
 	<?php
 	$categoryModel = Menu::find()->where(['state_id' => Category::STATE_ACTIVE])->limit(10)->all();
 	?>
-   <nav class="frntre-nav">
-	<ul>
-	<?php foreach ($categoryModel as $category) { ?>
+	<nav class="frntre-nav">
+		<ul>
+			<?php foreach ($categoryModel as $category) { ?>
 				<li>
 					<a href="#0"><span class="menu-text"><?= $category->title ?></span></a>
 				</li>

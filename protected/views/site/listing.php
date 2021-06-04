@@ -80,3 +80,60 @@ if (isset($requestData['category_id']) && $requestData['menu_id']) {
     ?>
   </div>
 </section>
+
+
+<!-- Frntre Footer -->
+<footer class="frntre-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-6">
+				<h4>About Us</h4>
+				<ul>
+					<li><a href="#0">About Wayfair</a></li>
+					<li><a href="#0">Wayfair Professional</a></li>
+					<li><a href="#0">MyWay Loyalty Program</a></li>
+					<li><a href="#0">Gift Cards</a></li>
+					<li><a href="#0">Wayfair Credit Card</a></li>
+					<li><a href="#0">Careers</a></li>
+					<li><a href="#0">Sell on Wayfair</a></li>
+					<li><a href="#0">Investor Relations</a></li>
+					<li><a href="#0">Advertise with Us</a></li>
+					<li><a href="#0">Locations</a></li>
+				</ul>
+			</div>
+			<div class="col-md-4 col-6">
+				<h4>Customer Service</h4>
+				<ul>
+					<li><a href="#0">My Orders</a></li>
+					<li><a href="#0">Track My Order</a></li>
+					<li><a href="#0">Return Policy</a></li>
+					<li><a href="#0">Help Center</a></li>
+					<li><a href="#0">Report a Bug</a></li>
+				</ul>
+			</div>
+			<div class="col-md-4 col-6">
+				<h4>Customer Service</h4>
+				<ul>
+					<li><a href="#0">My Orders</a></li>
+					<li><a href="#0">Track My Order</a></li>
+					<li><a href="#0">Return Policy</a></li>
+					<li><a href="#0">Help Center</a></li>
+					<li><a href="#0">Report a Bug</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- Frntre Copyright -->
+<section class="frntre-copyright">
+	<div class="container">
+		<ul>
+			<li><a href="#0">Terms of Use</a></li>
+			<li><a href="#0">Privacy Policy</a></li>
+			<li><a href="#0">Interest-Based Ads</a></li>
+			<li><a href="#0">Shop Wayfair International</a></li>
+		</ul>
+		<p>&copy; 2002 - 2020 by Wayfair LLC, 4 Copley Place, 7th Floor, Boston, MA 02116</p>
+	</div>
+</section>
